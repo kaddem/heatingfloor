@@ -1,0 +1,72 @@
+.promo{
+  background-image: url(../img/promo-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 37px 0;
+}
+.promo-text{
+  .col-8;
+  color: #ffffff;
+  &__head{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__slogan{
+    font-size: 32px;
+    line-height: 36px;
+    padding: 0;
+    margin: 0;
+  }
+}
+.form-calculate{
+  .col-4;
+  
+  .calculate__head{
+    color: #434242;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+    strong{
+      display: block;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  }
+
+  .form{
+    background-color: rgba(255, 255, 255, .8);
+    color: @text-color;
+    padding: 30px;
+    border: none;
+    input:nth-of-type(1), input:nth-of-type(2), input:nth-of-type(3){
+      width: 100%;
+    }
+    input:nth-of-type(4), input:nth-of-type(5){
+      width: 48%;
+    }
+    input:nth-of-type(4){
+      margin-right: 4%;
+    }
+    input{
+      float: left;
+      background-color: transparent;
+      font-size: 18px;
+      border: 1px solid #434242;
+      padding: 16px 10px;
+      margin-bottom: 14px;
+    }
+    .btn{
+      background-color: @yellow-color;
+      width: 100%;
+      padding: 15px 10px;
+    }
+  }
+}

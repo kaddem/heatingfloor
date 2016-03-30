@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+}
+html, body{
+  font-family: "Segoe Ui", sans-serif;
+}
+h2{
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 48px;
+}
+input, button{
+  outline: none;
+  &::-webkit-input-placeholder {color:@text-color;}
+  &::-moz-placeholder          {color:@text-color;}/* Firefox 19+ */
+  &:-moz-placeholder           {color:@text-color;}/* Firefox 18- */
+  &:-ms-input-placeholder      {color:@text-color;}
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+.btn{
+  font-weight: bold;
+  border: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background-color: @yellow-color;
+  font-size: 18px;
+  padding: 17px;
+}
+.form{
+  padding: 35px 25px;
+  border: 1px solid @form-border;
+  margin-left: 0;
+  margin-right: 0;
+  input{
+    font-size: 18px;
+    padding: 15px;
+  }
+}

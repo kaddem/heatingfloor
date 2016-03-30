@@ -1,0 +1,43 @@
+.reviews{
+
+  .owl-carousel{
+    .col-10;
+    .col-offset-1;
+  }
+  &__item{
+    text-align: center;
+  }
+  &__name{
+    display: block;
+  }
+  .img-skin{
+    display: inline-block;
+    width: 145px;
+    height: 145px;
+    border-radius: 50% !important; 
+    overflow: hidden;
+    img{
+      // width: 100%;
+    }
+  }
+  
+  .owl-carousel{
+    & .owl-nav{
+        display: block;
+        
+        .owl-prev, .owl-next{
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .owl-prev{
+          left: -20px;
+          .sprite(@icon-arrow-left);
+        }
+        .owl-next{
+          right: -20px;
+          .sprite(@icon-arrow-right);
+        }
+      }
+    } 
+}

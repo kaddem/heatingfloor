@@ -1,17 +1,71 @@
-@media screen and (min-width: @laptop-wide-min) {
+@media screen and (min-width: @laptop-min) {
   .container{
-    width: @laptop-wide-min;
+    width: @laptop-min;
+  }
+  html, body{
+    min-width: @laptop-min;
   }
 }
 
-@media screen and (min-width: @laptop-min) and (max-width: @laptop-max){
-
-}
+// @media screen and (min-width: @laptop-min) and (max-width: @laptop-max){
+//   .container{
+//     width: @laptop-min;
+//   }
+//   html, body{
+//     min-width: @laptop-min;
+//   }
+// }
 
 @media screen and (min-width: @tablet-min) and (max-width: @tablet-max) {
-
+  .container{
+    width: @tablet-min;
+  }
+  html, body{
+    min-width: @tablet-min;
+  }
+  .owl-carousel{
+    & .owl-nav{
+      .owl-prev{
+        left: -40px;
+      }
+      .owl-next{
+        right: -40px;
+      }
+    }
+  }
+  @import url(responsive/header_tablet.less);
+  @import url(responsive/promo_tablet.less);
+  @import url(responsive/action_tablet.less);
+  @import url(responsive/gift_tablet.less);
+  @import url(responsive/howwork_tablet.less);
+  @import url(responsive/pay_tablet.less);
+  @import url(responsive/worth_tablet.less);
+  @import url(responsive/reviews_tablet.less);
+  @import url(responsive/more_tablet.less);
+  @import url(responsive/sertificate_tablet.less);
+  @import url(responsive/map_tablet.less);
+  @import url(responsive/question_tablet.less);
+  @import url(responsive/footer_tablet.less);
 }
 
 @media screen and (max-width: @phone-max) {
-
+  .container{
+    width: @laptop-min;
+  }
+  html, body{
+    min-width: @laptop-min;
+  }
+  @import url(responsive/header_phone.less);
+  @import url(responsive/promo_phone.less);
+  @import url(responsive/action_phone.less);
+  @import url(responsive/gift_phone.less);
+  @import url(responsive/howwork_phone.less);
+  @import url(responsive/pay_phone.less);
+  @import url(responsive/worth_phone.less);
+  @import url(responsive/reviews_phone.less);
+  @import url(responsive/more_phone.less);
+  @import url(responsive/sertificate_phone.less);
+  @import url(responsive/map_phone.less);
+  @import url(responsive/question_phone.less);
+  @import url(responsive/footer_phone.less);
 }

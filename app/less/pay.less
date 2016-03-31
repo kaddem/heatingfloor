@@ -1,27 +1,65 @@
 .pay{
   .range;
+  margin: 40px 0;
+  background-color: @blue-color;
+  color: #fff;
+  display: table;
+  width: 100%;
+
+  .bg-box{
+    background-image: url(../img/pay-bg.jpg);
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    position: relative;
+    &:after{
+      width: 0;
+      height: 0;
+      content: '';
+      display: block;
+      border: 65px solid transparent;
+      border-top-color: @blue-color;
+      position: absolute;
+      top: 0;
+      right: -65px;
+    }
+  }
+
+  .test-box, .bg-box{
+    .col-6;
+    float: none;
+    display: table-cell;
+  }
+
+  .test-box{
+    padding: 50px 0 100px 0;
+  }
+
   &__bgphoto{
     .col-6;
     background-image: url(../img/pay-bg.jpg);
   }
   &__items{
-    .col-6;
-    .col-offset-6;
+    margin-left: 50px;
   }
   &__head{
+    margin: 0 0 40px 0;
     text-align: left;
   }
   &__list{
     list-style: none;
-    background-color: grey;
   }
   &__item{
     font-size: 30px;
     padding: 10px 0;
+    position: relative;
+    padding-left: 80px;
 
     &:before{
       content: '';
       display: block;
+      position: absolute;
+      left: 0;
     }
     &:nth-child(1):before{
       .sprite(@icon-pay-nomoney);
@@ -39,10 +77,4 @@
       .sprite(@icon-pay-credit);
     }
   }
-  // &__bgphoto, &__items{
-  //   float: none;
-  //   display: table-cell;
-  //   vertical-align: top;
-  //   height: 100%;
-  // }
 }

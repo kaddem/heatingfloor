@@ -276,16 +276,18 @@ header .logo {
   width: 8.33333333%;
   padding: 0 10px;
   float: left;
+  padding-left: 20px;
 }
 header .main-nav {
   width: 75%;
   padding: 0 10px;
   float: left;
-  padding-top: 50px;
+  padding-left: 29px;
+  padding-top: 46px;
 }
 header .main-nav li {
   display: inline-block;
-  margin: 0 15px;
+  margin-right: 25px;
 }
 header .main-nav a {
   display: inline-block;
@@ -309,11 +311,12 @@ header .contacts {
 }
 header .phone {
   display: inline-block;
-  font-weight: bold;
+  font-family: "Segoe Ui Bold", sans-serif;
+  letter-spacing: -1px;
   color: #000;
   font-size: 20px;
   line-height: 24px;
-  margin: 0px 0 20px 0;
+  margin: 4px 0 13px 0;
   text-decoration: none;
 }
 header .btn-recall {
@@ -343,6 +346,7 @@ header .btn-recall {
 .promo-text__head {
   font-size: 30px;
   line-height: 30px;
+  margin: 35px 0 11px 0;
   font-family: "Segoe Ui Bold", sans-serif;
   text-transform: uppercase;
 }
@@ -367,7 +371,7 @@ header .btn-recall {
   text-align: center;
 }
 .form-calculate .calculate__head strong {
-  display: block;
+  font-family: "Segoe Ui Bold", sans-serif;
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -375,7 +379,7 @@ header .btn-recall {
 .form-calculate .form {
   background-color: rgba(255, 255, 255, 0.8);
   color: #434242;
-  padding: 30px;
+  padding: 24px 29px 31px 33px;
   border: none;
 }
 .form-calculate .form input:nth-of-type(1),
@@ -396,7 +400,7 @@ header .btn-recall {
   font-size: 18px;
   border: 1px solid #434242;
   padding: 16px 10px;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 .form-calculate .form .btn {
   background-color: #ffe252;
@@ -404,8 +408,11 @@ header .btn-recall {
   padding: 15px 10px;
 }
 .action {
-  padding: 70px 0;
+  padding: 80px 0 70px 0;
   color: #ffffff;
+}
+.action .range {
+  margin: 0;
 }
 .action__slogan {
   width: 41.66666667%;
@@ -418,6 +425,7 @@ header .btn-recall {
   margin-left: 10px;
 }
 .action__slogan span {
+  font-family: "Segoe Ui Bold", sans-serif;
   font-size: 30px;
   line-height: 36px;
   display: inline-block;
@@ -437,7 +445,6 @@ header .btn-recall {
 .action__slogan strong {
   font-size: 70px;
   line-height: 70px;
-  font-family: "Segoe Ui Bold", sans-serif;
   text-transform: uppercase;
   display: block;
 }
@@ -458,7 +465,7 @@ header .btn-recall {
   font-size: 34px;
   line-height: 48px;
   padding: 0;
-  margin: 0 70px;
+  margin: 0 70px 0 100px;
   text-align: left;
   text-transform: none;
 }
@@ -624,11 +631,45 @@ header .btn-recall {
 .pay {
   margin-left: -10px;
   margin-right: -10px;
+  margin: 40px 0;
+  background-color: #336699;
+  color: #fff;
+  display: table;
+  width: 100%;
 }
 .pay:after {
   content: '';
   display: block;
   clear: both;
+}
+.pay .bg-box {
+  background-image: url(../img/pay-bg.jpg);
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.pay .bg-box:after {
+  width: 0;
+  height: 0;
+  content: '';
+  display: block;
+  border: 65px solid transparent;
+  border-top-color: #336699;
+  position: absolute;
+  top: 0;
+  right: -65px;
+}
+.pay .test-box,
+.pay .bg-box {
+  width: 50%;
+  padding: 0 10px;
+  float: left;
+  float: none;
+  display: table-cell;
+}
+.pay .test-box {
+  padding: 50px 0 100px 0;
 }
 .pay__bgphoto {
   width: 50%;
@@ -637,25 +678,26 @@ header .btn-recall {
   background-image: url(../img/pay-bg.jpg);
 }
 .pay__items {
-  width: 50%;
-  padding: 0 10px;
-  float: left;
-  margin-left: 50%;
+  margin-left: 50px;
 }
 .pay__head {
+  margin: 0 0 40px 0;
   text-align: left;
 }
 .pay__list {
   list-style: none;
-  background-color: grey;
 }
 .pay__item {
   font-size: 30px;
   padding: 10px 0;
+  position: relative;
+  padding-left: 80px;
 }
 .pay__item:before {
   content: '';
   display: block;
+  position: absolute;
+  left: 0;
 }
 .pay__item:nth-child(1):before {
   background-image: url(../img/sprite.png);
@@ -947,9 +989,244 @@ header .btn-recall {
   background-image: url(../img/lastform-bg.jpg);
   background-position: center;
   background-size: cover;
+  padding: 70px 0 50px 0;
+  color: #fff;
+}
+.question .form-question {
+  margin: 0 auto;
+  width: 500px;
+  padding: 0;
+  text-align: center;
+  border: none;
+}
+.question .form-question__head,
+.question .form-question input,
+.question .form-question textarea {
+  display: block;
+}
+.question .form-question__head {
+  font-family: "Segoe Ui Bold", sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+.question .form-question input,
+.question .form-question textarea {
+  width: 100%;
+  max-width: 100%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  margin-bottom: 25px;
+  color: #fff;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+.question .form-question input::-webkit-input-placeholder,
+.question .form-question textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.question .form-question input::-moz-placeholder,
+.question .form-question textarea::-moz-placeholder {
+  color: #fff;
+}
+.question .form-question input:-moz-placeholder,
+.question .form-question textarea:-moz-placeholder {
+  color: #fff;
+}
+.question .form-question input:-ms-input-placeholder,
+.question .form-question textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.question .form-question textarea {
+  min-height: 95px;
+  padding: 15px;
+}
+.question .form-question .btn {
+  background-color: #f08456;
+  color: #fff;
+  width: 190px;
+  font-weight: normal;
+  margin-top: 30px;
+}
+footer {
+  background-color: #434242;
+  color: #fff;
+}
+footer .logo-footer {
+  width: 8.33333333%;
+  padding: 0 10px;
+  float: left;
+}
+footer .contacts {
+  list-style: none;
+  width: 66.66666667%;
+  padding: 0 10px;
+  float: left;
+}
+footer .contacts a {
+  color: #fff;
+}
+footer .phone,
+footer .mail,
+footer .adress {
+  padding-left: 30px;
+  position: relative;
+  text-decoration: none;
+}
+footer .phone:before,
+footer .mail:before,
+footer .adress:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+footer .phone {
+  font-family: "Segoe Ui Bold", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+footer .phone:before {
+  content: '';
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: -386px -250px;
+  width: 20px;
+  height: 15px;
+}
+footer .mail {
+  font-family: "Segoe Ui Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+footer .mail:before {
+  content: '';
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: -423px -82px;
+  width: 16px;
+  height: 25px;
+}
+footer .adress {
+  font-family: "Segoe Ui Lite", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+footer .adress:before {
+  content: '';
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: -371px -250px;
+  width: 15px;
+  height: 24px;
+}
+footer .copypast {
+  width: 25%;
+  padding: 0 10px;
+  float: left;
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+  }
+  html,
+  body {
+    min-width: 1200px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: 768px;
+  }
+  html,
+  body {
+    min-width: 768px;
+  }
+  .owl-carousel .owl-nav .owl-prev {
+    left: -40px;
+  }
+  .owl-carousel .owl-nav .owl-next {
+    right: -40px;
+  }
+  header .main-nav li {
+    display: block;
+  }
+  .promo .form-calculate,
+  .promo .promo-text {
+    width: 50%;
+    padding: 0 10px;
+    float: left;
+  }
+  .action {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .action__slogan {
+    width: 56%;
+    float: none;
+    padding: 0 10px;
+  }
+  .action__slogan span {
+    padding-left: 100px;
+  }
+  .action__slogan span:before {
+    left: 0;
+  }
+  .action__description {
+    width: 44%;
+    float: none;
+    padding: 20px 10px;
+  }
+  .action__description h2 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .action__description:before {
+    left: -75px;
+    background-image: -webkit-linear-gradient(21deg, transparent 0%, transparent 50%, #3c5c81 50%, #336699 55%, #336699 100%);
+    background-image: linear-gradient(69deg, transparent 0%, transparent 50%, #3c5c81 50%, #336699 55%, #336699 100%);
+  }
+  .howwork__item {
+    width: 50%;
+    padding: 0 10px;
+    float: left;
+    padding: 15px 30px;
+  }
+  .howwork__item:after {
+    content: normal;
+  }
+  .pay .bg-box {
+    width: 40%;
+  }
+  .pay .test-box {
+    width: 60%;
+  }
+  .worth__item {
+    width: 50%;
+    padding: 0 10px;
+    float: left;
+    float: none;
+    padding-top: 120px;
+  }
+  .worth .form-worth .col {
+    width: 50%;
+    padding: 0 10px;
+    float: left;
+  }
+  .worth .form-worth .col:nth-child(1),
+  .worth .form-worth .col:nth-child(2) {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: 1200px;
+  }
+  html,
+  body {
+    min-width: 1200px;
   }
 }

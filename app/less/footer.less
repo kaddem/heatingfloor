@@ -1,0 +1,60 @@
+footer{
+  background-color: @text-color;
+  color: #fff;
+  .logo-footer{
+    .col-1;
+  }
+  .contacts{
+    list-style: none;
+
+    .col-8;
+    a{
+      color: #fff;
+    }
+  }
+  .phone, .mail, .adress{
+    padding-left: 30px;
+    position: relative;
+    text-decoration: none;
+  }
+  .phone:before, .mail:before, .adress:before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .phone{
+    .ffbold;
+    font-size: 24px;
+    line-height: 30px;
+    &:before{
+      content: '';
+      display: inline-block;
+      .sprite(@icon-mail);
+    }
+  }
+  .mail{
+    .ffbold;
+    font-size: 20px;
+    line-height: 24px;
+    &:before{
+      content: '';
+      display: inline-block;
+      .sprite(@icon-phone);
+    }
+  }
+  .adress{
+    .fflite;
+    font-size: 18px;
+    line-height: 24px;
+    &:before{
+      content: '';
+      display: inline-block;
+      .sprite(@icon-map-pic);
+    }
+  }
+  .copypast{
+    .col-3;
+  }
+}

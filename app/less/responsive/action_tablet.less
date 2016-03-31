@@ -1,0 +1,30 @@
+.action{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__slogan{
+    width: 56%;
+    float: none;
+    padding: 0 10px;
+    span{
+      padding-left: 100px;
+      &:before{
+        left: 0;
+      }
+    }
+  }
+  &__description{
+    width: 44%;
+    float: none;
+    padding: 20px 10px;
+    & h2{
+      // padding-left: 35px;
+      margin: 0;
+      font-size: 30px;
+      line-height: 36px;
+    }
+    &:before{
+      left: -75px;
+      background-image: linear-gradient(69deg, transparent 0%, transparent 50%, #3c5c81 50%, @blue-color 55%, @blue-color 100%);
+    }
+  }
+}

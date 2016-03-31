@@ -1,0 +1,48 @@
+.pay{
+  .range;
+  &__bgphoto{
+    .col-6;
+    background-image: url(../img/pay-bg.jpg);
+  }
+  &__items{
+    .col-6;
+    .col-offset-6;
+  }
+  &__head{
+    text-align: left;
+  }
+  &__list{
+    list-style: none;
+    background-color: grey;
+  }
+  &__item{
+    font-size: 30px;
+    padding: 10px 0;
+
+    &:before{
+      content: '';
+      display: block;
+    }
+    &:nth-child(1):before{
+      .sprite(@icon-pay-nomoney);
+    }
+    &:nth-child(2):before{
+      .sprite(@icon-pay-money);
+    }
+    &:nth-child(3):before{
+      .sprite(@icon-pay-card);
+    }
+    &:nth-child(4):before{
+      .sprite(@icon-pay-sber);
+    }
+    &:nth-child(5):before{
+      .sprite(@icon-pay-credit);
+    }
+  }
+  // &__bgphoto, &__items{
+  //   float: none;
+  //   display: table-cell;
+  //   vertical-align: top;
+  //   height: 100%;
+  // }
+}

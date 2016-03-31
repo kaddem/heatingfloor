@@ -12,12 +12,11 @@
   &:after{
     content: '';
     display: block;
-    overflow: hidden;
     clear: both;
   }
 }
 
-.generate-columns(@n, @i: 1) when (@i =< @n) { 
+.generate-columns(@n, @i: 1) when (@i =< @n) {
 
   .col-@{i} {
   width: (@i * 100% / @n);
@@ -28,8 +27,8 @@
   // width: (@i * 100% / @n);
   margin-left: (@i * 100% / @n);
   }
-  
+
   .generate-columns(@n, (@i + 1));
   }
-  
+
   .generate-columns(12);

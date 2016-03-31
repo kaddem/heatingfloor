@@ -1,10 +1,20 @@
 *{
   box-sizing: border-box;
 }
-html, body{
+.ffbold{
+  font-family: "Segoe Ui Bold", sans-serif;
+}
+.ffnormal{
   font-family: "Segoe Ui", sans-serif;
 }
+.fflite{
+  font-family: "Segoe Ui Lite", sans-serif;
+}
+html, body{
+  .ffnormal;
+}
 h2{
+  .ffbold;
   text-align: center;
   font-size: 30px;
   text-transform: uppercase;
@@ -39,5 +49,31 @@ ul{
   input{
     font-size: 18px;
     padding: 15px;
+  }
+}
+
+.owl-carousel{
+  & .owl-nav{
+    display: block;
+
+    .owl-prev, .owl-next{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .owl-prev{
+      left: -80px;
+      .sprite(@icon-arrow-left);
+      &:hover{
+        .sprite(@icon-arrow-left-hover);
+      }
+    }
+    .owl-next{
+      right: -80px;
+      .sprite(@icon-arrow-right);
+      &:hover{
+        .sprite(@icon-arrow-right-hover);
+      }
+    }
   }
 }

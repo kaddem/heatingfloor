@@ -11,7 +11,6 @@
 .range:after {
   content: '';
   display: block;
-  overflow: hidden;
   clear: both;
 }
 .col-1 {
@@ -111,11 +110,25 @@
   margin-left: 100%;
 }
 @font-face {
-  font-family: "Segoe Ui";
-  src: url("../fonts/segoeuil.eot");
-  src: url("../fonts/segoeuil.eot?#iefix") format("embedded-opentype"), url("../fonts/segoeuil.woff") format("woff"), url("../fonts/segoeuil.ttf") format("truetype");
-  font-style: normal;
+  font-family: 'Segoe Ui Lite';
+  src: url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot');
+  src: url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot?#iefix') format('embedded-opentype'), url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.woff') format('woff'), url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.ttf') format('truetype'), url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.svg#web') format('svg');
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Segoe Ui Bold';
+  src: url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold/latest.eot');
+  src: url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold/latest.eot?#iefix') format('embedded-opentype'), url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold/latest.woff') format('woff'), url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold/latest.ttf') format('truetype'), url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Bold/latest.svg#web') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Segoe Ui';
+  src: url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Normal/latest.eot');
+  src: url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Normal/latest.eot?#iefix') format('embedded-opentype'), url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Normal/latest.woff') format('woff'), url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Normal/latest.ttf') format('truetype'), url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Normal/latest.svg#web') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 /*
 LESS variables are information about icon's compiled state, stored under its original file name
@@ -153,11 +166,21 @@ This must be run when you have at least 2 sprites.
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.ffbold {
+  font-family: "Segoe Ui Bold", sans-serif;
+}
+.ffnormal {
+  font-family: "Segoe Ui", sans-serif;
+}
+.fflite {
+  font-family: "Segoe Ui Lite", sans-serif;
+}
 html,
 body {
   font-family: "Segoe Ui", sans-serif;
 }
 h2 {
+  font-family: "Segoe Ui Bold", sans-serif;
   text-align: center;
   font-size: 30px;
   text-transform: uppercase;
@@ -209,6 +232,43 @@ ul {
   font-size: 18px;
   padding: 15px;
 }
+.owl-carousel .owl-nav {
+  display: block;
+}
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.owl-carousel .owl-nav .owl-prev {
+  left: -80px;
+  background-image: url(../img/sprite.png);
+  background-position: -322px -101px;
+  width: 17px;
+  height: 46px;
+}
+.owl-carousel .owl-nav .owl-prev:hover {
+  background-image: url(../img/sprite.png);
+  background-position: -339px -101px;
+  width: 17px;
+  height: 46px;
+}
+.owl-carousel .owl-nav .owl-next {
+  right: -80px;
+  background-image: url(../img/sprite.png);
+  background-position: -305px -147px;
+  width: 17px;
+  height: 46px;
+}
+.owl-carousel .owl-nav .owl-next:hover {
+  background-image: url(../img/sprite.png);
+  background-position: -305px -101px;
+  width: 17px;
+  height: 46px;
+}
 header {
   padding: 15px 0 8px 0;
 }
@@ -222,7 +282,6 @@ header .main-nav {
   padding: 0 10px;
   float: left;
   padding-top: 50px;
-  padding-left: 20px;
 }
 header .main-nav li {
   display: inline-block;
@@ -284,7 +343,7 @@ header .btn-recall {
 .promo-text__head {
   font-size: 30px;
   line-height: 30px;
-  font-weight: bold;
+  font-family: "Segoe Ui Bold", sans-serif;
   text-transform: uppercase;
 }
 .promo-text__slogan {
@@ -378,7 +437,7 @@ header .btn-recall {
 .action__slogan strong {
   font-size: 70px;
   line-height: 70px;
-  font-weight: bold;
+  font-family: "Segoe Ui Bold", sans-serif;
   text-transform: uppercase;
   display: block;
 }
@@ -394,6 +453,7 @@ header .btn-recall {
   vertical-align: middle;
 }
 .action__description h2 {
+  font-family: "Segoe Ui Lite", sans-serif;
   font-weight: normal;
   font-size: 34px;
   line-height: 48px;
@@ -403,7 +463,7 @@ header .btn-recall {
   text-transform: none;
 }
 .action__description h2 strong {
-  font-weight: bold;
+  font-family: "Segoe Ui Bold", sans-serif;
 }
 .action__description:before {
   content: '';
@@ -428,13 +488,14 @@ header .btn-recall {
 }
 .gift__slogan {
   font-size: 30px;
-  font-weight: bold;
+  font-family: "Segoe Ui Bold", sans-serif;
   text-transform: uppercase;
 }
 .gift__head {
   font-size: 18px;
   line-height: 24px;
   margin: 20px 0 30px 0;
+  font-family: "Segoe Ui", sans-serif;
   font-weight: normal;
   text-transform: none;
 }
@@ -483,7 +544,7 @@ header .btn-recall {
 }
 .gift__item-head {
   font-size: 28px;
-  font-weight: bold;
+  font-family: "Segoe Ui Bold", sans-serif;
   margin: 0;
   color: #ffffff;
 }
@@ -552,14 +613,79 @@ header .btn-recall {
   display: inline-block;
   font-size: 24px;
   line-height: 24px;
-  font-weight: bold;
+  font-family: "Segoe Ui Bold", sans-serif;
   margin-top: 25px;
 }
 .howwork__item-text {
   font-size: 18px;
   line-height: 24px;
-  font-weight: bold;
   margin-top: 10px;
+}
+.pay {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.pay:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.pay__bgphoto {
+  width: 50%;
+  padding: 0 10px;
+  float: left;
+  background-image: url(../img/pay-bg.jpg);
+}
+.pay__items {
+  width: 50%;
+  padding: 0 10px;
+  float: left;
+  margin-left: 50%;
+}
+.pay__head {
+  text-align: left;
+}
+.pay__list {
+  list-style: none;
+  background-color: grey;
+}
+.pay__item {
+  font-size: 30px;
+  padding: 10px 0;
+}
+.pay__item:before {
+  content: '';
+  display: block;
+}
+.pay__item:nth-child(1):before {
+  background-image: url(../img/sprite.png);
+  background-position: -407px -154px;
+  width: 30px;
+  height: 36px;
+}
+.pay__item:nth-child(2):before {
+  background-image: url(../img/sprite.png);
+  background-position: -371px -154px;
+  width: 36px;
+  height: 36px;
+}
+.pay__item:nth-child(3):before {
+  background-image: url(../img/sprite.png);
+  background-position: -371px -190px;
+  width: 42px;
+  height: 28px;
+}
+.pay__item:nth-child(4):before {
+  background-image: url(../img/sprite.png);
+  background-position: -371px -114px;
+  width: 41px;
+  height: 40px;
+}
+.pay__item:nth-child(5):before {
+  background-image: url(../img/sprite.png);
+  background-position: -412px -114px;
+  width: 32px;
+  height: 37px;
 }
 .worth {
   text-align: center;
@@ -628,12 +754,14 @@ header .btn-recall {
 .worth__item-head {
   display: block;
   text-align: center;
-  font-weight: bold;
+  font-family: "Segoe Ui Bold", sans-serif;
   font-size: 24px;
   line-height: 30px;
 }
 .worth__item-text {
   text-align: left;
+  font-size: 18px;
+  line-height: 24px;
 }
 .form-worth {
   margin-left: 0;
@@ -666,34 +794,159 @@ header .btn-recall {
   display: inline-block;
   width: 145px;
   height: 145px;
-  -webkit-border-radius: 50% !important;
-  border-radius: 50% !important;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
   overflow: hidden;
 }
 .reviews .owl-carousel .owl-nav {
   display: block;
 }
-.reviews .owl-carousel .owl-nav .owl-prev,
-.reviews .owl-carousel .owl-nav .owl-next {
+.more__item {
+  width: 25%;
+  padding: 0 10px;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.more__item:nth-child(3) {
+  width: 50%;
+  padding: 0 10px;
+  float: left;
+  float: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.more__item:nth-child(8) {
+  width: 58.33333333%;
+  padding: 0 10px;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.more__item:last-child {
+  width: 41.66666667%;
+  padding: 0 10px;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.more__item > div {
+  position: relative;
+}
+.more__item > div:hover .bg-hover {
+  opacity: 0.8;
+}
+.more__item > div:hover .bg-hover p {
+  color: #ffffff;
+}
+.more__item .bg-hover {
+  opacity: 0;
+  font-family: "Segoe Ui Bold", sans-serif;
+  font-size: 30px;
+  text-align: center;
   position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f08456;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.more__item .bg-hover p {
+  color: #fff;
+  position: absolute;
+  margin: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-.reviews .owl-carousel .owl-nav .owl-prev {
-  left: -20px;
-  background-image: url(../img/sprite.png);
-  background-position: -322px -101px;
-  width: 17px;
-  height: 46px;
+.more .install-water {
+  height: 430px;
 }
-.reviews .owl-carousel .owl-nav .owl-next {
-  right: -20px;
-  background-image: url(../img/sprite.png);
-  background-position: -305px -101px;
-  width: 17px;
-  height: 46px;
+.more .project,
+.more .installation,
+.more .boiler,
+.more .boiler-rus {
+  height: 345px;
+}
+.more .services,
+.more .start {
+  height: 260px;
+}
+.more .sewerage {
+  height: 260px;
+}
+.more .more-bg {
+  background-size: cover;
+  background-position: center;
+}
+.more .project {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/more-project.jpg);
+}
+.more .installation {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/more-install.jpg);
+}
+.more .install-water {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/more-install-water.jpg);
+}
+.more .boiler {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/more-install-boiler.jpg);
+}
+.more .boiler-rus {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/more-install-boilerrus.jpg);
+}
+.more .services {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/more-service.jpg);
+}
+.more .start {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/more-start.jpg);
+}
+.more .sewerage {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/more-sewerage.jpg);
+}
+.more__btn {
+  display: block;
+  width: 100%;
+  height: 260px;
+}
+.sertificate .owl-carousel {
+  width: 83.33333333%;
+  padding: 0 10px;
+  float: left;
+  margin-left: 8.33333333%;
+}
+.sertificate__item {
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 10px 3px #d8d8d8;
+  box-shadow: 0px 0px 10px 3px #d8d8d8;
+}
+.map {
+  height: 385px;
+}
+.question {
+  background-image: url(../img/lastform-bg.jpg);
+  background-position: center;
+  background-size: cover;
 }
 @media screen and (min-width: 1200px) {
   .container {

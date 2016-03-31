@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Заготовка под проект</title>
+  <title>Цены на монтаж водяных теплых полов. РОСА Монтаж</title>
   <!-- build:css css/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
@@ -173,7 +173,20 @@
     </div>
     <!-- howwork -->
     <div class="pay">
-      
+      <div class="container">
+        <div class="range">
+          <div class="pay__items">
+            <h2 class="pay__head">Варианты оплаты:</h2>
+            <ul class="pay__list">
+              <li class="pay__item">Безналичный расчет</li>
+              <li class="pay__item">Наличными через кассу</li>
+              <li class="pay__item">Банковской  картой в офисе</li>
+              <li class="pay__item">Через сбербанк</li>
+              <li class="pay__item">В кредит</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- /.pay -->
     <div class="worth">
@@ -235,7 +248,7 @@
       <div class="container">
         <h2>Отзывы</h2>
         <div class="range">
-          <div class="owl-carousel">
+          <div class="owl-carousel" id="owl-reviews">
             <div class="reviews__item">
               <div class="img-skin"><img src="img/reviews_eugeniy.jpg" alt="Фотография Евгения для отзыва об установке водяного теплого пола"></div>
               <blockquote class="reviews__text">
@@ -267,26 +280,77 @@
 
     <div class="more">
       <div class="container">
+        <h2 class="more__head">Кроме теплого пола у нас так же заказывают:</h2>
         <div class="range">
-          <div class="more__item"></div>
+          <div class="more__item">
+            <div class="project">
+              <div class="bg-hover">
+                <p>Проектные работы</p>
+              </div>
+            </div>
+          </div>
           <!-- /.more__item -->
-          <div class="more__item"></div>
+          <div class="more__item">
+            <div class="installation">
+              <div class="bg-hover">
+                <p>Монтаж Системы отопления</p>
+              </div>
+            </div>
+          </div>
           <!-- /.more__item -->
-          <div class="more__item"></div>
+          <div class="more__item">
+            <div class="install-water">
+              <div class="bg-hover">
+                <p>Монтаж водоснабжения</p>
+              </div>
+            </div>
+          </div>
           <!-- /.more__item -->
-          <div class="more__item"></div>
+          <div class="more__item">
+            <div class="boiler">
+              <div class="bg-hover">
+                <p>Установка котла</p>
+              </div>
+            </div>
+          </div>
           <!-- /.more__item -->
-          <div class="more__item"></div>
+          <div class="more__item">
+            <div class="boiler-rus">
+              <div class="bg-hover">
+                 <p>Установка бойлера</p>
+              </div>
+            </div>
+          </div>
           <!-- /.more__item -->
-          <div class="more__item"></div>
+          <div class="more__item">
+            <div class="services">
+              <div class="bg-hover">
+                <p>Сервисное обслуживание</p>
+              </div>
+            </div>
+          </div>
           <!-- /.more__item -->
-          <div class="more__item"></div>
+          <div class="more__item">
+            <div class="start">
+              <div class="bg-hover">
+                <p>Пусконаладка</p>
+              </div>
+            </div>
+          </div>
           <!-- /.more__item -->
-          <div class="more__item"></div>
+          <div class="more__item">
+            <div class="sewerage">
+              <div class="bg-hover">
+                <p>Монтаж канализации</p>
+              </div>
+            </div>
+          </div>
           <!-- /.more__item -->
-          <button class="more__item more__btn">
-            Хочу больше, чем просто теплый пол
-          </button>
+          <div class="more__item">
+            <button class="more__btn">
+              Хочу больше, чем просто теплый пол
+            </button>
+          </div>
         </div>
         <!-- /.range -->
       </div>
@@ -299,7 +363,26 @@
         <h2 class="sertificate__head">Наши сертификаты</h2>
         <!-- /.sertificate__head -->
         <div class="range">
-          
+          <div class="owl-carousel" id="owl-sertificate">
+            <div class="sertificate__item">
+              <img src="img/sertificate/Baxi_Koz.jpg" alt="">
+            </div>
+            <div class="sertificate__item">
+              <img src="img/sertificate/Baxi_Sol.jpg" alt="">
+            </div>
+            <div class="sertificate__item">
+              <img src="img/sertificate/Dimplex_Rod.jpg" alt="">
+            </div>
+            <div class="sertificate__item">
+              <img src="img/sertificate/Dimplex_Sol.jpg" alt="">
+            </div>
+            <div class="sertificate__item">
+              <img src="img/sertificate/Dimplex_Sol_adv.jpg" alt="">
+            </div>
+            <div class="sertificate__item">
+              <img src="img/sertificate/Dimplex_Sol_air.jpg" alt="">
+            </div>
+          </div>
         </div>
         <!-- /.range -->
       </div>
@@ -307,8 +390,7 @@
     </div>
     <!-- /.sertificate -->
 
-    <div class="map">
-      
+    <div class="map" id="map">
     </div>
 
     <div class="question">
@@ -352,6 +434,9 @@
       </div>
     </div>
   </footer>
+  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDRQVjTZq6DH0X8LwFzLIvXJqAWW5kiCo&signed_in=true&callback=initMap"></script>
+  </body>
   <!-- build:js js/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>

@@ -4,6 +4,19 @@
   margin-bottom: 60px;
   .form-gift{
     box-shadow: 0px 20px 20px -10px #d6d4d4;
+
+    &__col{
+      .col-12;
+    }
+
+    &__item{
+      .col-4;
+      padding-left: 35px;
+      padding-right: 35px;
+      input, button{
+        width: 100%;
+      }
+    }
   }
 
 
@@ -23,16 +36,13 @@
   .form-gift{
     padding: 35px 0;
   }
-  .col{
+  &__col{
     .col-4;
     padding-left: 35px;
     padding-right: 35px;
     input, button{
       width: 100%;
     }
-  }
-  .col:nth-child(3n+1){
-    // padding-left: @indent-col/2;
   }
   &__photo{
     width: 100%;
@@ -43,19 +53,19 @@
     overflow: hidden;
     margin-bottom: 35px;
     height: 370px;
-    &:hover .gift__description{
-      transform: translateY(-100%);
-    }
+    // &:hover .gift__description{
+    //   transform: translateY(-100%);
+    // }
   }
   &__description{
     position: absolute;
     text-align: left;
-    top: 100%;
+    // top: 100%;
     background-image: linear-gradient(45deg, rgba(239, 149, 103, 0.9) 0%, rgba(239, 149, 103, 0.9) 90%, transparent 90%, transparent 100%);
     color: #fff;
     padding: 10px 15px;
-    transform: translateY(-60px);
-    transition: all 0.3s ease;
+    // transform: translateY(-60px);
+    // transition: all 0.3s ease;
   }
   &__item-head{
     font-size: 28px;

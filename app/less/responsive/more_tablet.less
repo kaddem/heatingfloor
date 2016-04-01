@@ -1,0 +1,74 @@
+.more{
+
+  .range{
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  &__item{
+
+    .col-6;
+    padding: 15px;
+
+    &:nth-child(3){
+      .col-12;
+      padding: 15px;
+    }
+    &:nth-child(8), &:nth-child(9){
+      .col-6;
+      padding: 15px;
+    }
+
+    .bg-hover{
+      width: 100%;
+      height: 40%;
+      text-align: center;
+      position: absolute;
+      opacity: 0.8;
+      bottom: 0;
+      background-color: @orange-color;
+
+      & p{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        margin: 0;
+        .ffbold;
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .more__item{
+    & > div {
+      height: 300px;
+    }
+  }
+  &__btn{
+    height: 300px;
+  }
+  .project{
+    background-image: url(../../img/more-project_tablet.jpg);
+  }
+  .installation{
+    background-image: url(../../img/more-install_tablet.jpg);
+  }
+  .install-water{
+    background-image: url(../../img/more-install-water_tablet.jpg);
+  }
+  .boiler{
+    background-image: url(../../img/more-install-boiler_tablet.jpg);
+  }
+  .boiler-rus{
+    background-image: url(../../img/more-install-boilerrus_tablet.jpg);
+  }
+  .services{
+    background-image: url(../../img/more-service_tablet.jpg);
+  }
+  .start{
+    background-image: url(../../img/more-start_tablet.jpg);
+  }
+  .sewerage{
+    background-image: url(../../img/more-sewerage_tablet.jpg);
+  }
+}

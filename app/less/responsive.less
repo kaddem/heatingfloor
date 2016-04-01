@@ -5,6 +5,57 @@
   html, body{
     min-width: @laptop-min;
   }
+  .promo{
+    .promo-text{
+      .btn{
+        display: none;
+      }
+    }
+  }
+  .more{
+    &__item{
+      & .bg-hover{
+        opacity: 0;
+        .ffbold;
+        font-size: 30px;
+        text-align: center;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: @orange-color;
+        transition: all 0.3s ease;
+        p{
+          color: #fff;
+          position: absolute;
+          margin: 0;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .gift{
+    &__item{
+      &:hover .gift__description{
+        transform: translateY(-100%);
+      }
+    }
+    &__description{
+      top: 100%;
+      transform: translateY(-60px);
+      transition: all 0.3s ease;
+    }
+  }
+  .worth{
+    .form-worth-call{
+      display: none;
+    }
+  }
 }
 
 // @media screen and (min-width: @laptop-min) and (max-width: @laptop-max){
@@ -50,10 +101,20 @@
 
 @media screen and (max-width: @phone-max) {
   .container{
-    width: @laptop-min;
+    width: @phone-min;
   }
   html, body{
-    min-width: @laptop-min;
+    min-width: @phone-min;
+  }
+  .owl-carousel{
+    & .owl-nav{
+      .owl-prev{
+        left: -20px;
+      }
+      .owl-next{
+        right: -20px;
+      }
+    }
   }
   @import url(responsive/header_phone.less);
   @import url(responsive/promo_phone.less);

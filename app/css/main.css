@@ -1482,9 +1482,7 @@ footer .copypast {
     text-align: center;
   }
   header .main-nav {
-    width: 33.33333333%;
-    padding: 0 10px;
-    float: left;
+    width: auto;
     background-color: #fff;
     position: absolute;
     padding: 0;

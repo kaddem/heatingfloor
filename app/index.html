@@ -19,18 +19,20 @@
     <div class="container">
       <div class="range">
         <div class="logo">
-          <img src="img/main_logo.png">
+          <img src="img/main_logo.png" alt="РОСА Монтаж. Логотип компании">
         </div>
         <!-- /.logo -->
+        <a class="menu-burger" href="#"></a>
         <nav class="main-nav">
+          <a class="menu-back" href="#"></a>
           <ul>
-            <li><a href="">Типы полов</a></li>
-            <li><a href="">Подарки</a></li>
-            <li><a href="">Как мы работаем</a></li>
-            <li><a href="">Оплата</a></li>
-            <li><a href="">Отзывы</a></li>
-            <li><a href="">Дополнительные услуги</a></li>
-            <li><a href="">Контакты</a></li>
+            <li><a href="#">Типы полов</a></li>
+            <li><a href="#gift">Подарки</a></li>
+            <li><a href="#howwork">Как мы работаем</a></li>
+            <li><a href="#pay">Оплата</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#services">Дополнительные услуги</a></li>
+            <li><a href="#map">Контакты</a></li>
           </ul>
         </nav>
         <!-- /.main-nav -->
@@ -45,7 +47,7 @@
     <!-- /.container -->
   </header>
   <main>
-    <div class="promo">
+    <div id="promo" class="promo">
       <div class="container">
         <div class="range">
           <div class="promo-text">
@@ -91,7 +93,7 @@
     </div>
     <!-- /.action -->
 
-    <div class="gift">
+    <div id="gift" class="gift">
       <div class="container">
         <span class="gift__slogan">Выбери подарок</span>
         <h2 class="gift__head">Заказав у нас теплый пол, вы можете выбрать любой из  подарков</h2>
@@ -100,7 +102,8 @@
               <div class="gift__item">
                 <img src="img/gift1.jpg" alt="" class="gift__photo">
                 <div class="gift__description">
-                  <h3 class="gift__item-head">Проект бесплатно</h3>
+                  <input name="giftradio" type="radio" id="gift1" checked="checked">
+                  <label for="gift1" class="gift__item-head">Проект бесплатно</label>
                   <!-- /.gift__item-head -->
                   <p class="gift__item-text">Вы можете получить индивидуальный проект для вашего дома</p>
                   <!-- /.gift__item-text -->
@@ -113,7 +116,8 @@
               <div class="gift__item">
                 <img src="img/gift2.jpg" alt="" class="gift__photo">
                 <div class="gift__description">
-                  <h3 class="gift__item-head">Доставка бесплатно</h3>
+                  <input name="giftradio" type="radio" id="gift2">
+                  <label for="gift2" class="gift__item-head">Доставка бесплатно</label>
                   <!-- /.gift__item-head -->
                   <p class="gift__item-text">Мы доставим материалыв пределах 30 км от КАД</p>
                   <!-- /.gift__item-text -->
@@ -126,7 +130,8 @@
               <div class="gift__item">
                 <img src="img/gift3.jpg" alt="" class="gift__photo">
                 <div class="gift__description">
-                  <h3 class="gift__item-head">Скидка на услугу</h3>
+                  <input name="giftradio" type="radio" id="gift3">
+                  <label for="gift3" class="gift__item-head">Скидка на услугу</label>
                   <!-- /.gift__item-head -->
                   <p class="gift__item-text">Вы так же можете выбрать скидку 30% на любую из наших дополнительных  услуг</p>
                   <!-- /.gift__item-text -->
@@ -154,7 +159,7 @@
       <!-- /.container -->
     </div>
     <!-- /.gift -->
-    <div class="howwork">
+    <div id="howwork" class="howwork">
       <div class="container">
         <h2 class="howwork__head">4 шага к вашему комфорту</h2>
         <ul class="range howwork__list">
@@ -178,7 +183,7 @@
       </div>
     </div>
     <!-- howwork -->
-    <div class="pay">
+    <div id="pay" class="pay">
       <div class="bg-box"></div>
       <div class="test-box">
         <div class="pay__items">
@@ -250,7 +255,7 @@
     </div>
     <!-- /.worth -->
 
-    <div class="reviews">
+    <div id="reviews" class="reviews">
       <div class="container">
         <h2>Отзывы</h2>
         <div class="range">
@@ -284,7 +289,7 @@
     </div>
     <!-- /.reviews -->
 
-    <div class="more">
+    <div id="services" class="more">
       <div class="container">
         <h2 class="more__head">Кроме теплого пола у нас так же заказывают:</h2>
         <div class="range">
@@ -434,7 +439,7 @@
         <!-- /.adress -->
         <div class="copypast">
           <span>РОСА Монтаж 2016 ©</span>
-          <span>Разработка:<a class="webstudia" href="#">Рекламное агентство</a></span>
+          <span>Разработка: <a class="webstudia" href="#">Рекламное агентство</a></span>
         </div>
         <!-- /.copypast -->
       </div>

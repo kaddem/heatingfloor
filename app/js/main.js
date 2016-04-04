@@ -38,6 +38,34 @@ $(document).ready(function(){
         }
     });
 
+     $('.menu-burger').on('click', function(e){
+        e.preventDefault();
+        $('.menu-back').show();
+        $('.main-nav').slideDown(400);
+     });
+     $('.menu-back').on('click', function(e){
+        e.preventDefault();
+        $('.main-nav').slideUp(400);
+        $('.menu-back').show();
+     });
+     $('.main-nav ul a').on('click', function(e){
+        // e.preventDefault();
+        if ($(window).width() < 1200) {
+            $('.main-nav').slideUp(400);
+            $('.menu-back').show();
+        };
+     });
+
+     // Плавный скролл
+      $('.main-nav ul a').on('click', function(){
+        var coordinateY = $( $.attr(this, 'href') ).offset().top;
+        $('html, body').animate({
+          scrollTop: coordinateY - 20
+        }, 1000);
+
+          return false;
+      });
+
 });
 
 function initMap() {
@@ -54,6 +82,10 @@ function initMap() {
     icon: image
   });
 }
+
+
+
+
 
 
 // SmoothScroll v0.9.9

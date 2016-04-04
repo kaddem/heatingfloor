@@ -1,14 +1,13 @@
 header{
   .container{
     position: relative;
-    &:before{
-      content: '';
-      display: block;
-      position: absolute;
-      .sprite(@icon-menu-burger);
-      margin: 0;
-      cursor: pointer;
-    }
+  }
+  .menu-burger{
+    display: block;
+    position: absolute;
+    .sprite(@icon-menu-burger);
+    margin: 0;
+    top: 10px;
   }
   .logo{
     .col-2;
@@ -29,7 +28,7 @@ header{
       margin-right: 0;
       margin: 2px 0;
     }
-    a{
+    ul a{
       font-size: 18px;
       padding: 18px 25px;
       display: block;
@@ -40,13 +39,13 @@ header{
         border: none;
       }
     }
-
-    &:before{
-      content: '';
+    .menu-back{
       display: block;
       .sprite(@icon-back-menu);
       margin: 20px 25px;
       cursor: pointer;
+      padding: 0;
+      margin: 18px 25px;
     }
   }
   .contacts{

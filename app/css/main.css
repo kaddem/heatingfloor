@@ -15,7 +15,8 @@
 }
 .col-1 {
   width: 8.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-1 {
@@ -23,7 +24,8 @@
 }
 .col-2 {
   width: 16.66666667%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-2 {
@@ -31,7 +33,8 @@
 }
 .col-3 {
   width: 25%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-3 {
@@ -39,7 +42,8 @@
 }
 .col-4 {
   width: 33.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-4 {
@@ -47,7 +51,8 @@
 }
 .col-5 {
   width: 41.66666667%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-5 {
@@ -55,7 +60,8 @@
 }
 .col-6 {
   width: 50%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-6 {
@@ -63,7 +69,8 @@
 }
 .col-7 {
   width: 58.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-7 {
@@ -71,7 +78,8 @@
 }
 .col-8 {
   width: 66.66666667%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-8 {
@@ -79,7 +87,8 @@
 }
 .col-9 {
   width: 75%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-9 {
@@ -87,7 +96,8 @@
 }
 .col-10 {
   width: 83.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-10 {
@@ -95,7 +105,8 @@
 }
 .col-11 {
   width: 91.66666667%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-11 {
@@ -103,7 +114,8 @@
 }
 .col-12 {
   width: 100%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .col-offset-12 {
@@ -279,13 +291,15 @@ header {
 }
 header .logo {
   width: 8.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   padding-left: 20px;
 }
 header .main-nav {
   width: 75%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   padding-left: 29px;
   padding-top: 46px;
@@ -294,7 +308,7 @@ header .main-nav li {
   display: inline-block;
   margin-right: 25px;
 }
-header .main-nav a {
+header .main-nav ul a {
   display: inline-block;
   color: #434242;
   font-size: 16px;
@@ -305,12 +319,13 @@ header .main-nav a {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-header .main-nav a:hover {
+header .main-nav ul a:hover {
   border-bottom: 4px solid #f08456;
 }
 header .contacts {
   width: 16.66666667%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   text-align: center;
 }
@@ -344,7 +359,8 @@ header .btn-recall {
 }
 .promo-text {
   width: 66.66666667%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   color: #ffffff;
 }
@@ -363,7 +379,8 @@ header .btn-recall {
 }
 .form-calculate {
   width: 33.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .form-calculate .calculate__head {
@@ -421,7 +438,8 @@ header .btn-recall {
 }
 .action__slogan {
   width: 41.66666667%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   float: none;
   display: table-cell;
@@ -455,7 +473,8 @@ header .btn-recall {
 }
 .action__description {
   width: 58.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   float: none;
   position: relative;
@@ -500,12 +519,14 @@ header .btn-recall {
 }
 .gift .form-gift__col {
   width: 100%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .gift .form-gift__item {
   width: 33.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   padding-left: 35px;
   padding-right: 35px;
@@ -532,7 +553,8 @@ header .btn-recall {
 }
 .gift__col {
   width: 33.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   padding-left: 35px;
   padding-right: 35px;
@@ -550,6 +572,7 @@ header .btn-recall {
   overflow: hidden;
   margin-bottom: 35px;
   height: 370px;
+  cursor: pointer;
 }
 .gift__description {
   position: absolute;
@@ -558,6 +581,22 @@ header .btn-recall {
   background-image: linear-gradient(45deg, rgba(239, 149, 103, 0.9) 0%, rgba(239, 149, 103, 0.9) 90%, transparent 90%, transparent 100%);
   color: #fff;
   padding: 10px 15px;
+}
+.gift__description input,
+.gift__description label {
+  cursor: pointer;
+}
+.gift__description input[type="radio"]:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 3px solid #f08456;
+}
+.gift__description input[type="radio"]:checked:before {
+  background-color: #f08456;
+  -webkit-box-shadow: inset 0 0 0 3px #fff;
+  box-shadow: inset 0 0 0 3px #fff;
 }
 .gift__item-head {
   font-size: 28px;
@@ -579,7 +618,8 @@ header .btn-recall {
 .howwork__item {
   position: relative;
   width: 25%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   list-style: none;
   color: #434242;
@@ -673,7 +713,8 @@ header .btn-recall {
 .pay .test-box,
 .pay .bg-box {
   width: 50%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   float: none;
   display: table-cell;
@@ -683,7 +724,8 @@ header .btn-recall {
 }
 .pay__bgphoto {
   width: 50%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   background-image: url(../img/pay-bg.jpg);
 }
@@ -747,7 +789,8 @@ header .btn-recall {
 }
 .worth__item {
   width: 33.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   color: #434242;
   position: relative;
@@ -823,7 +866,8 @@ header .btn-recall {
 }
 .form-worth .col {
   width: 25%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
 }
 .form-worth input,
@@ -832,7 +876,8 @@ header .btn-recall {
 }
 .reviews .owl-carousel {
   width: 83.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   margin-left: 8.33333333%;
 }
@@ -855,14 +900,16 @@ header .btn-recall {
 }
 .more__item {
   width: 25%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 .more__item:nth-child(3) {
   width: 50%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   float: right;
   padding-top: 10px;
@@ -870,14 +917,16 @@ header .btn-recall {
 }
 .more__item:nth-child(8) {
   width: 58.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 .more__item:last-child {
   width: 41.66666667%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -979,7 +1028,8 @@ header .btn-recall {
 }
 .sertificate .owl-carousel {
   width: 83.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
   margin-left: 8.33333333%;
 }
@@ -1058,17 +1108,25 @@ header .btn-recall {
 footer {
   background-color: #434242;
   color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 footer .logo-footer {
   width: 8.33333333%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
+  padding-top: 5px;
 }
 footer .contacts {
   list-style: none;
   width: 66.66666667%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
+}
+footer .contacts li {
+  margin-bottom: 10px;
 }
 footer .contacts a {
   color: #fff;
@@ -1130,8 +1188,15 @@ footer .adress:before {
 }
 footer .copypast {
   width: 25%;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
+  font-family: "Segoe Ui Lite", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+footer .copypast a {
+  color: #fff;
 }
 @media screen and (min-width: 1200px) {
   .container {
@@ -1140,6 +1205,16 @@ footer .copypast {
   html,
   body {
     min-width: 1200px;
+  }
+  .menu-burger,
+  .menu-back {
+    display: none;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .main-nav {
+    display: block !important;
   }
   .promo .promo-text .btn {
     display: none;
@@ -1185,6 +1260,25 @@ footer .copypast {
   .worth .form-worth-call {
     display: none;
   }
+  footer .range {
+    font-size: 0;
+  }
+  footer .logo-footer,
+  footer .contacts,
+  footer .copypast {
+    display: inline-block;
+    float: none;
+    vertical-align: bottom;
+  }
+  footer .contacts li:last-child {
+    margin-bottom: 0;
+  }
+  footer .copypast {
+    text-align: right;
+  }
+  footer .copypast span {
+    display: block;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
@@ -1203,8 +1297,7 @@ footer .copypast {
   header .container {
     position: relative;
   }
-  header .container:before {
-    content: '';
+  header .menu-burger {
     display: block;
     position: absolute;
     background-image: url(../img/sprite.png);
@@ -1212,18 +1305,20 @@ footer .copypast {
     width: 52px;
     height: 32px;
     margin: 0;
-    cursor: pointer;
+    top: 10px;
   }
   header .logo {
     width: 16.66666667%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     margin-left: 41.66666667%;
     text-align: center;
   }
   header .main-nav {
     width: 33.33333333%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     background-color: #fff;
     position: absolute;
@@ -1237,7 +1332,7 @@ footer .copypast {
     margin-right: 0;
     margin: 2px 0;
   }
-  header .main-nav a {
+  header .main-nav ul a {
     font-size: 18px;
     padding: 18px 25px;
     display: block;
@@ -1245,12 +1340,11 @@ footer .copypast {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  header .main-nav a:hover {
+  header .main-nav ul a:hover {
     background-color: #f08456;
     border: none;
   }
-  header .main-nav:before {
-    content: '';
+  header .main-nav .menu-back {
     display: block;
     background-image: url(../img/sprite.png);
     background-position: -413px -253px;
@@ -1258,17 +1352,21 @@ footer .copypast {
     height: 21px;
     margin: 20px 25px;
     cursor: pointer;
+    padding: 0;
+    margin: 18px 25px;
   }
   header .contacts {
     width: 25%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     float: right;
   }
   .promo .form-calculate,
   .promo .promo-text {
     width: 50%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
   }
   .promo .promo-text .btn {
@@ -1310,7 +1408,8 @@ footer .copypast {
   .gift__col,
   .gift .form-gift__col {
     width: 50%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
   }
   .gift__col:nth-child(1),
@@ -1326,7 +1425,8 @@ footer .copypast {
   }
   .gift .form-gift__item {
     width: 100%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
   }
   .gift .form-gift input[type=text] {
@@ -1338,7 +1438,8 @@ footer .copypast {
   }
   .howwork__item {
     width: 50%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     padding: 15px 30px;
   }
@@ -1353,7 +1454,8 @@ footer .copypast {
   }
   .worth__item {
     width: 50%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     float: none;
     padding-top: 120px;
@@ -1363,7 +1465,8 @@ footer .copypast {
   }
   .worth .form-worth .col {
     width: 50%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
   }
   .worth .form-worth .col:nth-child(1),
@@ -1376,20 +1479,23 @@ footer .copypast {
   }
   .more__item {
     width: 50%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     padding: 15px;
   }
   .more__item:nth-child(3) {
     width: 100%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     padding: 15px;
   }
   .more__item:nth-child(8),
   .more__item:nth-child(9) {
     width: 50%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     padding: 15px;
   }
@@ -1444,6 +1550,29 @@ footer .copypast {
   .more .sewerage {
     background-image: url(../../img/more-sewerage_tablet.jpg);
   }
+  footer .logo-footer {
+    width: 16.66666667%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    text-align: center;
+  }
+  footer .contacts {
+    width: 83.33333333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+  }
+  footer .copypast {
+    width: 83.33333333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    margin-left: 16.66666667%;
+  }
+  footer .copypast span:first-child {
+    margin-right: 20px;
+  }
 }
 @media screen and (max-width: 767px) {
   .container {
@@ -1462,8 +1591,7 @@ footer .copypast {
   header .container {
     position: relative;
   }
-  header .container:before {
-    content: '';
+  header .menu-burger {
     display: block;
     position: absolute;
     background-image: url(../img/sprite.png);
@@ -1472,11 +1600,11 @@ footer .copypast {
     height: 32px;
     margin: 0;
     top: 10px;
-    cursor: pointer;
   }
   header .logo {
     width: 33.33333333%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     margin-left: 16.66666667%;
     text-align: center;
@@ -1495,7 +1623,7 @@ footer .copypast {
     margin-right: 0;
     margin: 2px 0;
   }
-  header .main-nav a {
+  header .main-nav ul a {
     font-size: 18px;
     padding: 18px 25px;
     display: block;
@@ -1503,12 +1631,11 @@ footer .copypast {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  header .main-nav a:hover {
+  header .main-nav ul a:hover {
     background-color: #f08456;
     border: none;
   }
-  header .main-nav:before {
-    content: '';
+  header .main-nav .menu-back {
     display: block;
     background-image: url(../img/sprite.png);
     background-position: -413px -253px;
@@ -1516,10 +1643,13 @@ footer .copypast {
     height: 21px;
     margin: 20px 25px;
     cursor: pointer;
+    padding: 0;
+    margin: 18px 25px;
   }
   header .contacts {
     width: 50%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     float: right;
   }
@@ -1530,7 +1660,8 @@ footer .copypast {
   }
   .promo .promo-text {
     width: 100%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     text-align: center;
   }
@@ -1550,7 +1681,8 @@ footer .copypast {
   .action__slogan,
   .action__description {
     width: 100%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -1578,7 +1710,8 @@ footer .copypast {
   }
   .gift__col {
     width: 100%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
   }
   .gift__photo {
@@ -1603,7 +1736,8 @@ footer .copypast {
   }
   .gift .form-gift__item {
     width: 100%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     margin-bottom: 15px;
   }
@@ -1612,7 +1746,8 @@ footer .copypast {
   }
   .howwork__item {
     width: 100%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     position: relative;
     padding-left: 100px;
@@ -1653,7 +1788,8 @@ footer .copypast {
   }
   .worth__item {
     width: 100%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     padding-top: 120px;
   }
@@ -1666,7 +1802,8 @@ footer .copypast {
   }
   .form-worth .col {
     width: 100%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     margin-bottom: 20px;
   }
@@ -1675,14 +1812,16 @@ footer .copypast {
   }
   .more__item {
     width: 50%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     padding-top: 10px;
     padding-bottom: 10px;
   }
   .more__item:nth-child(3) {
     width: 100%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1690,7 +1829,8 @@ footer .copypast {
   .more__item:nth-child(8),
   .more__item:nth-child(9) {
     width: 50%;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     float: left;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1730,5 +1870,36 @@ footer .copypast {
   }
   .question .form-question {
     width: 90%;
+  }
+  footer .logo-footer {
+    width: 33.33333333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    text-align: center;
+  }
+  footer .contacts {
+    width: 66.66666667%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+  }
+  footer .contacts .adress {
+    display: block;
+  }
+  footer .contacts .adress:before {
+    margin: 0;
+    top: 3px;
+  }
+  footer .copypast {
+    border-top: 1px solid grey;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    text-align: center;
+  }
+  footer .copypast span {
+    display: block;
   }
 }

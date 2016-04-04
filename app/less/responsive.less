@@ -5,6 +5,15 @@
   html, body{
     min-width: @laptop-min;
   }
+  .menu-burger, .menu-back{
+    display: none;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .main-nav{
+    display: block !important;
+  }
   .promo{
     .promo-text{
       .btn{
@@ -54,6 +63,27 @@
   .worth{
     .form-worth-call{
       display: none;
+    }
+  }
+  footer{
+    .range{
+      font-size: 0;
+    }
+    .logo-footer, .contacts, .copypast{
+      display: inline-block;
+      float: none;
+      vertical-align: bottom;
+    }
+    .contacts{
+      li:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .copypast{
+      text-align: right;
+      span{
+        display: block;
+      }
     }
   }
 }

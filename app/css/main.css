@@ -263,28 +263,41 @@ ul {
 .owl-carousel .owl-nav .owl-prev {
   left: -80px;
   background-image: url(../img/sprite.png);
-  background-position: -339px -133px;
+  background-position: -322px -197px;
   width: 17px;
   height: 46px;
 }
 .owl-carousel .owl-nav .owl-prev:hover {
   background-image: url(../img/sprite.png);
-  background-position: -305px -179px;
+  background-position: -339px -197px;
   width: 17px;
   height: 46px;
 }
 .owl-carousel .owl-nav .owl-next {
   right: -80px;
   background-image: url(../img/sprite.png);
-  background-position: -305px -133px;
+  background-position: -305px -243px;
   width: 17px;
   height: 46px;
 }
 .owl-carousel .owl-nav .owl-next:hover {
   background-image: url(../img/sprite.png);
-  background-position: -322px -133px;
+  background-position: -305px -197px;
   width: 17px;
   height: 46px;
+}
+.up-button {
+  position: fixed;
+  bottom: 95px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: block;
+  z-index: 99999999;
+  background-image: url(../img/sprite.png);
+  background-position: -371px -145px;
+  width: 66px;
+  height: 50px;
 }
 header {
   padding: 15px 0 8px 0;
@@ -630,25 +643,25 @@ header .btn-recall {
 }
 .howwork__item:nth-child(1):before {
   background-image: url(../img/sprite.png);
-  background-position: -177px -188px;
+  background-position: -371px 0px;
   width: 75px;
   height: 82px;
 }
 .howwork__item:nth-child(2):before {
   background-image: url(../img/sprite.png);
-  background-position: -125px -104px;
+  background-position: -177px -188px;
   width: 75px;
   height: 82px;
 }
 .howwork__item:nth-child(3):before {
   background-image: url(../img/sprite.png);
-  background-position: -217px -102px;
+  background-position: -125px -104px;
   width: 75px;
   height: 82px;
 }
 .howwork__item:nth-child(4):before {
   background-image: url(../img/sprite.png);
-  background-position: -371px 0px;
+  background-position: -217px -102px;
   width: 75px;
   height: 82px;
 }
@@ -753,31 +766,31 @@ header .btn-recall {
 }
 .pay__item:nth-child(1):before {
   background-image: url(../img/sprite.png);
-  background-position: -407px -217px;
+  background-position: -341px -101px;
   width: 30px;
   height: 36px;
 }
 .pay__item:nth-child(2):before {
   background-image: url(../img/sprite.png);
-  background-position: -371px -217px;
+  background-position: -305px -101px;
   width: 36px;
   height: 36px;
 }
 .pay__item:nth-child(3):before {
   background-image: url(../img/sprite.png);
-  background-position: -371px -253px;
+  background-position: -305px -137px;
   width: 42px;
   height: 28px;
 }
 .pay__item:nth-child(4):before {
   background-image: url(../img/sprite.png);
-  background-position: -371px -177px;
+  background-position: -371px -227px;
   width: 41px;
   height: 40px;
 }
 .pay__item:nth-child(5):before {
   background-image: url(../img/sprite.png);
-  background-position: -412px -177px;
+  background-position: -412px -227px;
   width: 32px;
   height: 37px;
 }
@@ -894,6 +907,10 @@ header .btn-recall {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   overflow: hidden;
+  z-index: 100000;
+}
+.reviews .img-skin img {
+  z-index: 10000;
 }
 .reviews .owl-carousel .owl-nav {
   display: block;
@@ -1026,6 +1043,10 @@ header .btn-recall {
   right: 0;
   margin: auto;
 }
+.sertificate {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
 .sertificate .owl-carousel {
   width: 83.33333333%;
   padding-left: 10px;
@@ -1156,7 +1177,7 @@ footer .phone:before {
   content: '';
   display: inline-block;
   background-image: url(../img/sprite.png);
-  background-position: -322px -179px;
+  background-position: -402px -267px;
   width: 20px;
   height: 15px;
 }
@@ -1169,7 +1190,7 @@ footer .mail:before {
   content: '';
   display: inline-block;
   background-image: url(../img/sprite.png);
-  background-position: -423px -145px;
+  background-position: -423px -195px;
   width: 16px;
   height: 25px;
 }
@@ -1182,7 +1203,7 @@ footer .adress:before {
   content: '';
   display: inline-block;
   background-image: url(../img/sprite.png);
-  background-position: -356px -133px;
+  background-position: -347px -137px;
   width: 15px;
   height: 24px;
 }
@@ -1279,6 +1300,11 @@ footer .copypast a {
   footer .copypast span {
     display: block;
   }
+  .up-button {
+    -webkit-transform: translateX(-558px);
+    -ms-transform: translateX(-558px);
+    transform: translateX(-558px);
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
@@ -1294,6 +1320,12 @@ footer .copypast a {
   .owl-carousel .owl-nav .owl-next {
     right: -40px;
   }
+  .up-button {
+    bottom: 125px;
+    -webkit-transform: translateX(-318px);
+    -ms-transform: translateX(-318px);
+    transform: translateX(-318px);
+  }
   header .container {
     position: relative;
   }
@@ -1301,7 +1333,7 @@ footer .copypast a {
     display: block;
     position: absolute;
     background-image: url(../img/sprite.png);
-    background-position: -371px -145px;
+    background-position: -371px -195px;
     width: 52px;
     height: 32px;
     margin: 0;
@@ -1347,7 +1379,7 @@ footer .copypast a {
   header .main-nav .menu-back {
     display: block;
     background-image: url(../img/sprite.png);
-    background-position: -413px -253px;
+    background-position: -371px -267px;
     width: 31px;
     height: 21px;
     margin: 20px 25px;
@@ -1588,6 +1620,12 @@ footer .copypast a {
   .owl-carousel .owl-nav .owl-next {
     right: -20px;
   }
+  .up-button {
+    bottom: 40px;
+    -webkit-transform: translateX(-148px);
+    -ms-transform: translateX(-148px);
+    transform: translateX(-148px);
+  }
   header .container {
     position: relative;
   }
@@ -1595,7 +1633,7 @@ footer .copypast a {
     display: block;
     position: absolute;
     background-image: url(../img/sprite.png);
-    background-position: -371px -145px;
+    background-position: -371px -195px;
     width: 52px;
     height: 32px;
     margin: 0;
@@ -1638,7 +1676,7 @@ footer .copypast a {
   header .main-nav .menu-back {
     display: block;
     background-image: url(../img/sprite.png);
-    background-position: -413px -253px;
+    background-position: -371px -267px;
     width: 31px;
     height: 21px;
     margin: 20px 25px;

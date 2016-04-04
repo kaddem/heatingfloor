@@ -56,28 +56,63 @@ $(document).ready(function(){
         };
      });
 
-     // Плавный скролл
-      $('.main-nav ul a').on('click', function(){
-        var coordinateY = $( $.attr(this, 'href') ).offset().top;
-        $('html, body').animate({
-          scrollTop: coordinateY - 20
-        }, 1000);
 
-          return false;
+     // Плавный скролл по якорям
+    function anchorScroll(boxAnchorLink){
+      $(boxAnchorLink + ' a').on('click', function(e){
+        e.preventDefault();
+        var attr = $(this).attr('href').substring(1);
+        var currentPosition = $(document).scrollTop();
+        var idPosition = $('#'+attr).offset().top;
+        var scrollTime = Math.abs(currentPosition - idPosition) / 3; // Math.abs - модуль числа.
+        $('body,html').animate({'scrollTop':idPosition},scrollTime);
+      });
+    };
+
+    function pageScroll(elem, showPosition){
+      $('<a href="#" class="' + elem + '"></a>').appendTo('body').fadeOut(0);
+      // $(upBtn).appendTo('body').fadeOut(0);
+
+      $('.'+elem).on('click', function (e) { // отслеживаем событие на элементе #scroll-top
+        e.preventDefault();
+        var current_position = $(document).scrollTop(); // получаем позицию скролла
+        var scroll_time = current_position / 3; // подсчитываем время анимации
+        $('body,html').animate({'scrollTop':0},scroll_time); // собственно, анимируем
       });
 
+      $(window).on('scroll', function(e) { // отслеживаем событие на элементе window
+        showScrollBtn(); // на любой скролл запускаем функцию
+      });
+
+      showScrollBtn(); // после готовности DOM тоже запустим функцию
+
+      function showScrollBtn() {
+        if( $(document).scrollTop() > showPosition ) { // если скролл более чем на 500px
+        $('.'+elem).fadeIn(150); // то покажем кнопку перемотки вверх
+        }
+        else { // иначе
+        $('.'+elem).fadeOut(150); // скроем кнопку перемотки
+        }
+      }
+    }
+
+
+    pageScroll('up-button', 300);
+    anchorScroll('#anchor-menu');
+
 });
+
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
-    center: {lat: 60.0679, lng: 30.3600},
+    center: {lat: 59.8863, lng: 30.3726},
     scrollwheel: false
   });
 
   var image = '../img/icon-for-map.png';
   var beachMarker = new google.maps.Marker({
-    position: {lat: 60.0679, lng: 30.3600},
+    position: {lat: 59.8862, lng: 30.3658},
     map: map,
     icon: image
   });

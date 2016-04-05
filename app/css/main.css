@@ -249,6 +249,11 @@ ul {
   font-size: 18px;
   padding: 15px;
 }
+.form:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 .owl-carousel .owl-nav {
   display: block;
 }
@@ -263,26 +268,26 @@ ul {
 .owl-carousel .owl-nav .owl-prev {
   left: -80px;
   background-image: url(../img/sprite.png);
-  background-position: -322px -197px;
+  background-position: -339px -225px;
   width: 17px;
   height: 46px;
 }
 .owl-carousel .owl-nav .owl-prev:hover {
   background-image: url(../img/sprite.png);
-  background-position: -339px -197px;
+  background-position: -200px -104px;
   width: 17px;
   height: 46px;
 }
 .owl-carousel .owl-nav .owl-next {
   right: -80px;
   background-image: url(../img/sprite.png);
-  background-position: -305px -243px;
+  background-position: -305px -225px;
   width: 17px;
   height: 46px;
 }
 .owl-carousel .owl-nav .owl-next:hover {
   background-image: url(../img/sprite.png);
-  background-position: -305px -197px;
+  background-position: -322px -225px;
   width: 17px;
   height: 46px;
 }
@@ -298,6 +303,17 @@ ul {
   background-position: -371px -145px;
   width: 66px;
   height: 50px;
+}
+.form-close {
+  top: 5px;
+  right: 5px;
+  display: none;
+  position: absolute;
+  background-image: url(../img/sprite.png);
+  background-position: -305px -197px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
 }
 header {
   padding: 15px 0 8px 0;
@@ -363,6 +379,33 @@ header .btn-recall {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+header .form {
+  width: 380px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px grey;
+  box-shadow: 0 0 5px grey;
+  z-index: 10000;
+}
+header .form h3 {
+  margin-top: 0;
+}
+header .form input,
+header .form button {
+  width: 100%;
+}
+header .form input {
+  margin-bottom: 20px;
+}
+header .hidden-form {
+  display: none;
+}
+header .visible-form {
+  display: block;
+  position: fixed;
+}
 .promo {
   background-image: url(../img/promo-bg.jpg);
   background-repeat: no-repeat;
@@ -395,6 +438,9 @@ header .btn-recall {
   padding-left: 10px;
   padding-right: 10px;
   float: left;
+}
+.form-calculate .btn-form-calculate {
+  display: none;
 }
 .form-calculate .calculate__head {
   color: #434242;
@@ -874,6 +920,8 @@ header .btn-recall {
 .form-worth {
   margin-left: 0;
   margin-right: 0;
+}
+.form-worth .form {
   -webkit-box-shadow: 0px 20px 20px -10px #d6d4d4;
   box-shadow: 0px 20px 20px -10px #d6d4d4;
 }
@@ -1042,6 +1090,44 @@ header .btn-recall {
   left: 0;
   right: 0;
   margin: auto;
+}
+.more .form {
+  width: 380px;
+  background: #fff;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10000;
+  -webkit-box-shadow: 0 0 5px grey;
+  box-shadow: 0 0 5px grey;
+  opacity: 0;
+  padding: 35px;
+}
+.more .form input,
+.more .form button {
+  width: 100%;
+}
+.more .form input {
+  margin-bottom: 20px;
+}
+.more .form-close {
+  top: 5px;
+  right: 5px;
+  display: block;
+  position: absolute;
+  background-image: url(../img/sprite.png);
+  background-position: -305px -197px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+.more .hidden-form {
+  display: none;
+}
+.more .visible-form {
+  display: block;
+  position: fixed;
 }
 .sertificate {
   padding-top: 10px;
@@ -1501,8 +1587,8 @@ footer .copypast a {
     padding-right: 10px;
     float: left;
   }
-  .worth .form-worth .col:nth-child(1),
-  .worth .form-worth .col:nth-child(2) {
+  .worth .form-worth .col:nth-of-type(1),
+  .worth .form-worth .col:nth-of-type(2) {
     margin-bottom: 20px;
   }
   .more .range {
@@ -1626,6 +1712,24 @@ footer .copypast a {
     -ms-transform: translateX(-148px);
     transform: translateX(-148px);
   }
+  .hidden-form {
+    display: none;
+  }
+  .visible-form {
+    display: block;
+    position: fixed;
+  }
+  .form-close {
+    top: 5px;
+    right: 5px;
+    display: block;
+    position: absolute;
+    background-image: url(../img/sprite.png);
+    background-position: -305px -197px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
   header .container {
     position: relative;
   }
@@ -1707,14 +1811,32 @@ footer .copypast a {
     line-height: 36px;
     margin-top: 15px;
   }
-  .promo .promo-text .btn {
+  .promo .form-calculate {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    text-align: center;
+  }
+  .promo .form-calculate .btn-form-calculate {
+    display: inline-block;
     color: #000;
     padding: 13px;
     width: 180px;
     margin-top: 30px;
   }
-  .promo .form-calculate {
-    display: none;
+  .promo .form-calculate .form {
+    width: 380px;
+    background: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10000;
+    -webkit-box-shadow: 0 0 5px grey;
+    box-shadow: 0 0 5px grey;
+    opacity: 0;
+    padding: 35px;
   }
   .action__slogan,
   .action__description {
@@ -1836,9 +1958,26 @@ footer .copypast a {
     width: 300px;
   }
   .form-worth {
-    display: none;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    text-align: center;
   }
-  .form-worth .col {
+  .form-worth .form {
+    width: 380px;
+    background: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10000;
+    -webkit-box-shadow: 0 0 5px grey;
+    box-shadow: 0 0 5px grey;
+    opacity: 0;
+    padding: 35px;
+  }
+  .form-worth .form .col {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;

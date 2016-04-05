@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    // Карусель - отзывы
     $('#owl-reviews').owlCarousel({
         loop:true,
         margin:20,
@@ -19,7 +19,8 @@ $(document).ready(function(){
         }
     });
 
-     $('#owl-sertificate').owlCarousel({
+    // Карусель сертификаты
+    $('#owl-sertificate').owlCarousel({
         loop:true,
         margin:0,
         nav:true,
@@ -38,17 +39,18 @@ $(document).ready(function(){
         }
     });
 
-     $('.menu-burger').on('click', function(e){
+
+    $('.menu-burger').on('click', function(e){
         e.preventDefault();
         $('.menu-back').show();
         $('.main-nav').slideDown(400);
-     });
-     $('.menu-back').on('click', function(e){
+    });
+    $('.menu-back').on('click', function(e){
         e.preventDefault();
         $('.main-nav').slideUp(400);
         $('.menu-back').show();
-     });
-     $('.main-nav ul a').on('click', function(e){
+    });
+    $('.main-nav ul a').on('click', function(e){
         // e.preventDefault();
         if ($(window).width() < 1200) {
             $('.main-nav').slideUp(400);
@@ -56,49 +58,103 @@ $(document).ready(function(){
         };
      });
 
-
-     // Плавный скролл по якорям
+    // Плавный скролл по якорям
     function anchorScroll(boxAnchorLink){
-      $(boxAnchorLink + ' a').on('click', function(e){
-        e.preventDefault();
-        var attr = $(this).attr('href').substring(1);
-        var currentPosition = $(document).scrollTop();
-        var idPosition = $('#'+attr).offset().top;
-        var scrollTime = Math.abs(currentPosition - idPosition) / 3; // Math.abs - модуль числа.
-        $('body,html').animate({'scrollTop':idPosition},scrollTime);
-      });
+        $(boxAnchorLink + ' a').on('click', function(e){
+            e.preventDefault();
+            var attr = $(this).attr('href').substring(1);
+            var currentPosition = $(document).scrollTop();
+            var idPosition = $('#'+attr).offset().top;
+            var scrollTime = Math.abs(currentPosition - idPosition) / 3; // Math.abs - модуль числа.
+            $('body,html').animate({'scrollTop':idPosition},scrollTime);
+        });
     };
 
+    // Закрытие модального окна формы
+    function modalClose(id){
+        $(id).css('display','none');
+        var elem = $(id).parent('.form');
+            elem.animate({
+                top: 0,
+                opacity: 0
+            }, 300);
+        setTimeout(
+            function(){
+                elem
+                    .addClass('hidden-form')
+                    .removeClass('visible-form')
+            }, 300);
+    };
+
+    // Функция открытия формы в модальном окне
+    function formCall(btn){
+        $(btn).parent().find('.form-close').css('display','block');
+        $(btn).parent().find('.form')
+            .addClass('visible-form')
+            .removeClass('hidden-form')
+            .animate({
+                opacity: 1,
+                top: 40
+            }, 300);
+    };
+
+    $(window).resize(function(){
+        if( $(window).width() > 767 ) {
+            $('.form-calculate').find('.form').css('opacity', 1);
+            $('.form-worth').find('.form').css('opacity', 1);
+        }
+    });
+
+
     function pageScroll(elem, showPosition){
-      $('<a href="#" class="' + elem + '"></a>').appendTo('body').fadeOut(0);
-      // $(upBtn).appendTo('body').fadeOut(0);
+        $('<a href="#" class="' + elem + '"></a>').appendTo('body').fadeOut(0);
+        // $(upBtn).appendTo('body').fadeOut(0);
 
-      $('.'+elem).on('click', function (e) { // отслеживаем событие на элементе #scroll-top
-        e.preventDefault();
-        var current_position = $(document).scrollTop(); // получаем позицию скролла
-        var scroll_time = current_position / 3; // подсчитываем время анимации
-        $('body,html').animate({'scrollTop':0},scroll_time); // собственно, анимируем
-      });
+        $('.'+elem).on('click', function (e) { // отслеживаем событие на элементе #scroll-top
+            e.preventDefault();
+            var current_position = $(document).scrollTop(); // получаем позицию скролла
+            var scroll_time = current_position / 3; // подсчитываем время анимации
+            $('body,html').animate({'scrollTop':0},scroll_time); // собственно, анимируем
+        });
 
-      $(window).on('scroll', function(e) { // отслеживаем событие на элементе window
-        showScrollBtn(); // на любой скролл запускаем функцию
-      });
+        $(window).on('scroll', function(e) { // отслеживаем событие на элементе window
+            showScrollBtn(); // на любой скролл запускаем функцию
+        });
 
-      showScrollBtn(); // после готовности DOM тоже запустим функцию
+        showScrollBtn(); // после готовности DOM тоже запустим функцию
 
-      function showScrollBtn() {
-        if( $(document).scrollTop() > showPosition ) { // если скролл более чем на 500px
-        $('.'+elem).fadeIn(150); // то покажем кнопку перемотки вверх
+        function showScrollBtn() {
+            if( $(document).scrollTop() > showPosition ) { // если скролл более чем на 500px
+                $('.'+elem).fadeIn(150); // то покажем кнопку перемотки вверх
+            }
+            else { // иначе
+                $('.'+elem).fadeOut(150); // скроем кнопку перемотки
+            }
         }
-        else { // иначе
-        $('.'+elem).fadeOut(150); // скроем кнопку перемотки
-        }
-      }
     }
 
 
     pageScroll('up-button', 300);
     anchorScroll('#anchor-menu');
+
+    // вызовы открытия форм в модальном окне по нажатию на кнопку
+    $('#call-form-calculate').on('click', function(){
+        formCall(this);
+    });
+    $('#form-worth-call').on('click', function(){
+        formCall(this);
+    });
+    $('#more__btn').on('click', function(){
+        formCall(this);
+    });
+    $('#btn-recall').on('click', function(){
+        formCall(this);
+    });
+
+    // Вызов функции закрытия модального окна по нажатию на кнопку закрыть
+    $('.form-close').on('click', function(){
+        modalClose(this);
+    });
 
 });
 

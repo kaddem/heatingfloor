@@ -10,14 +10,29 @@
     }
     .col-12;
     text-align: center;
-    .btn{
+  }
+  .form-calculate{
+    .col-12;
+    text-align: center;
+    // display: none;
+    .btn-form-calculate{
+      display: inline-block;
       color: #000;
       padding: 13px;
       width: 180px;
       margin-top: 30px;
     }
-  }
-  .form-calculate{
-    display: none;
+    .form{
+      width: @phone-min;
+      background: #fff;
+      top: 0px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 10000;
+      box-shadow: 0 0 5px grey;
+      opacity: 0;
+      padding: 35px;
+    }
   }
 }

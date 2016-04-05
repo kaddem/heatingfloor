@@ -38,7 +38,15 @@
         <!-- /.main-nav -->
         <div class="contacts">
           <a href="tel:+78127150506" class="phone">+7 (812) 715-05-06</a>
-          <button class="btn btn-recall">Заказать звонок</button>
+          <button class="btn btn-recall" id="btn-recall">Заказать звонок</button>
+          <form action="" class="form hidden-form">
+            <span class="form-close"></span>
+            <h3 class="calculate__head">Заказ обратного звонка</h3>
+            <input type="text" placeholder="Имя">
+            <input type="text" placeholder="Телефон">
+            <input type="text" placeholder="Время звонка">
+            <button class="btn">Перезвоните мне</button>
+          </form>
         </div>
         <!-- /.contacts -->
       </div>
@@ -55,11 +63,11 @@
             <!-- /.promo-text__head -->
             <p class="promo-text__slogan">Проектирование и установка водяных<br>теплых полов любой сложности</p>
             <!-- /.promo-text__slogan -->
-            <button class="btn">Получить расчет</button>
           </div>
           <!-- /.promo-text -->
           <div class="form-calculate">
-            <form action="" class="form">
+            <form action="" class="form hidden-form">
+              <span class="form-close"></span>
               <h3 class="calculate__head"><strong>Получить расчет</strong> предварительной стоимости <br>за 24 часа!</h3>
               <input type="text" placeholder="Имя">
               <input type="text" placeholder="E-mail">
@@ -68,6 +76,7 @@
               <input type="text" placeholder="К-во помещений">
               <button class="btn">Получить расчет</button>
             </form>
+            <button class="btn btn-form-calculate" id="call-form-calculate">Получить расчет</button>
           </div>
         </div>
         <!-- /.range -->
@@ -234,22 +243,25 @@
           </li>
           <!-- /.worth__item -->
         </ul>
-        <button class="btn form-worth-call">Хочу теплый пол</button>
         <!-- /.range worth__list -->
-        <form action="" class="range form form-worth">
-          <div class="col">
-            <input type="text" placeholder="Имя">
-          </div>
-          <div class="col">
-            <input type="text" placeholder="Телефон">
-          </div>
-          <div class="col">
-            <input type="email" placeholder="E-mail">
-          </div>
-          <div class="col">
-            <button class="btn">Хочу теплый пол</button>
-          </div>
-        </form>
+        <div class="range form-worth">
+          <button class="btn form-worth-call" id="form-worth-call">Хочу теплый пол</button>
+          <form action="" class="form hidden-form">
+            <span class="form-close"></span>
+            <div class="col">
+              <input type="text" placeholder="Имя">
+            </div>
+            <div class="col">
+              <input type="text" placeholder="Телефон">
+            </div>
+            <div class="col">
+              <input type="email" placeholder="E-mail">
+            </div>
+            <div class="col">
+              <button class="btn">Хочу теплый пол</button>
+            </div>
+          </form>
+        </div>
       </div>
       <!-- /.container -->
     </div>
@@ -358,9 +370,33 @@
           </div>
           <!-- /.more__item -->
           <div class="more__item">
-            <button class="more__btn">
+            <button class="more__btn" id="more__btn">
               Хочу больше, чем просто теплый пол
             </button>
+            <form action="" class="form hidden-form">
+              <span class="form-close"></span>
+              <input type="text" placeholder="Имя">
+              <input type="text" placeholder="E-mail">
+              <input type="text" placeholder="Телефон">
+              <button class="btn">Хочу теплый пол</button>
+            </form>
+
+            <!-- <form action="" class="form hidden-form">
+              <span class="form-close"></span>
+              <div class="col">
+                <input type="text" placeholder="Имя">
+              </div>
+              <div class="col">
+                <input type="text" placeholder="Телефон">
+              </div>
+              <div class="col">
+                <input type="email" placeholder="E-mail">
+              </div>
+              <div class="col">
+                <button class="btn">Хочу теплый пол</button>
+              </div>
+            </form> -->
+
           </div>
         </div>
         <!-- /.range -->

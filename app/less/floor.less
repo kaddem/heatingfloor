@@ -1,0 +1,88 @@
+.floor{
+  padding-bottom: 50px;
+  h3{
+    font-size: 30px;
+    .ffbold;
+    width: 80%;
+  }
+
+  .floor-animate{
+    position: relative;
+    // height: 400px;
+    .range;
+  }
+  .concrete, .wood{
+    .col-6;
+  }
+  img[class*='concrete'], img[class*='wood']{
+    position: absolute;
+    left: 0;
+    // position: relative;
+  }
+  .concrete-animate{
+    .concrete-layer-1{
+      z-index: 10;
+      top: 0px;
+      left: 21px;
+    }
+    .concrete-layer-2{
+      z-index: 9;
+      top: 5px;
+      left: 21px;
+    }
+    .concrete-layer-3{
+      z-index: 8;
+      top: 15px;
+      left: 8px;
+    }
+    .concrete-layer-4{
+      z-index: 7;
+      top: 15px;
+      left: 6px;
+    }
+    .concrete-layer-5{
+      z-index: 6;
+      top: 13px;
+    }
+    .concrete-layer-6{
+      z-index: 5;
+      top: 23px;
+    }
+  }
+  .wood-animate{
+    padding-left: 10px;
+    img[class*="wood-layer"]{
+      margin-left: 10px;
+    }
+    .wood-layer-1{
+      z-index: 10;
+      top: 0px;
+    }
+    .wood-layer-2{
+      z-index: 9;
+      top: 4px;
+    }
+    .wood-layer-3{
+      z-index: 8;
+      top: 14px;
+      left: 13px;
+    }
+    .wood-layer-4{
+      z-index: 7;
+      top: 6px;
+    }
+    .wood-layer-5{
+      z-index: 6;
+      top: 6px;
+    }
+    .wood-layer-6{
+      z-index: 5;
+      top: 16px;
+    }
+  }
+  .layer-list{
+    .col-6;
+    .col-offset-6;
+  }
+
+}

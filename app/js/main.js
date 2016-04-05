@@ -40,6 +40,7 @@ $(document).ready(function(){
     });
 
 
+    // бургер, что тут еще скажешь? но без колы(
     $('.menu-burger').on('click', function(e){
         e.preventDefault();
         $('.menu-back').show();
@@ -51,7 +52,6 @@ $(document).ready(function(){
         $('.menu-back').show();
     });
     $('.main-nav ul a').on('click', function(e){
-        // e.preventDefault();
         if ($(window).width() < 1200) {
             $('.main-nav').slideUp(400);
             $('.menu-back').show();

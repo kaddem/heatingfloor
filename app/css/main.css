@@ -567,6 +567,102 @@ header .visible-form {
   background-image: -webkit-linear-gradient(21deg, #f08456 0%, #f08456 50%, #3c5c81 50%, #336699 55%, #336699 100%);
   background-image: linear-gradient(69deg, #f08456 0%, #f08456 50%, #3c5c81 50%, #336699 55%, #336699 100%);
 }
+.floor {
+  padding-bottom: 50px;
+}
+.floor h3 {
+  font-size: 30px;
+  font-family: "Segoe Ui Bold", sans-serif;
+  width: 80%;
+}
+.floor .floor-animate {
+  position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.floor .floor-animate:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.floor .concrete,
+.floor .wood {
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.floor img[class*='concrete'],
+.floor img[class*='wood'] {
+  position: absolute;
+  left: 0;
+}
+.floor .concrete-animate .concrete-layer-1 {
+  z-index: 10;
+  top: 0px;
+  left: 21px;
+}
+.floor .concrete-animate .concrete-layer-2 {
+  z-index: 9;
+  top: 5px;
+  left: 21px;
+}
+.floor .concrete-animate .concrete-layer-3 {
+  z-index: 8;
+  top: 15px;
+  left: 8px;
+}
+.floor .concrete-animate .concrete-layer-4 {
+  z-index: 7;
+  top: 15px;
+  left: 6px;
+}
+.floor .concrete-animate .concrete-layer-5 {
+  z-index: 6;
+  top: 13px;
+}
+.floor .concrete-animate .concrete-layer-6 {
+  z-index: 5;
+  top: 23px;
+}
+.floor .wood-animate {
+  padding-left: 10px;
+}
+.floor .wood-animate img[class*="wood-layer"] {
+  margin-left: 10px;
+}
+.floor .wood-animate .wood-layer-1 {
+  z-index: 10;
+  top: 0px;
+}
+.floor .wood-animate .wood-layer-2 {
+  z-index: 9;
+  top: 4px;
+}
+.floor .wood-animate .wood-layer-3 {
+  z-index: 8;
+  top: 14px;
+  left: 13px;
+}
+.floor .wood-animate .wood-layer-4 {
+  z-index: 7;
+  top: 6px;
+}
+.floor .wood-animate .wood-layer-5 {
+  z-index: 6;
+  top: 6px;
+}
+.floor .wood-animate .wood-layer-6 {
+  z-index: 5;
+  top: 16px;
+}
+.floor .layer-list {
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+  margin-left: 50%;
+}
 .gift {
   color: #434242;
   text-align: center;

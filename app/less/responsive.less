@@ -149,6 +149,21 @@
     bottom: 40px;
     transform: translateX(-@phone-min/2 + 42px);
   }
+  .hidden-form{
+    display: none;
+  }
+  .visible-form{
+    display: block;
+    position: fixed;
+  }
+  .form-close{
+    top: 5px;
+    right: 5px;
+    display: block;
+    position: absolute;
+    .sprite(@icon-modal-close);
+    cursor: pointer;
+  }
   @import url(responsive/header_phone.less);
   @import url(responsive/promo_phone.less);
   @import url(responsive/action_phone.less);

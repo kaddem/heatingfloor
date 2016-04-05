@@ -26,7 +26,7 @@
         <nav class="main-nav">
           <a class="menu-back" href="#"></a>
           <ul id="anchor-menu">
-            <li><a href="#">Типы полов</a></li>
+            <li><a href="#floor">Типы полов</a></li>
             <li><a href="#gift">Подарки</a></li>
             <li><a href="#howwork">Как мы работаем</a></li>
             <li><a href="#pay">Оплата</a></li>
@@ -38,7 +38,15 @@
         <!-- /.main-nav -->
         <div class="contacts">
           <a href="tel:+78127150506" class="phone">+7 (812) 715-05-06</a>
-          <button class="btn btn-recall">Заказать звонок</button>
+          <button class="btn btn-recall" id="btn-recall">Заказать звонок</button>
+          <form action="" class="form hidden-form">
+            <span class="form-close"></span>
+            <h3 class="calculate__head">Заказ обратного звонка</h3>
+            <input type="text" placeholder="Имя">
+            <input type="text" placeholder="Телефон">
+            <input type="text" placeholder="Время звонка">
+            <button class="btn">Перезвоните мне</button>
+          </form>
         </div>
         <!-- /.contacts -->
       </div>
@@ -55,11 +63,11 @@
             <!-- /.promo-text__head -->
             <p class="promo-text__slogan">Проектирование и установка водяных<br>теплых полов любой сложности</p>
             <!-- /.promo-text__slogan -->
-            <button class="btn">Получить расчет</button>
           </div>
           <!-- /.promo-text -->
           <div class="form-calculate">
-            <form action="" class="form">
+            <form action="" class="form hidden-form">
+              <span class="form-close"></span>
               <h3 class="calculate__head"><strong>Получить расчет</strong> предварительной стоимости <br>за 24 часа!</h3>
               <input type="text" placeholder="Имя">
               <input type="text" placeholder="E-mail">
@@ -68,6 +76,7 @@
               <input type="text" placeholder="К-во помещений">
               <button class="btn">Получить расчет</button>
             </form>
+            <button class="btn btn-form-calculate" id="call-form-calculate">Получить расчет</button>
           </div>
         </div>
         <!-- /.range -->
@@ -92,6 +101,51 @@
       <!-- /.container -->
     </div>
     <!-- /.action -->
+    <div class="floor" id="floor">
+      <div class="container">
+        <h2 class="floor__head">Типы водяных теплых полов</h2>
+        <div class="range">
+          <div class="concrete">
+            <h3>Теплый пол на бетонном основании</h3>
+            <div class="floor-animate concrete-animate">
+              <img class="concrete-layer-1" src="img/concrete-tile-1.png" alt="">
+              <img class="concrete-layer-2" src="img/concrete-strainer-2.png" alt="">
+              <img class="concrete-layer-3" src="img/concrete-pipe-3.png" alt="">
+              <img class="concrete-layer-4" src="img/concrete-armature-4.png" alt="">
+              <img class="concrete-layer-5" src="img/concrete-polystyrene-5.png" alt="">
+              <img class="concrete-layer-6" src="img/concrete-strainer-6.png" alt="">
+              <ul class="layer-list">
+                <li class="layer-description">Lorem ipsum dolor sit amet, consectetur.</li>
+                <li class="layer-description">Cumque dolorem qui enim sapiente natus?</li>
+                <li class="layer-description">Nemo molestiae ut, amet fugit veritatis.</li>
+                <li class="layer-description">Temporibus, tenetur recusandae! Dignissimos, magni, expedita.</li>
+                <li class="layer-description">Consequuntur distinctio, totam quaerat explicabo in.</li>
+                <li class="layer-description">Expedita maiores at modi ad asperiores?</li>
+              </ul>
+            </div>
+          </div>
+          <div class="wood">
+            <h3>Теплый пол на деревянном основании</h3>
+            <div class="floor-animate wood-animate">
+              <img class="wood-layer-1" src="img/wood-tile-1.png" alt="">
+              <img class="wood-layer-2" src="img/wood-gypsum-2.png" alt="">
+              <img class="wood-layer-3" src="img/wood-pipe-3.png" alt="">
+              <img class="wood-layer-4" src="img/wood-plate-4.png" alt="">
+              <img class="wood-layer-5" src="img/wood-polystyrene-5.png" alt="">
+              <img class="wood-layer-6" src="img/wood-wood-6.png" alt="">
+              <ul class="layer-list">
+                <li class="layer-description">Lorem ipsum dolor sit amet, consectetur.</li>
+                <li class="layer-description">Optio ex fugiat modi? Numquam, officia!</li>
+                <li class="layer-description">Ut repellat voluptatem accusamus veniam architecto!</li>
+                <li class="layer-description">Placeat voluptas, obcaecati deleniti accusamus alias.</li>
+                <li class="layer-description">Mollitia expedita dolor, adipisci fugit fuga!</li>
+                <li class="layer-description">Vel laudantium officiis veniam debitis a.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="gift" class="gift">
       <div class="container">
@@ -234,22 +288,25 @@
           </li>
           <!-- /.worth__item -->
         </ul>
-        <button class="btn form-worth-call">Хочу теплый пол</button>
         <!-- /.range worth__list -->
-        <form action="" class="range form form-worth">
-          <div class="col">
-            <input type="text" placeholder="Имя">
-          </div>
-          <div class="col">
-            <input type="text" placeholder="Телефон">
-          </div>
-          <div class="col">
-            <input type="email" placeholder="E-mail">
-          </div>
-          <div class="col">
-            <button class="btn">Хочу теплый пол</button>
-          </div>
-        </form>
+        <div class="range form-worth">
+          <button class="btn form-worth-call" id="form-worth-call">Хочу теплый пол</button>
+          <form action="" class="form hidden-form">
+            <span class="form-close"></span>
+            <div class="col">
+              <input type="text" placeholder="Имя">
+            </div>
+            <div class="col">
+              <input type="text" placeholder="Телефон">
+            </div>
+            <div class="col">
+              <input type="email" placeholder="E-mail">
+            </div>
+            <div class="col">
+              <button class="btn">Хочу теплый пол</button>
+            </div>
+          </form>
+        </div>
       </div>
       <!-- /.container -->
     </div>
@@ -358,9 +415,33 @@
           </div>
           <!-- /.more__item -->
           <div class="more__item">
-            <button class="more__btn">
+            <button class="more__btn" id="more__btn">
               Хочу больше, чем просто теплый пол
             </button>
+            <form action="" class="form hidden-form">
+              <span class="form-close"></span>
+              <input type="text" placeholder="Имя">
+              <input type="text" placeholder="E-mail">
+              <input type="text" placeholder="Телефон">
+              <button class="btn">Хочу теплый пол</button>
+            </form>
+
+            <!-- <form action="" class="form hidden-form">
+              <span class="form-close"></span>
+              <div class="col">
+                <input type="text" placeholder="Имя">
+              </div>
+              <div class="col">
+                <input type="text" placeholder="Телефон">
+              </div>
+              <div class="col">
+                <input type="email" placeholder="E-mail">
+              </div>
+              <div class="col">
+                <button class="btn">Хочу теплый пол</button>
+              </div>
+            </form> -->
+
           </div>
         </div>
         <!-- /.range -->

@@ -51,4 +51,29 @@ header {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+  .form{
+    width: @phone-min;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 0 5px grey;
+    z-index: 10000;
+    h3{
+      margin-top: 0;
+    }
+    input, button{
+      width: 100%;
+    }
+    input{
+      margin-bottom: 20px;
+    }
+  }
+  .hidden-form{
+    display: none;
+  }
+  .visible-form{
+    display: block;
+    position: fixed;
+  }
 }

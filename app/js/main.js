@@ -105,7 +105,7 @@ $(document).ready(function(){
         }
     });
 
-
+    // Функция показа кнопки прокрутки наверх
     function pageScroll(elem, showPosition){
         $('<a href="#" class="' + elem + '"></a>').appendTo('body').fadeOut(0);
         // $(upBtn).appendTo('body').fadeOut(0);
@@ -133,6 +133,121 @@ $(document).ready(function(){
         }
     }
 
+    // Табы для 3D полов
+    $(".concrete-layer__price").hide(0);
+    $(".layer--action .concrete-layer__price").show(0);
+    $(".concrete-layer__text").on('click', function(){
+        $(".concrete-layer__price").hide(400);
+        $(this).parent().find('.concrete-layer__price').show(400);
+    });
+
+    var animTime = 300;
+    var posConArr = [];
+    var posConArrMid = [];
+    var posConArrEnd = [];
+    var lehghtConcrete = $(".concrete-animate__item").length;
+    var i = 0;
+    var k = 0;
+    do {
+        var positionXXX = $('.concrete-animate__item:eq(' + i + ')').position();
+        var posY = positionXXX.top;
+        posConArr[i] = posY;
+        posConArrMid[i] = posY + 80;
+        posConArrEnd[i] = posY + 160;
+        i += 1;
+    } while ( lehghtConcrete > i );
+    console.log(posConArr);
+    console.log(posConArrMid);
+    console.log(posConArrEnd);
+
+    do {
+        if ( k < 2 ) {
+            $('.concrete-animate__item:eq(' + k + ')').animate({
+                top : posConArr[k]
+            }, animTime);
+        } else if ( k > 2 ){
+            $('.concrete-animate__item:eq(' + k + ')').animate({
+                top : posConArrEnd[k]
+            }, animTime);
+        } else {
+            $('.concrete-animate__item:eq(' + k + ')').animate({
+                top : posConArrMid[k]
+            }, animTime);
+        }
+        k += 1;
+    } while ( lehghtConcrete > k );
+
+
+    $(".concrete-layer__text").on('click', function(){
+        var indx = $(this).parent().index();
+        console.log(indx);
+        var n = 0;
+        do {
+            if ( indx === 0 ) {
+                if ( n === 0 ) {
+                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                        top : posConArr[n]
+                    }, animTime);
+                } else if ( n === 1 ){
+                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                        top : posConArrMid[n]
+                    }, animTime);
+                } else {
+                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                        top : posConArrEnd[n]
+                    }, animTime);
+                }
+            } else if ( indx === lehghtConcrete - 1 ) {
+                if ( n === lehghtConcrete - 1) {
+                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                        top : posConArrEnd[n]
+                    }, animTime);
+                } else if ( n === lehghtConcrete - 2 ){
+                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                        top : posConArrMid[n]
+                    }, animTime);
+                } else {
+                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                        top : posConArr[n]
+                    }, animTime);
+                }
+            } else {
+                if ( n < indx ) {
+                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                        top : posConArr[n]
+                    }, animTime);
+                } else if (n > indx){
+                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                        top : posConArrEnd[n]
+                    }, animTime);
+                } else {
+                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                        top : posConArrMid[n]
+                    }, animTime);
+                }
+            }
+            console.log(indx);
+            console.log(n);
+            n += 1;
+        } while ( lehghtConcrete > n );
+    });
+
+
+    function tabs(box_link, box_link_active, item_tab){
+      $(item_tab + ':not(:first-of-type)').hide();
+      $(box_link + ' a:first').addClass(box_link_active);
+      $(box_link + ' a').on('click', function(e){
+        e.preventDefault();
+        var index_el = $(this).closest("li").index();
+        $(box_link + ' a').removeClass(box_link_active);
+        $(this).addClass(box_link_active);
+        $(item_tab).hide();
+        $(item_tab + ':eq('+index_el+')').show();
+      });
+    };
+
+    // tabs('.layer', 'tabs-link--active', '.layer__price');
+
 
     pageScroll('up-button', 300);
     anchorScroll('#anchor-menu');
@@ -155,6 +270,8 @@ $(document).ready(function(){
     $('.form-close').on('click', function(){
         modalClose(this);
     });
+
+
 
 });
 

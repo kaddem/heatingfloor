@@ -6,11 +6,6 @@
     width: 80%;
   }
 
-  .floor-animate{
-    position: relative;
-    // height: 400px;
-    .range;
-  }
   .concrete, .wood{
     .col-6;
   }
@@ -19,70 +14,125 @@
     left: 0;
     // position: relative;
   }
-  .concrete-animate{
-    .concrete-layer-1{
-      z-index: 10;
-      top: 0px;
-      left: 21px;
+  .concrete{
+    &__animate{
+      position: relative;
+      .range;
     }
-    .concrete-layer-2{
-      z-index: 9;
-      top: 5px;
-      left: 21px;
+    &__images, &__layer{
+      list-style: none;
+      .col-6;
+      float: none;
+      display: table-cell;
     }
-    .concrete-layer-3{
-      z-index: 8;
-      top: 15px;
-      left: 8px;
+    &__images{
+
     }
-    .concrete-layer-4{
-      z-index: 7;
-      top: 15px;
-      left: 6px;
-    }
-    .concrete-layer-5{
-      z-index: 6;
-      top: 13px;
-    }
-    .concrete-layer-6{
-      z-index: 5;
-      top: 23px;
-    }
-  }
-  .wood-animate{
-    padding-left: 10px;
-    img[class*="wood-layer"]{
-      margin-left: 10px;
-    }
-    .wood-layer-1{
-      z-index: 10;
-      top: 0px;
-    }
-    .wood-layer-2{
-      z-index: 9;
-      top: 4px;
-    }
-    .wood-layer-3{
-      z-index: 8;
-      top: 14px;
-      left: 13px;
-    }
-    .wood-layer-4{
-      z-index: 7;
-      top: 6px;
-    }
-    .wood-layer-5{
-      z-index: 6;
-      top: 6px;
-    }
-    .wood-layer-6{
-      z-index: 5;
-      top: 16px;
+    &__img{
+      &:nth-child(1){
+        z-index: 10;
+        top: 0px;
+        left: 21px;
+      }
+      &:nth-child(2){
+        z-index: 9;
+        top: 5px;
+        left: 21px;
+      }
+      &:nth-child(3){
+        z-index: 8;
+          top: 15px;
+          left: 8px;
+      }
+      &:nth-child(4){
+        z-index: 7;
+        top: 15px;
+        left: 6px;
+      }
+      &:nth-child(5){
+        z-index: 6;
+        top: 13px;
+      }
+      &:nth-child(6){
+        z-index: 5;
+        top: 23px;
+      }
     }
   }
-  .layer-list{
-    .col-6;
-    .col-offset-6;
+
+  .wood{
+    &__animate{
+      position: relative;
+      .range;
+    }
+    &__images, &__layer{
+      list-style: none;
+      .col-6;
+      float: none;
+      display: table-cell;
+    }
+    &__images{
+
+    }
+    &__img{
+      &:nth-child(1){
+        z-index: 10;
+        top: 0px;
+      }
+      &:nth-child(2){
+        z-index: 9;
+        top: 4px;
+      }
+      &:nth-child(3){
+        z-index: 8;
+        top: 14px;
+        left: 13px;
+      }
+      &:nth-child(4){
+        z-index: 7;
+        top: 6px;
+      }
+      &:nth-child(5){
+        z-index: 6;
+        top: 6px;
+      }
+      &:nth-child(6){
+        z-index: 5;
+        top: 16px;
+      }
+    }
+  }
+
+  .concrete, .wood{
+    &__text{
+      cursor: pointer;
+      border-bottom: 1px dashed @orange-color;
+    }
+    &__price{
+      .ffbold;
+      display: block;
+      color: @orange-color;
+    }
+    &__description{
+      margin-bottom: 30px;
+      position: relative;
+
+      &:before{
+        // content: '';
+        display: block;
+        width: 150px;
+        border-top: 1px solid #000;
+        position: absolute;
+        left: -150px;
+        z-index: 500;
+      }
+    }
+    .layer--action{
+      & .concrete__price, & .wood__price{
+        display: block;
+      }
+    }
+
   }
 
 }

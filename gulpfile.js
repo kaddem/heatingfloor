@@ -16,14 +16,14 @@ var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var ftp = require('gulp-ftp'); // если неободимо sftp соединение - заменить gulp-ftp на gulp-sftp(см. package.json)
 
-// Очищаем папку dist дабы убрать оставшийся 
+// Очищаем папку dist дабы убрать оставшийся
 // от пердыдущей сборки проекта на продакшн мусор
 gulp.task('clean', function () {
   return gulp.src('dist', {read: false})
   .pipe(clean());
 });
 
-// минифицируем графику и сохраняем в папку для 
+// минифицируем графику и сохраняем в папку для
 // продакшена, предварительно очистив ее таском 'clean'
 gulp.task('image', ['clean'], function () {
   return gulp.src('app/img/*.*')
@@ -57,7 +57,7 @@ gulp.task('ftp', ['build'], function () {
 });
 
 // local server with livereload
-gulp.task('webserver', function() {
+gulp.task('webserver', ['sprite' , 'less', 'bower'], function() {
   gulp.src('app')
   .pipe(server({
     livereload: true,
@@ -80,7 +80,7 @@ gulp.task('sprite', function () {
   // .pipe(imagemin()) //графика будет минифицирована при сборке на продакшн
   .pipe(gulp.dest('app/img/'))
   .pipe(notify("Sprite rebuild!"));;
-  
+
   return spriteData.css
   .pipe(gulp.dest('app/less/'));
 });
@@ -122,7 +122,7 @@ gulp.task('bower', function () {
   .pipe(gulp.dest('app'));
 });
 
-// отслеживаем изменения в проекте - less ясен перекомпилирует по новой css, 
+// отслеживаем изменения в проекте - less ясен перекомпилирует по новой css,
 // bower - добавляет в html пути к новым библиотекам
 // sprite отслеживает появление новой графики для переклеивания спрайта
 gulp.task('watch', function (){
@@ -132,5 +132,5 @@ gulp.task('watch', function (){
   gulp.watch('app/img/sprite/*.*', ['sprite']);
 });
 
-gulp.task('default', ['webserver', 'sprite', 'less', /*'bootstrapCompil',*/ 'bower', 'watch']);
+gulp.task('default', ['webserver', /*'sprite', 'less', 'bootstrapCompil', 'bower',*/ 'watch']);
 

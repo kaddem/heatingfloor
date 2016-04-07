@@ -134,22 +134,22 @@ $(document).ready(function(){
     }
 
     // Табы для 3D полов
-    $(".concrete-layer__price").hide(0);
-    $(".layer--action .concrete-layer__price").show(0);
-    $(".concrete-layer__text").on('click', function(){
-        $(".concrete-layer__price").hide(400);
-        $(this).parent().find('.concrete-layer__price').show(400);
+    $(".concrete__price").hide(0);
+    $(".layer--action .concrete__price").show(0);
+    $(".concrete__text").on('click', function(){
+        $(".concrete__price").hide(400);
+        $(this).parent().find('.concrete__price').show(400);
     });
 
     var animTime = 300;
     var posConArr = [];
     var posConArrMid = [];
     var posConArrEnd = [];
-    var lehghtConcrete = $(".concrete-animate__item").length;
+    var lehghtConcrete = $(".concrete__img").length;
     var i = 0;
     var k = 0;
     do {
-        var positionXXX = $('.concrete-animate__item:eq(' + i + ')').position();
+        var positionXXX = $('.concrete__img:eq(' + i + ')').position();
         var posY = positionXXX.top;
         posConArr[i] = posY;
         posConArrMid[i] = posY + 80;
@@ -162,15 +162,15 @@ $(document).ready(function(){
 
     do {
         if ( k < 2 ) {
-            $('.concrete-animate__item:eq(' + k + ')').animate({
+            $('.concrete__img:eq(' + k + ')').animate({
                 top : posConArr[k]
             }, animTime);
         } else if ( k > 2 ){
-            $('.concrete-animate__item:eq(' + k + ')').animate({
+            $('.concrete__img:eq(' + k + ')').animate({
                 top : posConArrEnd[k]
             }, animTime);
         } else {
-            $('.concrete-animate__item:eq(' + k + ')').animate({
+            $('.concrete__img:eq(' + k + ')').animate({
                 top : posConArrMid[k]
             }, animTime);
         }
@@ -178,50 +178,50 @@ $(document).ready(function(){
     } while ( lehghtConcrete > k );
 
 
-    $(".concrete-layer__text").on('click', function(){
+    $(".concrete__text").on('click', function(){
         var indx = $(this).parent().index();
         console.log(indx);
         var n = 0;
         do {
             if ( indx === 0 ) {
                 if ( n === 0 ) {
-                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                    $('.concrete__img:eq(' + n + ')').animate({
                         top : posConArr[n]
                     }, animTime);
                 } else if ( n === 1 ){
-                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                    $('.concrete__img:eq(' + n + ')').animate({
                         top : posConArrMid[n]
                     }, animTime);
                 } else {
-                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                    $('.concrete__img:eq(' + n + ')').animate({
                         top : posConArrEnd[n]
                     }, animTime);
                 }
             } else if ( indx === lehghtConcrete - 1 ) {
                 if ( n === lehghtConcrete - 1) {
-                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                    $('.concrete__img:eq(' + n + ')').animate({
                         top : posConArrEnd[n]
                     }, animTime);
                 } else if ( n === lehghtConcrete - 2 ){
-                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                    $('.concrete__img:eq(' + n + ')').animate({
                         top : posConArrMid[n]
                     }, animTime);
                 } else {
-                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                    $('.concrete__img:eq(' + n + ')').animate({
                         top : posConArr[n]
                     }, animTime);
                 }
             } else {
                 if ( n < indx ) {
-                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                    $('.concrete__img:eq(' + n + ')').animate({
                         top : posConArr[n]
                     }, animTime);
                 } else if (n > indx){
-                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                    $('.concrete__img:eq(' + n + ')').animate({
                         top : posConArrEnd[n]
                     }, animTime);
                 } else {
-                    $('.concrete-animate__item:eq(' + n + ')').animate({
+                    $('.concrete__img:eq(' + n + ')').animate({
                         top : posConArrMid[n]
                     }, animTime);
                 }
@@ -231,6 +231,170 @@ $(document).ready(function(){
             n += 1;
         } while ( lehghtConcrete > n );
     });
+
+    // Валидация и отправка формы
+    $.validator.setDefaults({
+        submitHandler: function (form, event) {
+            event.preventDefault();
+            var test = form;
+            console.log(test);
+            var title = $("input.title").val();
+            var name = $("input.form-name").val();
+            var email = $("input.form-email").val();
+            var phone = $("input.form-phone").val();
+            var area = $("input.form-area").val();
+            var quantity = $("input.form-quantity").val();
+            console.log(title, name, email, phone, area, quantity);
+            // var str = form.serialize();
+            $.ajax({
+                url : 'sendmail.php',
+                type : 'POST',
+                data : {
+                    form_title: title,
+                    form_name: name,
+                    form_email: email,
+                    form_phone: phone,
+                    form_area: area,
+                    form_quantity: quantity
+                },
+                success: function() {
+                    alert("Слышь друже! Отправили форму - жди ответку!");
+                // // Success message
+                //   $('#request').modal('hide');
+                //   $('#thank-you').modal();
+                //   $('#thank-you .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>');
+                //   $('#thank-you .modal-body').append('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span>'+firstName+', наш менеджер свяжется в вами в ближайшее время.</h3>');
+                //   setTimeout(function() {
+                //     $("#thank-you").modal('hide');
+                //   }, 5000);
+                  //clear all fields
+                  $('#form_calculate').trigger("reset");
+                },
+                error: function() {
+                    alert("Слышь, друже, что-то не так - сервак не отвечает. Походу кидалово!");
+                  // Fail message
+                  // $('#request').modal('hide');
+                  // $('#thank-you').modal();
+                  // $('#thank-you .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>');
+                  // $('#thank-you .modal-body').append('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span>'+firstName+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
+
+                  // setTimeout(function() {
+                  //   $("#thank-you").modal('hide');
+                  // }, 5000);
+                  // // //clear all fields
+                  $('#contactForm').trigger("reset");
+                }
+            });
+            // .done(function(msg) {
+            //     if(msg === "OK"){
+            //         console.log('OK');
+            //         alert('Отправлено');
+            //         var result = "Спасибо за заявку! Ждите звонка";
+            //         form.after('<p class="error-message">' + result + '</p>');
+            //     }else{
+            //         console.log('ERROR');
+            //         alert('ERROR');
+            //         // form.after('<p class="error-message">' + msg + '</p>');
+            //     }
+            // });
+            // .always(function() {
+            //     submitBtn.removeAttr('disabled');
+            // });
+        }
+    });
+    $.validator.addMethod("minlenghtphone", function (value, element) {
+            return value.replace(/\D+/g, '').length > 9;
+        },
+        "Введите 10 цифр (учитывая код города)");
+    $.validator.addMethod("requiredphone", function (value, element) {
+            return value.replace(/\D+/g, '').length > 1;
+        },
+        "Пожалуйста, заполните поле.");
+
+    $(".form-phone").mask("(999) 999-9999");
+
+    // Валидация формы получить расчет
+    $('#form_calculate').validate({
+        rules : {
+            name : {
+                required : true
+            },
+            email : {
+                required : true,
+                email : true
+            },
+            phone : {
+                required : true,
+                requiredphone: true,
+                minlenghtphone: true
+            },
+            area : {
+                required : true,
+                number : true,
+                min : 20,
+                max : 999
+            },
+            quantity : {
+                required : true,
+                number : true,
+                min : 1,
+                max : 20
+            }
+        },
+        messages : {
+            name : {
+                required : "Пожалуйста, заполните поле."
+            },
+            email : {
+                required : "Пожалуйста, заполните поле.",
+                email : "Укажите корректный email"
+            },
+            phone : {
+                required : "Пожалуйста, заполните поле."
+            },
+            area : {
+                required : "Введите значение",
+                number : "Укажите цифру (кв.м)",
+                min : "Минимум 20 кв.м",
+                max : "Максимум 999 кв.м"
+            },
+            quantity : {
+                required : "Введите значение",
+                number : "Укажите цифру",
+                min : "Минимум 1",
+                max : "Максимум 20"
+            }
+        }
+    });
+    $('#form_worth').validate({
+        rules : {
+            name : {
+                required : true
+            },
+            email : {
+                required : true,
+                email : true
+            },
+            phone : {
+                required : true,
+                requiredphone: true,
+                minlenghtphone: true
+            }
+        },
+        messages : {
+            name : {
+                required : "Пожалуйста, заполните поле."
+            },
+            email : {
+                required : "Пожалуйста, заполните поле.",
+                email : "Укажите корректный email"
+            },
+            phone : {
+                required : "Пожалуйста, заполните поле."
+            }
+        }
+    });
+
 
 
     function tabs(box_link, box_link_active, item_tab){
@@ -270,8 +434,6 @@ $(document).ready(function(){
     $('.form-close').on('click', function(){
         modalClose(this);
     });
-
-
 
 });
 

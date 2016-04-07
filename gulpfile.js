@@ -26,7 +26,7 @@ gulp.task('clean', function () {
 // минифицируем графику и сохраняем в папку для
 // продакшена, предварительно очистив ее таском 'clean'
 gulp.task('image', ['clean'], function () {
-  return gulp.src('app/img/*.*')
+  return gulp.src('app/img/**/*.*')
   .pipe(imagemin())
   .pipe(gulp.dest('dist/img/'))
 });
@@ -34,9 +34,9 @@ gulp.task('image', ['clean'], function () {
 // собираем весь проект для продакшена:
 gulp.task('build', ['image'], function () {
   var assets = useref.assets();
-  return gulp.src('app/*.html')
+  return gulp.src('app/*.*')
   .pipe(assets)
-  .pipe(gulpif('*.js', uglify()))
+  // .pipe(gulpif('*.js', uglify()))
   .pipe(gulpif('*.css', minifyCss()))
   .pipe(assets.restore())
   .pipe(useref())
@@ -48,9 +48,9 @@ gulp.task('build', ['image'], function () {
 gulp.task('ftp', ['build'], function () {
   return gulp.src('dist/**/*')
   .pipe(ftp({
-    host: '77.222.56.169', //КЭП и далее тоже
+    host: '77.222.56.63', //КЭП и далее тоже
     user: 'kademidovm', // Логин от ftp аккаунта
-    pass: '', //Указать пароль от ftp акаунта
+    pass: 'xiefciicsu', //Указать пароль от ftp акаунта
     port: '21', // указываем при необходимости. порт по умолчанию 22
     remotePath: 'group/public_html/testgulp'
   }));

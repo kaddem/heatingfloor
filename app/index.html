@@ -66,15 +66,26 @@
           </div>
           <!-- /.promo-text -->
           <div class="form-calculate">
-            <form action="" class="form hidden-form">
+            <form action="#" class="form hidden-form" id="form_calculate">
               <span class="form-close"></span>
-              <h3 class="calculate__head"><strong>Получить расчет</strong> предварительной стоимости <br>за 24 часа!</h3>
-              <input type="text" placeholder="Имя">
-              <input type="text" placeholder="E-mail">
-              <input type="text" placeholder="Телефон">
-              <input type="text" placeholder="Метраж">
-              <input type="text" placeholder="К-во помещений">
-              <button class="btn">Получить расчет</button>
+              <h3 class="calculate__head form-head"><strong>Получить расчет</strong> предварительной стоимости <br>за 24 часа!</h3>
+              <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы 'Расчет предварительной стоимости'">
+              <div class="form-row">
+                <input type="text" class="form-name" name="name" placeholder="Имя">
+              </div>
+              <div class="form-row">
+                <input type="text" class="form-email" name="email" placeholder="E-mail">
+              </div>
+              <div class="form-row">
+                <input type="text" class="form-phone" name="phone" placeholder="Телефон">
+              </div>
+              <div class="form-row">
+                <input type="text" class="form-area" name="area" placeholder="Метраж">
+              </div>
+              <div class="form-row">
+                <input type="text" class="form-quantity" name="quantity" placeholder="К-во помещений">
+              </div>
+              <button class="btn" name="enter">Получить расчет</button>
             </form>
             <button class="btn btn-form-calculate" id="call-form-calculate">Получить расчет</button>
           </div>
@@ -330,21 +341,23 @@
           <!-- /.worth__item -->
         </ul>
         <!-- /.range worth__list -->
+
         <div class="range form-worth">
           <button class="btn form-worth-call" id="form-worth-call">Хочу теплый пол</button>
-          <form action="" class="form hidden-form">
+          <form action="#" class="form hidden-form" id="form_worth">
             <span class="form-close"></span>
-            <div class="col">
-              <input type="text" placeholder="Имя">
+            <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы 'Преимущества фодяного пола'">
+            <div class="col form-row">
+              <input type="text" class="form-name" name="name" placeholder="Имя">
+            </div>
+            <div class="col form-row">
+              <input type="text" class="form-phone" name="phone" placeholder="Телефон">
+            </div>
+            <div class="col form-row">
+              <input type="email" class="form-email" name="email" placeholder="E-mail">
             </div>
             <div class="col">
-              <input type="text" placeholder="Телефон">
-            </div>
-            <div class="col">
-              <input type="email" placeholder="E-mail">
-            </div>
-            <div class="col">
-              <button class="btn">Хочу теплый пол</button>
+              <button class="btn" name="enter">Хочу теплый пол</button>
             </div>
           </form>
         </div>
@@ -575,9 +588,11 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/owl.carousel/dist/owl.carousel.js"></script>
+  <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:js js/main.min.js -->
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->
 </body>

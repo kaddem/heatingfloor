@@ -239,6 +239,17 @@ ul {
   font-size: 18px;
   padding: 17px;
 }
+.form-row {
+  position: relative;
+}
+label.error {
+  font-size: 12px;
+  position: absolute;
+  left: 12px;
+  top: 3px;
+  color: red;
+  z-index: 5;
+}
 .form {
   padding: 35px 25px;
   border: 1px solid #b7b7b7;
@@ -462,29 +473,30 @@ header .visible-form {
   color: #434242;
   padding: 24px 29px 31px 33px;
   border: none;
+  font-size: 0;
 }
-.form-calculate .form input:nth-of-type(1),
-.form-calculate .form input:nth-of-type(2),
-.form-calculate .form input:nth-of-type(3) {
+.form-calculate .form input {
   width: 100%;
 }
-.form-calculate .form input:nth-of-type(4),
-.form-calculate .form input:nth-of-type(5) {
+.form-calculate .form .form-row:nth-of-type(4),
+.form-calculate .form .form-row:nth-of-type(5) {
   width: 48%;
+  display: inline-block;
 }
-.form-calculate .form input:nth-of-type(4) {
+.form-calculate .form .form-row:nth-of-type(4) {
   margin-right: 4%;
 }
 .form-calculate .form input {
-  float: left;
   background-color: transparent;
   font-size: 18px;
   border: 1px solid #434242;
   padding: 16px 10px;
   margin-bottom: 15px;
+  z-index: 10;
 }
 .form-calculate .form .btn {
   background-color: #ffe252;
+  font-size: 18px;
   width: 100%;
   padding: 15px 10px;
 }
@@ -1060,6 +1072,9 @@ header .visible-form {
   text-align: left;
   font-size: 18px;
   line-height: 24px;
+}
+.worth label.error {
+  left: 28px;
 }
 .form-worth {
   margin-left: 0;

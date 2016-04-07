@@ -1616,6 +1616,13 @@ footer .copypast a {
     background-image: -webkit-linear-gradient(21deg, transparent 0%, transparent 50%, #3c5c81 50%, #336699 55%, #336699 100%);
     background-image: linear-gradient(69deg, transparent 0%, transparent 50%, #3c5c81 50%, #336699 55%, #336699 100%);
   }
+  .floor .concrete,
+  .floor .wood {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+  }
   .gift__item {
     margin-bottom: 0;
   }
@@ -1963,6 +1970,13 @@ footer .copypast a {
     margin: 0;
     font-size: 34px;
     line-height: 36px;
+  }
+  .floor .concrete,
+  .floor .wood {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
   }
   .gift__col {
     width: 100%;

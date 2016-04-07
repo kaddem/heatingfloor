@@ -16,17 +16,17 @@ var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var ftp = require('gulp-ftp'); // если неободимо sftp соединение - заменить gulp-ftp на gulp-sftp(см. package.json)
 
-// Очищаем папку dist дабы убрать оставшийся 
+// Очищаем папку dist дабы убрать оставшийся
 // от пердыдущей сборки проекта на продакшн мусор
 gulp.task('clean', function () {
   return gulp.src('dist', {read: false})
   .pipe(clean());
 });
 
-// минифицируем графику и сохраняем в папку для 
+// минифицируем графику и сохраняем в папку для
 // продакшена, предварительно очистив ее таском 'clean'
 gulp.task('image', ['clean'], function () {
-  return gulp.src('app/img/*.*')
+  return gulp.src('app/img/**/*.*')
   .pipe(imagemin())
   .pipe(gulp.dest('dist/img/'))
 });
@@ -34,9 +34,9 @@ gulp.task('image', ['clean'], function () {
 // собираем весь проект для продакшена:
 gulp.task('build', ['image'], function () {
   var assets = useref.assets();
-  return gulp.src('app/*.html')
+  return gulp.src('app/*.*')
   .pipe(assets)
-  .pipe(gulpif('*.js', uglify()))
+  // .pipe(gulpif('*.js', uglify()))
   .pipe(gulpif('*.css', minifyCss()))
   .pipe(assets.restore())
   .pipe(useref())
@@ -48,16 +48,16 @@ gulp.task('build', ['image'], function () {
 gulp.task('ftp', ['build'], function () {
   return gulp.src('dist/**/*')
   .pipe(ftp({
-    host: '77.222.56.169', //КЭП и далее тоже
+    host: '77.222.56.63', //КЭП и далее тоже
     user: 'kademidovm', // Логин от ftp аккаунта
-    pass: '', //Указать пароль от ftp акаунта
+    pass: 'xiefciicsu', //Указать пароль от ftp акаунта
     port: '21', // указываем при необходимости. порт по умолчанию 22
     remotePath: 'group/public_html/testgulp'
   }));
 });
 
 // local server with livereload
-gulp.task('webserver', function() {
+gulp.task('webserver', ['sprite' , 'less', 'bower'], function() {
   gulp.src('app')
   .pipe(server({
     livereload: true,
@@ -80,7 +80,7 @@ gulp.task('sprite', function () {
   // .pipe(imagemin()) //графика будет минифицирована при сборке на продакшн
   .pipe(gulp.dest('app/img/'))
   .pipe(notify("Sprite rebuild!"));;
-  
+
   return spriteData.css
   .pipe(gulp.dest('app/less/'));
 });
@@ -122,7 +122,7 @@ gulp.task('bower', function () {
   .pipe(gulp.dest('app'));
 });
 
-// отслеживаем изменения в проекте - less ясен перекомпилирует по новой css, 
+// отслеживаем изменения в проекте - less ясен перекомпилирует по новой css,
 // bower - добавляет в html пути к новым библиотекам
 // sprite отслеживает появление новой графики для переклеивания спрайта
 gulp.task('watch', function (){
@@ -132,5 +132,5 @@ gulp.task('watch', function (){
   gulp.watch('app/img/sprite/*.*', ['sprite']);
 });
 
-gulp.task('default', ['webserver', 'sprite', 'less', /*'bootstrapCompil',*/ 'bower', 'watch']);
+gulp.task('default', ['webserver', /*'sprite', 'less', 'bootstrapCompil', 'bower',*/ 'watch']);
 

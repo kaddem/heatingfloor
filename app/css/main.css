@@ -239,6 +239,17 @@ ul {
   font-size: 18px;
   padding: 17px;
 }
+.form-row {
+  position: relative;
+}
+label.error {
+  font-size: 12px;
+  position: absolute;
+  left: 12px;
+  top: 3px;
+  color: red;
+  z-index: 5;
+}
 .form {
   padding: 35px 25px;
   border: 1px solid #b7b7b7;
@@ -462,29 +473,30 @@ header .visible-form {
   color: #434242;
   padding: 24px 29px 31px 33px;
   border: none;
+  font-size: 0;
 }
-.form-calculate .form input:nth-of-type(1),
-.form-calculate .form input:nth-of-type(2),
-.form-calculate .form input:nth-of-type(3) {
+.form-calculate .form input {
   width: 100%;
 }
-.form-calculate .form input:nth-of-type(4),
-.form-calculate .form input:nth-of-type(5) {
+.form-calculate .form .form-row:nth-of-type(4),
+.form-calculate .form .form-row:nth-of-type(5) {
   width: 48%;
+  display: inline-block;
 }
-.form-calculate .form input:nth-of-type(4) {
+.form-calculate .form .form-row:nth-of-type(4) {
   margin-right: 4%;
 }
 .form-calculate .form input {
-  float: left;
   background-color: transparent;
   font-size: 18px;
   border: 1px solid #434242;
   padding: 16px 10px;
   margin-bottom: 15px;
+  z-index: 10;
 }
 .form-calculate .form .btn {
   background-color: #ffe252;
+  font-size: 18px;
   width: 100%;
   padding: 15px 10px;
 }
@@ -575,16 +587,6 @@ header .visible-form {
   font-family: "Segoe Ui Bold", sans-serif;
   width: 80%;
 }
-.floor .floor-animate {
-  position: relative;
-  margin-left: -10px;
-  margin-right: -10px;
-}
-.floor .floor-animate:after {
-  content: '';
-  display: block;
-  clear: both;
-}
 .floor .concrete,
 .floor .wood {
   width: 50%;
@@ -597,71 +599,129 @@ header .visible-form {
   position: absolute;
   left: 0;
 }
-.floor .concrete-animate .concrete-layer-1 {
-  z-index: 10;
-  top: 0px;
-  left: 21px;
+.floor .concrete__animate {
+  position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
 }
-.floor .concrete-animate .concrete-layer-2 {
-  z-index: 9;
-  top: 5px;
-  left: 21px;
+.floor .concrete__animate:after {
+  content: '';
+  display: block;
+  clear: both;
 }
-.floor .concrete-animate .concrete-layer-3 {
-  z-index: 8;
-  top: 15px;
-  left: 8px;
-}
-.floor .concrete-animate .concrete-layer-4 {
-  z-index: 7;
-  top: 15px;
-  left: 6px;
-}
-.floor .concrete-animate .concrete-layer-5 {
-  z-index: 6;
-  top: 13px;
-}
-.floor .concrete-animate .concrete-layer-6 {
-  z-index: 5;
-  top: 23px;
-}
-.floor .wood-animate {
-  padding-left: 10px;
-}
-.floor .wood-animate img[class*="wood-layer"] {
-  margin-left: 10px;
-}
-.floor .wood-animate .wood-layer-1 {
-  z-index: 10;
-  top: 0px;
-}
-.floor .wood-animate .wood-layer-2 {
-  z-index: 9;
-  top: 4px;
-}
-.floor .wood-animate .wood-layer-3 {
-  z-index: 8;
-  top: 14px;
-  left: 13px;
-}
-.floor .wood-animate .wood-layer-4 {
-  z-index: 7;
-  top: 6px;
-}
-.floor .wood-animate .wood-layer-5 {
-  z-index: 6;
-  top: 6px;
-}
-.floor .wood-animate .wood-layer-6 {
-  z-index: 5;
-  top: 16px;
-}
-.floor .layer-list {
+.floor .concrete__images,
+.floor .concrete__layer {
+  list-style: none;
   width: 50%;
   padding-left: 10px;
   padding-right: 10px;
   float: left;
-  margin-left: 50%;
+  float: none;
+  display: table-cell;
+}
+.floor .concrete__img:nth-child(1) {
+  z-index: 10;
+  top: 0px;
+  left: 21px;
+}
+.floor .concrete__img:nth-child(2) {
+  z-index: 9;
+  top: 5px;
+  left: 21px;
+}
+.floor .concrete__img:nth-child(3) {
+  z-index: 8;
+  top: 15px;
+  left: 8px;
+}
+.floor .concrete__img:nth-child(4) {
+  z-index: 7;
+  top: 15px;
+  left: 6px;
+}
+.floor .concrete__img:nth-child(5) {
+  z-index: 6;
+  top: 13px;
+}
+.floor .concrete__img:nth-child(6) {
+  z-index: 5;
+  top: 23px;
+}
+.floor .wood__animate {
+  position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.floor .wood__animate:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.floor .wood__images,
+.floor .wood__layer {
+  list-style: none;
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+  float: none;
+  display: table-cell;
+}
+.floor .wood__img:nth-child(1) {
+  z-index: 10;
+  top: 0px;
+}
+.floor .wood__img:nth-child(2) {
+  z-index: 9;
+  top: 4px;
+}
+.floor .wood__img:nth-child(3) {
+  z-index: 8;
+  top: 14px;
+  left: 13px;
+}
+.floor .wood__img:nth-child(4) {
+  z-index: 7;
+  top: 6px;
+}
+.floor .wood__img:nth-child(5) {
+  z-index: 6;
+  top: 6px;
+}
+.floor .wood__img:nth-child(6) {
+  z-index: 5;
+  top: 16px;
+}
+.floor .concrete__text,
+.floor .wood__text {
+  cursor: pointer;
+  border-bottom: 1px dashed #f08456;
+}
+.floor .concrete__price,
+.floor .wood__price {
+  font-family: "Segoe Ui Bold", sans-serif;
+  display: block;
+  color: #f08456;
+}
+.floor .concrete__description,
+.floor .wood__description {
+  margin-bottom: 30px;
+  position: relative;
+}
+.floor .concrete__description:before,
+.floor .wood__description:before {
+  display: block;
+  width: 150px;
+  border-top: 1px solid #000;
+  position: absolute;
+  left: -150px;
+  z-index: 500;
+}
+.floor .concrete .layer--action .concrete__price,
+.floor .wood .layer--action .concrete__price,
+.floor .concrete .layer--action .wood__price,
+.floor .wood .layer--action .wood__price {
+  display: block;
 }
 .gift {
   color: #434242;
@@ -1012,6 +1072,9 @@ header .visible-form {
   text-align: left;
   font-size: 18px;
   line-height: 24px;
+}
+.worth label.error {
+  left: 28px;
 }
 .form-worth {
   margin-left: 0;

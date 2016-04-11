@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Цены на монтаж водяных теплых полов. РОСА Монтаж</title>
-  <meta name="viewport" content="width=device-width; initial-scale=1">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <!-- build:css css/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
   <link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="bower_components/jquery-modal/jquery.modal.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css css/style.min.css -->
@@ -39,13 +40,21 @@
         <div class="contacts">
           <a href="tel:+78127150506" class="phone">+7 (812) 715-05-06</a>
           <button class="btn btn-recall" id="btn-recall">Заказать звонок</button>
-          <form action="" class="form hidden-form">
-            <span class="form-close"></span>
+          <form action="" class="form hidden-form" id="form_recall">
             <h3 class="calculate__head">Заказ обратного звонка</h3>
-            <input type="text" placeholder="Имя">
-            <input type="text" placeholder="Телефон">
-            <input type="text" placeholder="Время звонка">
-            <button class="btn">Перезвоните мне</button>
+            <div class="form-row">
+              <input type="hidden" class="title" name="DATA[TITLE]" value="Форма - 'Заказ обратного звонка'">
+            </div>
+            <div class="form-row">
+              <input type="text" class="form-name" name="name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+              <input type="text" class="form-phone" name="phone" placeholder="Телефон">
+            </div>
+            <div class="form-row">
+              <input type="text" class="form-date" name="date" placeholder="Время звонка">
+            </div>
+            <button class="btn" name="enter">Перезвоните мне</button>
           </form>
         </div>
         <!-- /.contacts -->
@@ -67,7 +76,6 @@
           <!-- /.promo-text -->
           <div class="form-calculate">
             <form action="#" class="form hidden-form" id="form_calculate">
-              <span class="form-close"></span>
               <h3 class="calculate__head form-head"><strong>Получить расчет</strong> предварительной стоимости <br>за 24 часа!</h3>
               <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы 'Расчет предварительной стоимости'">
               <div class="form-row">
@@ -176,12 +184,12 @@
                   <span class="wood__text">ГВЛ(гипсоволокнистая плита) или цементно-стружечная плита </span>
                   <span class="wood__price">300р/м.кв</span>
                 </li>
-                <li class="wood__description layer--action">
-                  <span class="wood__text">Теплораспределительные пластины </span>
-                  <span class="wood__price">300р/м.кв</span>
-                </li>
                 <li class="wood__description">
                   <span class="wood__text">Труба для теплого поля </span>
+                  <span class="wood__price">300р/м.кв</span>
+                </li>
+                <li class="wood__description layer--action">
+                  <span class="wood__text">Теплораспределительные пластины </span>
                   <span class="wood__price">300р/м.кв</span>
                 </li>
                 <li class="wood__description">
@@ -203,7 +211,7 @@
       <div class="container">
         <span class="gift__slogan">Выбери подарок</span>
         <h2 class="gift__head">Заказав у нас теплый пол, вы можете выбрать любой из  подарков</h2>
-          <form action="" class="range form form-gift">
+          <form action="" class="range form form-gift" id="form_gift">
             <div class="gift__col">
               <div class="gift__item">
                 <img src="img/gift1.jpg" alt="" class="gift__photo">
@@ -248,13 +256,14 @@
             </div>
             <div class="form-gift__col">
               <div class="range">
-                <div class="form-gift__item">
-                  <input type="text" placeholder="Имя">
+                <input type="hidden" class="title" name="DATA[TITLE]" value="Форма - 'Хочу подарок'">
+                <div class="form-gift__item form-row">
+                  <input type="text" class="form-name" name="name" placeholder="Имя">
                 </div>
-                <div class="form-gift__item">
-                  <input type="text" placeholder="Телефон">
+                <div class="form-gift__item form-row">
+                  <input type="text" class="form-phone" name="phone" placeholder="Телефон">
                 </div>
-                <div class="form-gift__item">
+                <div class="form-gift__item form-row">
                   <button class="btn">Хочу теплый пол</button>
                 </div>
               </div>
@@ -345,8 +354,7 @@
         <div class="range form-worth">
           <button class="btn form-worth-call" id="form-worth-call">Хочу теплый пол</button>
           <form action="#" class="form hidden-form" id="form_worth">
-            <span class="form-close"></span>
-            <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы 'Преимущества фодяного пола'">
+            <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы 'Преимущества dодяного пола'">
             <div class="col form-row">
               <input type="text" class="form-name" name="name" placeholder="Имя">
             </div>
@@ -472,30 +480,19 @@
             <button class="more__btn" id="more__btn">
               Хочу больше, чем просто теплый пол
             </button>
-            <form action="" class="form hidden-form">
-              <span class="form-close"></span>
-              <input type="text" placeholder="Имя">
-              <input type="text" placeholder="E-mail">
-              <input type="text" placeholder="Телефон">
+            <form action="" class="form hidden-form" id="form-more">
+              <input type="hidden" class="title" name="DATA[TITLE]" value="Форма -'Дополнительные услуги'">
+              <div class="form-row">
+                <input type="text" class="form-name" name="name" placeholder="Имя">
+              </div>
+              <div class="form-row">
+                <input type="text" class="form-email" name="email" placeholder="E-mail">
+              </div>
+              <div class="form-row">
+                <input type="text" class="form-phone" name="phone" placeholder="Телефон">
+              </div>
               <button class="btn">Хочу теплый пол</button>
             </form>
-
-            <!-- <form action="" class="form hidden-form">
-              <span class="form-close"></span>
-              <div class="col">
-                <input type="text" placeholder="Имя">
-              </div>
-              <div class="col">
-                <input type="text" placeholder="Телефон">
-              </div>
-              <div class="col">
-                <input type="email" placeholder="E-mail">
-              </div>
-              <div class="col">
-                <button class="btn">Хочу теплый пол</button>
-              </div>
-            </form> -->
-
           </div>
         </div>
         <!-- /.range -->
@@ -522,12 +519,12 @@
             <div class="sertificate__item">
               <img src="img/sertificate/Dimplex_Sol.jpg" alt="">
             </div>
-            <div class="sertificate__item">
+<!--             <div class="sertificate__item">
               <img src="img/sertificate/Dimplex_Sol_adv.jpg" alt="">
             </div>
             <div class="sertificate__item">
               <img src="img/sertificate/Dimplex_Sol_air.jpg" alt="">
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- /.range -->
@@ -541,10 +538,15 @@
 
     <div class="question">
       <div class="container">
-        <form action="" class="form form-question">
+        <form action="" class="form form-question" id="form-question">
           <span class="form-question__head">Остались вопросы ? напишите нам</span>
-          <input type="text" placeholder="E-mail">
-          <textarea placeholder="Сообщение"></textarea>
+          <input type="hidden" class="title" name="DATA[TITLE]" value="Форма -'Остались вопросы?'">
+          <div class="form-row">
+            <input type="text" class="form-email" name="email" placeholder="E-mail">
+          </div>
+          <div class="form-row">
+            <textarea class="form-text" name="text" placeholder="Сообщение"></textarea>
+          </div>
           <button class="btn">Отправить</button>
         </form>
         <!-- /.form form-question -->
@@ -580,6 +582,10 @@
       </div>
     </div>
   </footer>
+
+  <div id="thank-you">
+
+  </div>
   <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDRQVjTZq6DH0X8LwFzLIvXJqAWW5kiCo&signed_in=true&callback=initMap"></script>
   </body>
@@ -589,6 +595,7 @@
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/owl.carousel/dist/owl.carousel.js"></script>
   <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
+  <script src="bower_components/jquery-modal/jquery.modal.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:js js/main.min.js -->

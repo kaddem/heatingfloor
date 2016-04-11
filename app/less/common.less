@@ -53,7 +53,7 @@ label.error{
   z-index: 5;
 }
 .form{
-  padding: 35px 25px;
+  padding: 25px;
   border: 1px solid @form-border;
   margin-left: 0;
   margin-right: 0;
@@ -111,4 +111,35 @@ label.error{
   position: absolute;
   .sprite(@icon-modal-close);
   cursor: pointer;
+}
+.modal{
+  border-radius: 0;
+}
+.modal a.close-modal{
+  top: 5px;
+  right: 5px;
+  .sprite(@icon-modal-close);
+}
+.jquery-modal:before{
+  content: normal;
+}
+
+#form_recall{
+  width: @phone-min - 40px;
+  h3{
+    margin-top: 0;
+    text-align: center;
+  }
+  & input, & button{
+    width: 100%;
+  }
+  & input{
+    margin-bottom: 20px;
+  }
+}
+.gift__description .checked:after{
+  background-color: @orange-color;
+}
+.gift__description .checked:after{
+  background-color: @orange-color;
 }

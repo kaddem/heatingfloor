@@ -58,6 +58,12 @@
       top: 100%;
       transform: translateY(-60px);
       transition: all 0.3s ease;
+      input[type="radio"], input[type="radio"]{
+        display: none;
+      }
+      input[type="radio"]:before, input[type="radio"]:after{
+        content: normal;
+      }
     }
   }
   .worth{
@@ -125,6 +131,7 @@
   @import url(responsive/header_tablet.less);
   @import url(responsive/promo_tablet.less);
   @import url(responsive/action_tablet.less);
+  @import url(responsive/floor_tablet.less);
   @import url(responsive/gift_tablet.less);
   @import url(responsive/howwork_tablet.less);
   @import url(responsive/pay_tablet.less);
@@ -139,7 +146,7 @@
 
 @media screen and (max-width: @phone-max) {
   .container{
-    width: @phone-min;
+    min-width: @phone-min;
   }
   html, body{
     min-width: @phone-min;
@@ -173,9 +180,24 @@
     .sprite(@icon-modal-close);
     cursor: pointer;
   }
+  .form{
+    width: @phone-min - 40px;
+    h3{
+      margin-top: 0;
+      text-align: center;
+    }
+    & input, & button{
+      width: 100%;
+    }
+    & input{
+      margin-bottom: 20px;
+    }
+  }
+
   @import url(responsive/header_phone.less);
   @import url(responsive/promo_phone.less);
   @import url(responsive/action_phone.less);
+  @import url(responsive/floor_phone.less);
   @import url(responsive/gift_phone.less);
   @import url(responsive/howwork_phone.less);
   @import url(responsive/pay_phone.less);

@@ -233,77 +233,77 @@ $(document).ready(function(){
     });
 
     // Валидация и отправка формы
-    $.validator.setDefaults({
-        submitHandler: function (form, event) {
-            event.preventDefault();
-            var test = form;
-            console.log(test);
-            var title = $("input.title").val();
-            var name = $("input.form-name").val();
-            var email = $("input.form-email").val();
-            var phone = $("input.form-phone").val();
-            var area = $("input.form-area").val();
-            var quantity = $("input.form-quantity").val();
-            console.log(title, name, email, phone, area, quantity);
-            // var str = form.serialize();
-            $.ajax({
-                url : 'sendmail.php',
-                type : 'POST',
-                data : {
-                    form_title: title,
-                    form_name: name,
-                    form_email: email,
-                    form_phone: phone,
-                    form_area: area,
-                    form_quantity: quantity
-                },
-                success: function() {
-                    alert("Слышь друже! Отправили форму - жди ответку!");
-                // // Success message
-                //   $('#request').modal('hide');
-                //   $('#thank-you').modal();
-                //   $('#thank-you .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>');
-                //   $('#thank-you .modal-body').append('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span>'+firstName+', наш менеджер свяжется в вами в ближайшее время.</h3>');
-                //   setTimeout(function() {
-                //     $("#thank-you").modal('hide');
-                //   }, 5000);
-                  //clear all fields
-                  $('#form_calculate').trigger("reset");
-                },
-                error: function() {
-                    alert("Слышь, друже, что-то не так - сервак не отвечает. Походу кидалово!");
-                  // Fail message
-                  // $('#request').modal('hide');
-                  // $('#thank-you').modal();
-                  // $('#thank-you .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>');
-                  // $('#thank-you .modal-body').append('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span>'+firstName+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
+    // $.validator.setDefaults({
+    //     submitHandler: function (form, event) {
+    //         event.preventDefault();
+    //         var test = form;
+    //         console.log(test);
+    //         var title = $("input.title").val();
+    //         var name = $("input.form-name").val();
+    //         var email = $("input.form-email").val();
+    //         var phone = $("input.form-phone").val();
+    //         var area = $("input.form-area").val();
+    //         var quantity = $("input.form-quantity").val();
+    //         console.log(title, name, email, phone, area, quantity);
+    //         // var str = form.serialize();
+    //         $.ajax({
+    //             url : 'sendmail.php',
+    //             type : 'POST',
+    //             data : {
+    //                 form_title: title,
+    //                 form_name: name,
+    //                 form_email: email,
+    //                 form_phone: phone,
+    //                 form_area: area,
+    //                 form_quantity: quantity
+    //             },
+    //             success: function() {
+    //                 alert("Слышь друже! Отправили форму - жди ответку!");
+    //             // // Success message
+    //             //   $('#request').modal('hide');
+    //             //   $('#thank-you').modal();
+    //             //   $('#thank-you .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>');
+    //             //   $('#thank-you .modal-body').append('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span>'+firstName+', наш менеджер свяжется в вами в ближайшее время.</h3>');
+    //             //   setTimeout(function() {
+    //             //     $("#thank-you").modal('hide');
+    //             //   }, 5000);
+    //               //clear all fields
+    //               $('#form_calculate').trigger("reset");
+    //             },
+    //             error: function() {
+    //                 alert("Слышь, друже, что-то не так - сервак не отвечает. Походу кидалово!");
+    //               // Fail message
+    //               // $('#request').modal('hide');
+    //               // $('#thank-you').modal();
+    //               // $('#thank-you .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>');
+    //               // $('#thank-you .modal-body').append('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span>'+firstName+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
 
-                  // setTimeout(function() {
-                  //   $("#thank-you").modal('hide');
-                  // }, 5000);
-                  // // //clear all fields
-                  $('#contactForm').trigger("reset");
-                }
-            });
-            // .done(function(msg) {
-            //     if(msg === "OK"){
-            //         console.log('OK');
-            //         alert('Отправлено');
-            //         var result = "Спасибо за заявку! Ждите звонка";
-            //         form.after('<p class="error-message">' + result + '</p>');
-            //     }else{
-            //         console.log('ERROR');
-            //         alert('ERROR');
-            //         // form.after('<p class="error-message">' + msg + '</p>');
-            //     }
-            // });
-            // .always(function() {
-            //     submitBtn.removeAttr('disabled');
-            // });
-        }
-    });
+    //               // setTimeout(function() {
+    //               //   $("#thank-you").modal('hide');
+    //               // }, 5000);
+    //               // // //clear all fields
+    //               $('#contactForm').trigger("reset");
+    //             }
+    //         });
+    //         // .done(function(msg) {
+    //         //     if(msg === "OK"){
+    //         //         console.log('OK');
+    //         //         alert('Отправлено');
+    //         //         var result = "Спасибо за заявку! Ждите звонка";
+    //         //         form.after('<p class="error-message">' + result + '</p>');
+    //         //     }else{
+    //         //         console.log('ERROR');
+    //         //         alert('ERROR');
+    //         //         // form.after('<p class="error-message">' + msg + '</p>');
+    //         //     }
+    //         // });
+    //         // .always(function() {
+    //         //     submitBtn.removeAttr('disabled');
+    //         // });
+    //     }
+    // });
     $.validator.addMethod("minlenghtphone", function (value, element) {
-            return value.replace(/\D+/g, '').length > 9;
+            return value.replace(/\D+/g, '').length > 10;
         },
         "Введите 10 цифр (учитывая код города)");
     $.validator.addMethod("requiredphone", function (value, element) {
@@ -311,7 +311,7 @@ $(document).ready(function(){
         },
         "Пожалуйста, заполните поле.");
 
-    $(".form-phone").mask("(999) 999-9999");
+    $(".form-phone").mask("+7 (999) 999-9999");
 
     // Валидация формы получить расчет
     $('#form_calculate').validate({
@@ -364,6 +364,73 @@ $(document).ready(function(){
                 min : "Минимум 1",
                 max : "Максимум 20"
             }
+        },
+        submitHandler: function (form, event) {
+            event.preventDefault();
+            var test = form;
+            console.log(test);
+            var title = $("input.title").val();
+            var name = $("input.form-name").val();
+            var email = $("input.form-email").val();
+            var phone = $("input.form-phone").val();
+            var area = $("input.form-area").val();
+            var quantity = $("input.form-quantity").val();
+            console.log(title, name, email, phone, area, quantity);
+            // var str = form.serialize();
+            $.ajax({
+                url : 'sendmail.php',
+                type : 'POST',
+                data : {
+                    form_title: title,
+                    form_name: name,
+                    form_email: email,
+                    form_phone: phone,
+                    form_area: area,
+                    form_quantity: quantity
+                },
+                success: function() {
+                    alert("Бро! Отправили форму на расчет - жди ответку!");
+                // // Success message
+                //   $('#request').modal('hide');
+                //   $('#thank-you').modal();
+                //   $('#thank-you .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>');
+                //   $('#thank-you .modal-body').append('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span>'+firstName+', наш менеджер свяжется в вами в ближайшее время.</h3>');
+                //   setTimeout(function() {
+                //     $("#thank-you").modal('hide');
+                //   }, 5000);
+                  //clear all fields
+                  $('#form_calculate').trigger("reset");
+                },
+                error: function() {
+                    alert("Бро, что-то не так - сервак не отвечает. Походу расчета не будет!");
+                  // Fail message
+                  // $('#request').modal('hide');
+                  // $('#thank-you').modal();
+                  // $('#thank-you .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>');
+                  // $('#thank-you .modal-body').append('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span>'+firstName+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
+
+                  // setTimeout(function() {
+                  //   $("#thank-you").modal('hide');
+                  // }, 5000);
+                  // // //clear all fields
+                  $('#contactForm').trigger("reset");
+                }
+            });
+            // .done(function(msg) {
+            //     if(msg === "OK"){
+            //         console.log('OK');
+            //         alert('Отправлено');
+            //         var result = "Спасибо за заявку! Ждите звонка";
+            //         form.after('<p class="error-message">' + result + '</p>');
+            //     }else{
+            //         console.log('ERROR');
+            //         alert('ERROR');
+            //         // form.after('<p class="error-message">' + msg + '</p>');
+            //     }
+            // });
+            // .always(function() {
+            //     submitBtn.removeAttr('disabled');
+            // });
         }
     });
     $('#form_worth').validate({
@@ -392,6 +459,69 @@ $(document).ready(function(){
             phone : {
                 required : "Пожалуйста, заполните поле."
             }
+        },
+        submitHandler: function (form, event) {
+            event.preventDefault();
+            var test = form;
+            console.log(test);
+            var title = $(".form-worth input.title").val();
+            var name = $(".form-worth input.form-name").val();
+            var email = $(".form-worth input.form-email").val();
+            var phone = $(".form-worth input.form-phone").val();
+            console.log(title, name, email, phone);
+            // var str = form.serialize();
+            $.ajax({
+                url : 'sendmail.php',
+                type : 'POST',
+                data : {
+                    form_title: title,
+                    form_name: name,
+                    form_email: email,
+                    form_phone: phone,
+                },
+                success: function() {
+                    alert("Слышь друже! Отправили форму после преимуществ - жди ответку!");
+                // // Success message
+                //   $('#request').modal('hide');
+                //   $('#thank-you').modal();
+                //   $('#thank-you .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>');
+                //   $('#thank-you .modal-body').append('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span>'+firstName+', наш менеджер свяжется в вами в ближайшее время.</h3>');
+                //   setTimeout(function() {
+                //     $("#thank-you").modal('hide');
+                //   }, 5000);
+                  //clear all fields
+                  $('#form_calculate').trigger("reset");
+                },
+                error: function() {
+                    alert("Слышь, друже, что-то не так - форма после преимуществ отсутствует. Походу кидалово!");
+                  // Fail message
+                  // $('#request').modal('hide');
+                  // $('#thank-you').modal();
+                  // $('#thank-you .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>');
+                  // $('#thank-you .modal-body').append('<h3><span class="modal-thank-you__head alert">Похоже на сервере проблеммы</span>'+firstName+', пожалуйста отправьте заявку чуть позже или позвоните нам.</h3>');
+
+                  // setTimeout(function() {
+                  //   $("#thank-you").modal('hide');
+                  // }, 5000);
+                  // // //clear all fields
+                  $('#contactForm').trigger("reset");
+                }
+            });
+            // .done(function(msg) {
+            //     if(msg === "OK"){
+            //         console.log('OK');
+            //         alert('Отправлено');
+            //         var result = "Спасибо за заявку! Ждите звонка";
+            //         form.after('<p class="error-message">' + result + '</p>');
+            //     }else{
+            //         console.log('ERROR');
+            //         alert('ERROR');
+            //         // form.after('<p class="error-message">' + msg + '</p>');
+            //     }
+            // });
+            // .always(function() {
+            //     submitBtn.removeAttr('disabled');
+            // });
         }
     });
 

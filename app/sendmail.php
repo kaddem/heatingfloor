@@ -19,24 +19,24 @@
   $nameForm = $_POST['form_nameForm'];
   $name = $_POST['form_name'];
   $email = $_POST['form_email'];
-  $phone = $_POST['form_email'];
+  $phone = $_POST['form_phone'];
   $area = $_POST['form_area'];
   $quantity = $_POST['form_quantity'];
   $comments = "Площадь ".$area." м.кв; Кол-во помещений ".$quantity;
 
   // create email body and send it
   $to = 'kademidov@gmail.com'; // put your email
-  $subject = "Заявка от $name $nameForm";
-  $message = "Заполнена форма \"$nameForm\". \n\n".
-    "Данные отправителя:\n\nИмя: $name \n".
-    "Почта: $email \n".
-    "Телефон: $phone \n".
-    "Отапливаемая площадь: $area \n".
-    "Количество помещений: $quantity \n";
+  $subject = "Заявка от $name | ".$title;
+  $message = "Заполнена форма \"".$title."\". \n\n".
+    "Данные отправителя:\n\nИмя: ".$name." \n".
+    "Почта: ".$email." \n".
+    "Телефон: ".$phone." \n".
+    "Отапливаемая площадь: ".$area." \n".
+    "Количество помещений: ".$quantity." \n";
   $headers = "From: ".$name." <".$email.">" . "\r\n" .
     "Reply-To: ".$name." <".$email.">" . "\r\n" ;
   mail($to, $subject, $message ,$headers);
-  return true;
+  // return true;
 
   // Bitrix24
   // CRM server conect ion data

@@ -360,6 +360,20 @@ label.error {
 #form_recall input {
   margin-bottom: 20px;
 }
+#form-more {
+  width: 280px;
+}
+#form-more h3 {
+  margin-top: 0;
+  text-align: center;
+}
+#form-more input,
+#form-more button {
+  width: 100%;
+}
+#form-more input {
+  margin-bottom: 20px;
+}
 .gift__description .checked:after {
   background-color: #f08456;
 }
@@ -1571,6 +1585,185 @@ footer .copypast a {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+  .concrete__description {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .concrete__animate .concrete__img {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .concrete__animate:hover .concrete__img:nth-child(1) {
+    top: 0;
+  }
+  .concrete__animate:hover .concrete__img:nth-child(2) {
+    top: 45px;
+  }
+  .concrete__animate:hover .concrete__img:nth-child(3) {
+    top: 105px;
+  }
+  .concrete__animate:hover .concrete__img:nth-child(4) {
+    top: 155px;
+  }
+  .concrete__animate:hover .concrete__img:nth-child(5) {
+    top: 213px;
+  }
+  .concrete__animate:hover .concrete__img:nth-child(6) {
+    top: 273px;
+  }
+  .concrete__animate:hover .concrete__text {
+    position: relative;
+  }
+  .concrete__animate:hover .concrete__text:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid #000;
+    width: 100px;
+    height: 1px;
+    top: 0;
+    bottom: 0;
+    left: -115px;
+    margin: auto;
+    z-index: 999999999;
+  }
+  .concrete__animate:hover .concrete__text:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1px solid #000;
+    width: 6px;
+    height: 6px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: -122px;
+    margin: auto;
+    z-index: 999999999;
+  }
+  .concrete__animate:hover .concrete__description {
+    margin-bottom: 15px;
+  }
+  .concrete__animate:hover .concrete__description:nth-child(1) .concrete__text:before {
+    width: 150px;
+    left: -165px;
+  }
+  .concrete__animate:hover .concrete__description:nth-child(1) .concrete__text:after {
+    left: -172px;
+  }
+  .concrete__animate:hover .concrete__description:nth-child(2) .concrete__text:before {
+    width: 90px;
+    left: -105px;
+  }
+  .concrete__animate:hover .concrete__description:nth-child(2) .concrete__text:after {
+    left: -112px;
+  }
+  .concrete__animate:hover .concrete__description:nth-child(3) .concrete__text:before {
+    width: 100px;
+    left: -115px;
+  }
+  .concrete__animate:hover .concrete__description:nth-child(3) .concrete__text:after {
+    left: -121px;
+  }
+  .wood__description {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .wood__animate .wood__img {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .wood__animate:hover .wood__img:nth-child(1) {
+    top: 0;
+  }
+  .wood__animate:hover .wood__img:nth-child(2) {
+    top: 45px;
+  }
+  .wood__animate:hover .wood__img:nth-child(3) {
+    top: 105px;
+  }
+  .wood__animate:hover .wood__img:nth-child(4) {
+    top: 155px;
+  }
+  .wood__animate:hover .wood__img:nth-child(5) {
+    top: 213px;
+  }
+  .wood__animate:hover .wood__img:nth-child(6) {
+    top: 273px;
+  }
+  .wood__animate:hover .wood__description {
+    margin-bottom: 15px;
+  }
+  .wood__animate:hover .wood__text {
+    position: relative;
+  }
+  .wood__animate:hover .wood__text:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-bottom: 1px solid #000;
+    width: 180px;
+    height: 1px;
+    top: 0;
+    bottom: 0;
+    left: -195px;
+    margin: auto;
+    z-index: 999999999;
+  }
+  .wood__animate:hover .wood__text:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1px solid #000;
+    width: 6px;
+    height: 6px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: -202px;
+    margin: auto;
+    z-index: 999999999;
+  }
+  .wood__animate:hover .wood__description {
+    margin-bottom: 15px;
+  }
+  .wood__animate:hover .wood__description:nth-child(1) .wood__text:before {
+    width: 150px;
+    left: -165px;
+  }
+  .wood__animate:hover .wood__description:nth-child(1) .wood__text:after {
+    left: -172px;
+  }
+  .wood__animate:hover .wood__description:nth-child(2) .wood__text:before {
+    width: 170px;
+    left: -185px;
+  }
+  .wood__animate:hover .wood__description:nth-child(2) .wood__text:after {
+    left: -192px;
+  }
+  .wood__animate:hover .wood__description:nth-child(3) .wood__text:before {
+    width: 115px;
+    left: -130px;
+  }
+  .wood__animate:hover .wood__description:nth-child(3) .wood__text:after {
+    left: -135px;
+  }
+  .wood__animate:hover .wood__description:nth-child(5) .wood__text:before {
+    width: 85px;
+    left: -100px;
+  }
+  .wood__animate:hover .wood__description:nth-child(5) .wood__text:after {
+    left: -105px;
+  }
+  .wood__animate:hover .wood__description:nth-child(6) .wood__text:before {
+    width: 85px;
+    left: -100px;
+  }
+  .wood__animate:hover .wood__description:nth-child(6) .wood__text:after {
+    left: -105px;
+  }
   .gift__item:hover .gift__description {
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
@@ -1591,6 +1784,11 @@ footer .copypast a {
   .gift__description input[type="radio"]:before,
   .gift__description input[type="radio"]:after {
     content: normal;
+  }
+  .gift--active {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
   }
   .worth .form-worth-call {
     display: none;
@@ -1755,7 +1953,6 @@ footer .copypast a {
     padding-right: 10px;
     float: left;
   }
-<<<<<<< HEAD
   .floor .concrete__layer,
   .floor .wood__layer {
     padding-top: 20px;
@@ -1882,8 +2079,6 @@ footer .copypast a {
     z-index: 5;
     top: 273px;
   }
-=======
->>>>>>> 2437bb822884b71f3f503373edc15caf5ec9f86f
   .gift__item {
     margin-bottom: 0;
   }
@@ -2268,7 +2463,6 @@ footer .copypast a {
     padding-right: 10px;
     float: left;
   }
-<<<<<<< HEAD
   .floor .concrete h3,
   .floor .wood h3 {
     width: 100%;
@@ -2284,8 +2478,6 @@ footer .copypast a {
   .floor .wood__description {
     margin-bottom: 10px;
   }
-=======
->>>>>>> 2437bb822884b71f3f503373edc15caf5ec9f86f
   .gift__col {
     width: 100%;
     padding-left: 10px;

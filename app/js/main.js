@@ -1,4 +1,6 @@
+
 $(document).ready(function(){
+
     // Карусель - отзывы
     $('#owl-reviews').owlCarousel({
         loop:true,
@@ -28,13 +30,13 @@ $(document).ready(function(){
         navText:false,
         responsive:{
             0:{
-                items:1
-            },
-            768:{
                 items:2
             },
+            768:{
+                items:3
+            },
             1200:{
-                items:4
+                items:5
             }
         }
     });
@@ -462,6 +464,9 @@ $(document).ready(function(){
                     form_phone: phone
                 },
                 success: function() {
+                    // yaCounter36809450.reachGoal('recall', function(){
+                    //     console.log('recall в метрику отправлен');
+                    // });
                     $.modal.close();
                     $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется в вами в ближайшее время.</h3>');
                     $('#thank-you').modal();
@@ -560,6 +565,9 @@ $(document).ready(function(){
                     form_quantity: quantity
                 },
                 success: function() {
+                    // yaCounter36809450.reachGoal('calc', function(){
+                    //     console.log('calc в метрику отправлен');
+                    // });
                     $.modal.close();
                     $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется в вами в ближайшее время.</h3>');
                     $('#thank-you').modal();
@@ -621,6 +629,9 @@ $(document).ready(function(){
                     form_gift: gift
                 },
                 success: function() {
+                    // yaCounter36809450.reachGoal('gift', function(){
+                    //     console.log('gift в метрику отправлен');
+                    // });
                     $.modal.close();
                     $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется в вами в ближайшее время.</h3>');
                     $('#thank-you').modal();
@@ -689,6 +700,9 @@ $(document).ready(function(){
                     form_phone: phone
                 },
                 success: function() {
+                    // yaCounter36809450.reachGoal('worth', function(){
+                    //     console.log('worth в метрику отправлен');
+                    // });
                     $.modal.close();
                     $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется в вами в ближайшее время.</h3>');
                     $('#thank-you').modal();
@@ -757,6 +771,9 @@ $(document).ready(function(){
                     form_phone: phone
                 },
                 success: function() {
+                    // yaCounter36809450.reachGoal('more', function(){
+                    //     console.log('more в метрику отправлен');
+                    // });
                     $.modal.close();
                     $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span><br>'+name+', наш менеджер свяжется в вами в ближайшее время.</h3>');
                     $('#thank-you').modal();
@@ -815,6 +832,9 @@ $(document).ready(function(){
                     form_text: text
                 },
                 success: function() {
+                    // yaCounter36809450.reachGoal('question', function(){
+                    //     console.log('question в метрику отправлен');
+                    // });
                     $.modal.close();
                     $('#thank-you').html('<h3><span class="modal-thank-you__head">Спасибо за вашу заявку!</span> Наш менеджер свяжется в вами в ближайшее время.</h3>');
                     $('#thank-you').modal();
@@ -888,26 +908,6 @@ $(document).ready(function(){
     });
 
 });
-
-
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: {lat: 59.8863, lng: 30.3726},
-    scrollwheel: false
-  });
-
-  var image = '../img/icon-for-map.png';
-  var beachMarker = new google.maps.Marker({
-    position: {lat: 59.8863, lng: 30.3726},
-    map: map,
-    icon: image
-  });
-}
-
-
-
-
 
 
 // SmoothScroll v0.9.9

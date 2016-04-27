@@ -334,6 +334,7 @@ label.error {
 .modal {
   -webkit-border-radius: 0;
   border-radius: 0;
+  width: 320px;
 }
 .modal a.close-modal {
   top: 5px;
@@ -1374,6 +1375,9 @@ header .visible-form {
   float: left;
   margin-left: 8.33333333%;
 }
+.sertificate .owl-carousel .owl-nav {
+  display: block;
+}
 .sertificate__item {
   margin: 10px;
   -webkit-box-shadow: 0px 0px 10px 3px #d8d8d8;
@@ -1559,6 +1563,9 @@ footer .copypast a {
   }
   .promo .promo-text .btn {
     display: none;
+  }
+  .gift .error {
+    left: 52px;
   }
   .more__item .bg-hover {
     opacity: 0;
@@ -1961,6 +1968,12 @@ footer .copypast a {
   .floor .wood__description {
     margin-bottom: 20px;
   }
+  .floor .concrete__animate {
+    margin-left: 0;
+    margin-right: 0;
+    display: table;
+    width: 100%;
+  }
   .floor .concrete__text {
     position: relative;
   }
@@ -2019,6 +2032,12 @@ footer .copypast a {
   .floor .concrete__img:nth-child(6) {
     z-index: 5;
     top: 273px;
+  }
+  .floor .wood__animate {
+    margin-left: 0;
+    margin-right: 0;
+    display: table;
+    width: 100%;
   }
   .floor .wood__text {
     position: relative;
@@ -2120,6 +2139,10 @@ footer .copypast a {
   }
   .gift .form-gift .btn {
     padding: 43px 17px;
+  }
+  .gift .error {
+    left: 27px;
+    top: 10px;
   }
   .howwork__item {
     width: 50%;

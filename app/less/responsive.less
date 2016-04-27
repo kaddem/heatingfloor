@@ -53,42 +53,24 @@
     }
   }
 
+.floor{
   .concrete{
     &__description{
       transition: all 0.3s ease;
     }
-    // &__text{
-    //   transition: all 0.3s ease;
-    //   &:before{
-    //     width: 0;
-    //     transition: all 0.3s ease;
-    //   }
-    // }
+    &__layer{
+      ul{
+        // display: none;
+      }
+    }
+    &__list{
+      display: none;
+    }
     &__animate{
       & .concrete__img{
         transition: all 0.3s ease;
       }
-      &:hover .concrete__img{
-        &:nth-child(1){
-          top: 0;
-        }
-        &:nth-child(2){
-          top: 45px;
-        }
-        &:nth-child(3){
-          top: 105px;
-        }
-        &:nth-child(4){
-          top: 155px;
-        }
-        &:nth-child(5){
-          top: 213px;
-        }
-        &:nth-child(6){
-          top: 273px;
-        }
-      }
-      &:hover .concrete__text{
+      & .concrete__text{
         position: relative;
         &:before{
           content: '';
@@ -119,48 +101,39 @@
           z-index: 999999999;
         }
       }
-      &:hover .concrete__description{
-        margin-bottom: 15px;
-        &:nth-child(1) .concrete__text{
-          &:before{
-            width: 150px;
-            left: -165px;
-          }
-          &:after{
-            left: -172px;
-          }
-        }
-        &:nth-child(2) .concrete__text{
-          &:before{
-            width: 90px;
-            left: -105px;
-          }
-          &:after{
-            left: -112px;
-          }
-        }
-        &:nth-child(3) .concrete__text{
-          &:before{
-            width: 100px;
-            left: -115px;
-          }
-          &:after{
-            left: -121px;
-          }
-        }
-      }
+      // &:hover .concrete__description{
+      //   margin-bottom: 15px;
+      //   &:nth-child(1) .concrete__text{
+      //     &:before{
+      //       width: 150px;
+      //       left: -165px;
+      //     }
+      //     &:after{
+      //       left: -172px;
+      //     }
+      //   }
+      //   &:nth-child(2) .concrete__text{
+      //     &:before{
+      //       width: 90px;
+      //       left: -105px;
+      //     }
+      //     &:after{
+      //       left: -112px;
+      //     }
+      //   }
+      //   &:nth-child(3) .concrete__text{
+      //     &:before{
+      //       width: 100px;
+      //       left: -115px;
+      //     }
+      //     &:after{
+      //       left: -121px;
+      //     }
+      //   }
+      // }
     }
-  }
-
-  .wood{
-    &__description{
-      transition: all 0.3s ease;
-    }
-    &__animate{
-      & .wood__img{
-        transition: all 0.3s ease;
-      }
-      &:hover .wood__img{
+    &--open{
+      & .concrete__img{
         &:nth-child(1){
           top: 0;
         }
@@ -180,10 +153,24 @@
           top: 273px;
         }
       }
-      &:hover .wood__description{
-        margin-bottom: 15px;
+    }
+  }
+
+  .wood{
+    &__description{
+      transition: all 0.3s ease;
+    }
+    &__list{
+      display: none;
+    }
+    &__animate{
+      & .wood__img{
+        transition: all 0.3s ease;
       }
-      &:hover .wood__text{
+      // &:hover .wood__description{
+      //   margin-bottom: 15px;
+      // }
+      & .wood__text{
         position: relative;
         &:before{
           content: '';
@@ -198,10 +185,6 @@
           margin: auto;
           z-index: 999999999;
         }
-        // &:nth-child(1):before{
-        //   width: 150px;
-        //   left: -165px;
-        // }
         &:after{
           content: '';
           display: block;
@@ -217,8 +200,8 @@
           z-index: 999999999;
         }
       }
-      &:hover .wood__description{
-        margin-bottom: 15px;
+      & .wood__description{
+        // margin-bottom: 15px;
         &:nth-child(1) .wood__text{
           &:before{
             width: 150px;
@@ -239,11 +222,11 @@
         }
         &:nth-child(3) .wood__text{
           &:before{
-            width: 115px;
-            left: -130px;
+            width: 140px;
+            left: -155px;
           }
           &:after{
-            left: -135px;
+            left: -162px;
           }
         }
         &:nth-child(5) .wood__text{
@@ -252,21 +235,44 @@
             left: -100px;
           }
           &:after{
-            left: -105px;
+            left: -107px;
           }
         }
         &:nth-child(6) .wood__text{
           &:before{
-            width: 85px;
-            left: -100px;
+            width: 100px;
+            left: -115px;
           }
           &:after{
-            left: -105px;
+            left: -122px;
           }
         }
       }
     }
+    &--open{
+      & .wood__img{
+        &:nth-child(1){
+          top: 0;
+        }
+        &:nth-child(2){
+          top: 45px;
+        }
+        &:nth-child(3){
+          top: 105px;
+        }
+        &:nth-child(4){
+          top: 155px;
+        }
+        &:nth-child(5){
+          top: 213px;
+        }
+        &:nth-child(6){
+          top: 273px;
+        }
+      }
+    }
   }
+}
 
   .gift{
     &__item{

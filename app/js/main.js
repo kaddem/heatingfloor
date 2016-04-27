@@ -148,6 +148,102 @@ $(document).ready(function(){
     //     }
     // });
 
+    function floorOpen() {
+        $('.btn__concrete').on('click', function(){
+            if ($('.concrete__images').hasClass('concrete--open')){
+                $('.concrete__images').removeClass('concrete--open');
+                $('.concrete__list').hide(300);
+                $(this).text('Подробнее');
+            } else {
+                $('.concrete__images').addClass('concrete--open');
+                $('.concrete__list').show(300);
+                $(this).text('Свернуть');
+            }
+        });
+        $('.btn__wood').on('click', function(){
+            if ($('.wood__images').hasClass('wood--open')){
+                $('.wood__images').removeClass('wood--open');
+                $('.wood__list').hide(300);
+                $(this).text('Подробнее');
+            } else {
+                $('.wood__images').addClass('wood--open');
+                $('.wood__list').show(300);
+                $(this).text('Свернуть');
+            }
+        });
+    }
+    floorOpen();
+
+    if( $(window).width() < 1200 ) {
+        $('.concrete__images').addClass('concrete--open');
+        $('.concrete__list').show(300);
+        $('.wood__images').addClass('concrete--open');
+        $('.wood__list').show(300);
+        $('.btn__wood').hide(0);
+        $('.btn__concrete').hide(0);
+    }
+    $(window).resize(function(){
+        if( $(window).width() < 1200 ) {
+            $('.concrete__images').addClass('concrete--open');
+            $('.concrete__list').show(300);
+            $('.wood__images').addClass('concrete--open');
+            $('.wood__list').show(300);
+            $('.btn__wood').hide(0);
+            $('.btn__concrete').hide(0);
+        } else {
+            $('.concrete__images').removeClass('concrete--open');
+            $('.concrete__list').hide(300);
+            $('.wood__images').removeClass('concrete--open');
+            $('.wood__list').hide(300);
+            $('.btn__wood').show(0);
+            $('.btn__concrete').show(0);
+            //  $('.btn__concrete').on('click', function(){
+            //     if ($('.concrete__images').hasClass('concrete--open')){
+            //         $('.concrete__images').removeClass('concrete--open');
+            //         $('.concrete__list').hide(300);
+            //         $(this).text('Подробнее');
+            //     } else {
+            //         $('.concrete__images').addClass('concrete--open');
+            //         $('.concrete__list').show(300);
+            //         $(this).text('Свернуть');
+            //     }
+            // });
+            // $('.btn__wood').on('click', function(){
+            //     if ($('.wood__images').hasClass('wood--open')){
+            //         $('.wood__images').removeClass('wood--open');
+            //         $('.wood__list').hide(300);
+            //         $(this).text('Подробнее');
+            //     } else {
+            //         $('.wood__images').addClass('wood--open');
+            //         $('.wood__list').show(300);
+            //         $(this).text('Свернуть');
+            //     }
+            // });
+        }
+    });
+    // $('.btn__concrete').on('click', function(){
+    //     if ($('.concrete__images').hasClass('concrete--open')){
+    //         $('.concrete__images').removeClass('concrete--open');
+    //         $('.concrete__list').hide(300);
+    //         $(this).text('Подробнее');
+    //     } else {
+    //         $('.concrete__images').addClass('concrete--open');
+    //         $('.concrete__list').show(300);
+    //         $(this).text('Свернуть');
+    //     }
+    // });
+    // $('.btn__wood').on('click', function(){
+    //     if ($('.wood__images').hasClass('wood--open')){
+    //         $('.wood__images').removeClass('wood--open');
+    //         $('.wood__list').hide(300);
+    //         $(this).text('Подробнее');
+    //     } else {
+    //         $('.wood__images').addClass('wood--open');
+    //         $('.wood__list').show(300);
+    //         $(this).text('Свернуть');
+    //     }
+    // });
+
     function staticFloor() {
         $('.concrete__img:eq(0)').animate({
             top: 0
@@ -195,91 +291,91 @@ $(document).ready(function(){
     }
     // Табы для 3D полов
     function tabsFloor(){
-        $('.concrete__animate').mouseenter(function(){
-            $('.concrete__img:eq(0)').animate({
-                top: 0
-            }, 300);
-            $('.concrete__img:eq(1)').animate({
-                top: 45
-            }, 300);
-            $('.concrete__img:eq(2)').animate({
-                top: 105
-            }, 300);
-            $('.concrete__img:eq(3)').animate({
-                top: 155
-            }, 300);
-            $('.concrete__img:eq(4)').animate({
-                top: 213
-            }, 300);
-            $('.concrete__img:eq(5)').animate({
-                top: 273
-            }, 300);
-            $('.concrete__description').animate({
-                marginBottom: 20
-            }, 300);
-        });
-        $('.concrete__animate').mouseleave(function(){
-            $('.concrete__img:eq(0)').animate({
-                top: 0
-            }, 300);
-            $('.concrete__img:eq(1)').animate({
-                top: 5
-            }, 300);
-            $('.concrete__img:eq(2)').animate({
-                top: 15
-            }, 300);
-            $('.concrete__img:eq(3)').animate({
-                top: 15
-            }, 300);
-            $('.concrete__img:eq(4)').animate({
-                top: 13
-            }, 300);
-            $('.concrete__img:eq(5)').animate({
-                top: 23
-            }, 300);
-        });
+        // $('.concrete__animate').mouseenter(function(){
+        //     $('.concrete__img:eq(0)').animate({
+        //         top: 0
+        //     }, 300);
+        //     $('.concrete__img:eq(1)').animate({
+        //         top: 45
+        //     }, 300);
+        //     $('.concrete__img:eq(2)').animate({
+        //         top: 105
+        //     }, 300);
+        //     $('.concrete__img:eq(3)').animate({
+        //         top: 155
+        //     }, 300);
+        //     $('.concrete__img:eq(4)').animate({
+        //         top: 213
+        //     }, 300);
+        //     $('.concrete__img:eq(5)').animate({
+        //         top: 273
+        //     }, 300);
+        //     $('.concrete__description').animate({
+        //         marginBottom: 20
+        //     }, 300);
+        // });
+        // $('.concrete__animate').mouseleave(function(){
+        //     $('.concrete__img:eq(0)').animate({
+        //         top: 0
+        //     }, 300);
+        //     $('.concrete__img:eq(1)').animate({
+        //         top: 5
+        //     }, 300);
+        //     $('.concrete__img:eq(2)').animate({
+        //         top: 15
+        //     }, 300);
+        //     $('.concrete__img:eq(3)').animate({
+        //         top: 15
+        //     }, 300);
+        //     $('.concrete__img:eq(4)').animate({
+        //         top: 13
+        //     }, 300);
+        //     $('.concrete__img:eq(5)').animate({
+        //         top: 23
+        //     }, 300);
+        // });
 
 
-        $('.wood__animate').mouseenter(function(){
-            $('.wood__img:eq(0)').animate({
-                top: 0
-            }, 300);
-            $('.wood__img:eq(1)').animate({
-                top: 45
-            }, 300);
-            $('.wood__img:eq(2)').animate({
-                top: 105
-            }, 300);
-            $('.wood__img:eq(3)').animate({
-                top: 155
-            }, 300);
-            $('.wood__img:eq(4)').animate({
-                top: 213
-            }, 300);
-            $('.wood__img:eq(5)').animate({
-                top: 273
-            }, 300);
-        });
-        $('.wood__animate').mouseleave(function(){
-            $('.wood__img:eq(0)').animate({
-                top: 0
-            }, 300);
-            $('.wood__img:eq(1)').animate({
-                top: 4
-            }, 300);
-            $('.wood__img:eq(2)').animate({
-                top: 14
-            }, 300);
-            $('.wood__img:eq(3)').animate({
-                top: 6
-            }, 300);
-            $('.wood__img:eq(4)').animate({
-                top: 6
-            }, 300);
-            $('.wood__img:eq(5)').animate({
-                top: 16
-            }, 300);
-        });
+        // $('.wood__animate').mouseenter(function(){
+        //     $('.wood__img:eq(0)').animate({
+        //         top: 0
+        //     }, 300);
+        //     $('.wood__img:eq(1)').animate({
+        //         top: 45
+        //     }, 300);
+        //     $('.wood__img:eq(2)').animate({
+        //         top: 105
+        //     }, 300);
+        //     $('.wood__img:eq(3)').animate({
+        //         top: 155
+        //     }, 300);
+        //     $('.wood__img:eq(4)').animate({
+        //         top: 213
+        //     }, 300);
+        //     $('.wood__img:eq(5)').animate({
+        //         top: 273
+        //     }, 300);
+        // });
+        // $('.wood__animate').mouseleave(function(){
+        //     $('.wood__img:eq(0)').animate({
+        //         top: 0
+        //     }, 300);
+        //     $('.wood__img:eq(1)').animate({
+        //         top: 4
+        //     }, 300);
+        //     $('.wood__img:eq(2)').animate({
+        //         top: 14
+        //     }, 300);
+        //     $('.wood__img:eq(3)').animate({
+        //         top: 6
+        //     }, 300);
+        //     $('.wood__img:eq(4)').animate({
+        //         top: 6
+        //     }, 300);
+        //     $('.wood__img:eq(5)').animate({
+        //         top: 16
+        //     }, 300);
+        // });
     }
 
 

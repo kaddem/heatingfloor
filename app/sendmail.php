@@ -39,7 +39,7 @@
 
 
   // create email body and send it
-  $to = 'rosa.812@mail.ru'; // put your email
+  $to = 'order@rosa-montazh.ru'; // put your email
   $subject = "Заявка от $name | ".$title;
   $message = "Заполнена форма ".$title.". \n\n".
     "Данные отправителя:\n\nИмя: ".$name." \n".

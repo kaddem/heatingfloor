@@ -192,6 +192,10 @@ This must be run when you have at least 2 sprites.
 .fflite {
   font-family: "Segoe Ui Lite", sans-serif;
 }
+.blocker {
+  z-index: 9999999;
+  padding-top: 130px;
+}
 html,
 body {
   font-family: "Segoe Ui", sans-serif;
@@ -382,7 +386,15 @@ label.error {
   background-color: #f08456;
 }
 header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10000000;
   padding: 15px 0 8px 0;
+  -webkit-box-shadow: 0 0 1px 1px grey;
+  box-shadow: 0 0 1px 1px grey;
 }
 header .logo {
   width: 8.33333333%;
@@ -478,6 +490,7 @@ header .visible-form {
   background-position: center;
   background-size: cover;
   padding: 37px 0;
+  margin-top: 120px;
 }
 .promo-text {
   width: 66.66666667%;
@@ -487,15 +500,14 @@ header .visible-form {
   color: #ffffff;
 }
 .promo-text__head {
-  font-size: 30px;
-  line-height: 30px;
-  margin: 35px 0 11px 0;
+  font-size: 40px;
+  line-height: 50px;
+  margin-top: 10px;
   font-family: "Segoe Ui Bold", sans-serif;
   text-transform: uppercase;
 }
 .promo-text__slogan {
   font-size: 32px;
-  line-height: 36px;
   padding: 0;
   margin: 0;
 }
@@ -1703,7 +1715,7 @@ footer .copypast a {
     bottom: 0;
     left: -195px;
     margin: auto;
-    z-index: 999999999;
+    z-index: 99999;
   }
   .floor .wood__animate .wood__text:after {
     content: '';
@@ -1718,7 +1730,7 @@ footer .copypast a {
     bottom: 0;
     left: -202px;
     margin: auto;
-    z-index: 999999999;
+    z-index: 99999;
   }
   .floor .wood__animate .wood__description:nth-child(1) .wood__text:before {
     width: 150px;
@@ -1986,7 +1998,7 @@ footer .copypast a {
     bottom: 0;
     left: -200px;
     margin: auto;
-    z-index: 999999999;
+    z-index: 99;
   }
   .floor .concrete__text:after {
     content: '';
@@ -2001,7 +2013,7 @@ footer .copypast a {
     bottom: 0;
     left: -207px;
     margin: auto;
-    z-index: 999999999;
+    z-index: 99;
   }
   .floor .concrete__img:nth-child(1) {
     z-index: 10;
@@ -2051,7 +2063,7 @@ footer .copypast a {
     bottom: 0;
     left: -240px;
     margin: auto;
-    z-index: 999999999;
+    z-index: 99;
   }
   .floor .wood__text:after {
     content: '';
@@ -2066,7 +2078,7 @@ footer .copypast a {
     bottom: 0;
     left: -247px;
     margin: auto;
-    z-index: 999999999;
+    z-index: 99;
   }
   .floor .wood__img:nth-child(1) {
     z-index: 10;
@@ -2344,6 +2356,7 @@ footer .copypast a {
     height: 32px;
     margin: 0;
     top: 10px;
+    left: 5px;
   }
   header .logo {
     width: 25%;
@@ -2417,8 +2430,11 @@ footer .copypast a {
     text-align: center;
   }
   .promo .promo-text__head {
-    line-height: 36px;
+    line-height: 50px;
     margin-top: 15px;
+  }
+  .promo .promo-text__slogan {
+    line-height: 40px;
   }
   .promo .form-calculate {
     width: 100%;

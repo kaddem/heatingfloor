@@ -108,32 +108,32 @@ $(document).ready(function(){
     });
 
     // Функция показа кнопки прокрутки наверх
-    function pageScroll(elem, showPosition){
-        $('<a href="#" class="' + elem + '"></a>').appendTo('body').fadeOut(0);
-        // $(upBtn).appendTo('body').fadeOut(0);
+    // function pageScroll(elem, showPosition){
+    //     $('<a href="#" class="' + elem + '"></a>').appendTo('body').fadeOut(0);
+    //     // $(upBtn).appendTo('body').fadeOut(0);
 
-        $('.'+elem).on('click', function (e) { // отслеживаем событие на элементе #scroll-top
-            e.preventDefault();
-            var current_position = $(document).scrollTop(); // получаем позицию скролла
-            var scroll_time = current_position / 3; // подсчитываем время анимации
-            $('body,html').animate({'scrollTop':0},scroll_time); // собственно, анимируем
-        });
+    //     $('.'+elem).on('click', function (e) { // отслеживаем событие на элементе #scroll-top
+    //         e.preventDefault();
+    //         var current_position = $(document).scrollTop(); // получаем позицию скролла
+    //         var scroll_time = current_position / 3; // подсчитываем время анимации
+    //         $('body,html').animate({'scrollTop':0},scroll_time); // собственно, анимируем
+    //     });
 
-        $(window).on('scroll', function(e) { // отслеживаем событие на элементе window
-            showScrollBtn(); // на любой скролл запускаем функцию
-        });
+    //     $(window).on('scroll', function(e) { // отслеживаем событие на элементе window
+    //         showScrollBtn(); // на любой скролл запускаем функцию
+    //     });
 
-        showScrollBtn(); // после готовности DOM тоже запустим функцию
+    //     showScrollBtn(); // после готовности DOM тоже запустим функцию
 
-        function showScrollBtn() {
-            if( $(document).scrollTop() > showPosition ) { // если скролл более чем на 500px
-                $('.'+elem).fadeIn(150); // то покажем кнопку перемотки вверх
-            }
-            else { // иначе
-                $('.'+elem).fadeOut(150); // скроем кнопку перемотки
-            }
-        }
-    }
+    //     function showScrollBtn() {
+    //         if( $(document).scrollTop() > showPosition ) { // если скролл более чем на 500px
+    //             $('.'+elem).fadeIn(150); // то покажем кнопку перемотки вверх
+    //         }
+    //         else { // иначе
+    //             $('.'+elem).fadeOut(150); // скроем кнопку перемотки
+    //         }
+    //     }
+    // }
 
     // if( $(window).width() > 1199 ) {
     //     tabsFloor();
@@ -969,7 +969,7 @@ $(document).ready(function(){
 
     // tabs('.layer', 'tabs-link--active', '.layer__price');
 
-    pageScroll('up-button', 300);
+    // pageScroll('up-button', 300);
     anchorScroll('#anchor-menu');
 
     // вызовы открытия форм в модальном окне по нажатию на кнопку

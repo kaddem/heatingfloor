@@ -8,11 +8,25 @@
 
   .concrete, .wood{
     .col-6;
+
+    &__list{
+      border-bottom: 2px solid @orange-color;
+    }
+
+    &__description:last-child{
+      margin-bottom: 15px;
+    }
   }
   img[class*='concrete'], img[class*='wood']{
     position: absolute;
     left: 0;
     // position: relative;
+  }
+
+  .fullprice{
+    display: block;
+    color: @orange-color;
+    .ffbold;
   }
   .concrete{
     &__animate{
@@ -20,13 +34,14 @@
       .range;
     }
     &__images, &__layer{
-      list-style: none;
       .col-6;
       float: none;
       display: table-cell;
     }
-    &__images{
-
+    &__layer{
+      ul{
+        list-style: none;
+      }
     }
     &__img{
       &:nth-child(1){
@@ -66,13 +81,14 @@
       .range;
     }
     &__images, &__layer{
-      list-style: none;
       .col-6;
       float: none;
       display: table-cell;
     }
-    &__images{
-
+    &__layer{
+      ul{
+        list-style: none;
+      }
     }
     &__img{
       &:nth-child(1){
@@ -106,7 +122,7 @@
   .concrete, .wood{
     &__text{
       cursor: pointer;
-      border-bottom: 1px dashed @orange-color;
+      // border-bottom: 1px dashed @orange-color;
     }
     &__price{
       .ffbold;
@@ -134,5 +150,11 @@
     }
 
   }
-
+  .btn__concrete, .btn__wood{
+    width: 150px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

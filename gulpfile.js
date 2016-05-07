@@ -36,7 +36,7 @@ gulp.task('build', ['image'], function () {
   var assets = useref.assets();
   return gulp.src('app/*.*')
   .pipe(assets)
-  // .pipe(gulpif('*.js', uglify()))
+  .pipe(gulpif('*.js', uglify()))
   .pipe(gulpif('*.css', minifyCss()))
   .pipe(assets.restore())
   .pipe(useref())
@@ -49,8 +49,8 @@ gulp.task('ftp', ['build'], function () {
   return gulp.src('dist/**/*')
   .pipe(ftp({
     host: '77.222.56.63', //КЭП и далее тоже
-    user: 'kademidovm', // Логин от ftp аккаунта
-    pass: 'xiefciicsu', //Указать пароль от ftp акаунта
+    user: '', // Логин от ftp аккаунта
+    pass: '', //Указать пароль от ftp акаунта
     port: '21', // указываем при необходимости. порт по умолчанию 22
     remotePath: 'group/public_html/testgulp'
   }));

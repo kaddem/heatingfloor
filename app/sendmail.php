@@ -21,8 +21,22 @@
   $email = $_POST['form_email'];
   $phone = $_POST['form_phone'];
   $area = $_POST['form_area'];
+  $date = $_POST['form_date'];
+  $gift = $_POST['form_gift'];
+  $text = $_POST['form_text'];
   $quantity = $_POST['form_quantity'];
-  $comments = "Площадь ".$area." м.кв; Кол-во помещений ".$quantity;
+  if (isset($area) && isset($quantity)){
+    $comments = "Площадь: ".$area." м.кв; \nКол-во помещений: ".$quantity;
+  } else if (isset($date)) {
+    $comments ="Заказ обратного звонка на: ".$date;
+  } else if(isset($gift)) {
+    $comments ="Выбранный подарок: ".$gift;
+  } else if(isset($text)) {
+    $comments ="Выбранный подарок: ".$text;
+  } else {
+    $comments ="";
+  }
+
 
   // if($area == '') {
   //   $area_message = '';
@@ -36,14 +50,15 @@
   // }
 
   // create email body and send it
-  $to = 'kademidov@gmail.com'; // put your email
-  $subject = "Заявка от $name $nameForm";
-  $message = "Заполнена форма \"$nameForm\". \n\n".
-    "Данные отправителя:\n\nИмя: $name \n".
-    "Почта: $email \n".
-    "Телефон: $phone \n".
-    "Отапливаемая площадь: ".$area."\n".
-    "Количество помещений: ".$quantity."\n";
+  $to = 'order@rosa-montazh.ru'; // put your email
+  $subject = "Заявка от $name | ".$title;
+  $message = "Заполнена форма ".$title.". \n\n".
+    "Данные отправителя:\n\nИмя: ".$name." \n".
+    "Почта: ".$email." \n".
+    "Телефон: ".$phone." \n".
+    // "Отапливаемая площадь: ".$area." \n".
+    // "Количество помещений: ".$quantity." \n".
+    $comments;
   $headers = "From: ".$name." <".$email.">" . "\r\n" .
     "Reply-To: ".$name." <".$email.">" . "\r\n" ;
   mail($to, $subject, $message ,$headers);
@@ -69,23 +84,35 @@
     $leadData = $_POST['DATA'];
 
     $title = $_POST['form_title'];
-    $nameForm = $_POST['form_nameForm'];
     $name = $_POST['form_name'];
     $email = $_POST['form_email'];
     $phone = $_POST['form_phone'];
     $area = $_POST['form_area'];
+    $date = $_POST['form_date'];
+    $gift = $_POST['form_gift'];
+    $text = $_POST['form_text'];
     $quantity = $_POST['form_quantity'];
-    $comments = "Площадь ".$area." м.кв; Кол-во помещений ".$quantity;
+    if (isset($area) && isset($quantity)){
+      $comments = "Площадь: ".$area." м.кв; \nКол-во помещений: ".$quantity;
+    } else if (isset($date)) {
+      $comments = "Заказ обратного звонка на: ".$date;
+    } else if (isset($gift)) {
+      $comments ="Выбранный подарок: ".$gift;
+    } else if (isset($text)) {
+      $comments ="Выбранный подарок: ".$text;
+    } else {
+      $comments = "";
+    }
 
     // get lead data from the form
     $postData = array(
-      'TITLE' => $_POST['form_title'],
-      'NAME' => $_POST['form_name'],
-      'EMAIL_OTHER' => $_POST['form_email'],
-      'PHONE_WORK' => $_POST['form_email'],
-      'COMMENTS' => "Площадь ".$_POST['form_area']." м.кв; Кол-во помещений ".$_POST['form_quantity'],
+      'TITLE' => $title,
+      'NAME' => $name,
+      'EMAIL_OTHER' => $email,
+      'PHONE_WORK' => $phone,
+      'COMMENTS' => $comments,
       'SOURCE_ID' => 'Сайт теплый водяной пол',
-      'STATUS_DESCRIPTION' => $_POST['form_nameForm'],
+      'STATUS_DESCRIPTION' => $title,
       // 'ASSIGNED_BY_ID' => '',
     );
 

@@ -2,12 +2,17 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Цены на монтаж водяных теплых полов. РОСА Монтаж</title>
-  <meta name="viewport" content="width=device-width; initial-scale=1">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="Keywords" content="монтаж отопления, отопление, монтаж">
+  <meta name="Description" content="Наша компания выполняет расчет, проектирование и монтаж систем отопления и водоснабжения объектов любой площади и любого назначения">
+  <title>Водяной теплы пол. Цены на монтаж в Санкт-Петербурге и Ленинградской области. РОСА Монтаж</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <!-- build:css css/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
   <link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="bower_components/jquery-modal/jquery.modal.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css css/style.min.css -->
@@ -15,13 +20,40 @@
   <!-- endbuild -->
 </head>
 <body>
+  <script type="text/javascript">
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter36809450 = new Ya.Metrika({
+                      id:36809450,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true,
+                      webvisor:true
+                  });
+              } catch(e) { }
+          });
+
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/36809450" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
   <header>
     <div class="container">
       <div class="range">
         <div class="logo">
           <img src="img/main_logo.png" alt="РОСА Монтаж. Логотип компании">
         </div>
-        <!-- /.logo -->
         <a class="menu-burger" href="#"></a>
         <nav class="main-nav">
           <a class="menu-back" href="#"></a>
@@ -35,24 +67,28 @@
             <li><a href="#map">Контакты</a></li>
           </ul>
         </nav>
-        <!-- /.main-nav -->
         <div class="contacts">
           <a href="tel:+78127150506" class="phone">+7 (812) 715-05-06</a>
           <button class="btn btn-recall" id="btn-recall">Заказать звонок</button>
-          <form action="" class="form hidden-form">
-            <span class="form-close"></span>
+          <form action="#" class="form hidden-form" id="form_recall" onsubmit="yaCounter36809450.reachGoal('recall'); ga('send', 'event', 'SendForm', 'SendRecall');">
             <h3 class="calculate__head">Заказ обратного звонка</h3>
-            <input type="text" placeholder="Имя">
-            <input type="text" placeholder="Телефон">
-            <input type="text" placeholder="Время звонка">
-            <button class="btn">Перезвоните мне</button>
+            <div class="form-row">
+              <input type="hidden" class="title" name="DATA[TITLE]" value="Форма - Заказ обратного звонка">
+            </div>
+            <div class="form-row">
+              <input type="text" class="form-name" name="name" placeholder="Имя">
+            </div>
+            <div class="form-row">
+              <input type="text" class="form-phone" name="phone" placeholder="Телефон">
+            </div>
+            <div class="form-row">
+              <input type="text" class="form-date" name="date" placeholder="Время звонка">
+            </div>
+            <button class="btn" name="enter">Перезвоните мне</button>
           </form>
         </div>
-        <!-- /.contacts -->
       </div>
-      <!-- /.range -->
     </div>
-    <!-- /.container -->
   </header>
   <main>
     <div id="promo" class="promo">
@@ -60,16 +96,12 @@
         <div class="range">
           <div class="promo-text">
             <h1 class="promo-text__head">Монтаж водяного теплого пола</h1>
-            <!-- /.promo-text__head -->
-            <p class="promo-text__slogan">Проектирование и установка водяных<br>теплых полов любой сложности</p>
-            <!-- /.promo-text__slogan -->
+            <p class="promo-text__slogan">Акция! Монтаж водяного теплого пола - <strong>250 р/м<sup>2</sup></strong></p>
           </div>
-          <!-- /.promo-text -->
           <div class="form-calculate">
-            <form action="#" class="form hidden-form" id="form_calculate">
-              <span class="form-close"></span>
+            <form action="#" class="form hidden-form" id="form_calculate" onsubmit="yaCounter36809450.reachGoal('calc'); ga('send', 'event', 'SendForm', 'SendCalc');">
               <h3 class="calculate__head form-head"><strong>Получить расчет</strong> предварительной стоимости <br>за 24 часа!</h3>
-              <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы 'Расчет предварительной стоимости'">
+              <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы Расчет предварительной стоимости">
               <div class="form-row">
                 <input type="text" class="form-name" name="name" placeholder="Имя">
               </div>
@@ -83,40 +115,31 @@
                 <input type="text" class="form-area" name="area" placeholder="Метраж">
               </div>
               <div class="form-row">
-                <input type="text" class="form-quantity" name="quantity" placeholder="К-во помещений">
+                <input type="text" class="form-quantity" name="quantity" placeholder="К-во комнат">
               </div>
               <button class="btn" name="enter">Получить расчет</button>
             </form>
             <button class="btn btn-form-calculate" id="call-form-calculate">Получить расчет</button>
           </div>
         </div>
-        <!-- /.range -->
       </div>
-      <!-- /.container -->
     </div>
-    <!-- /.promo -->
     <div class="action">
       <div class="container">
         <div class="range">
           <div class="action__slogan">
-            <span><strong>Акция</strong>До конца апреля</span>
+            <span><strong>Акция</strong>До конца мая</span>
           </div>
-          <!-- /.action__slogan -->
           <div class="action__description">
             <h2>При заказе системы отопления, монтаж теплого пола с учетом скидки <strong>250р/м.кв</strong></h2>
           </div>
-          <!-- /.action__description -->
         </div>
-        <!-- /.range -->
       </div>
-      <!-- /.container -->
     </div>
-    <!-- /.action -->
     <div class="floor" id="floor">
       <div class="container">
         <h2 class="floor__head">Типы водяных теплых полов</h2>
         <div class="range">
-
           <div class="concrete">
             <h3>Теплый пол на бетонном основании</h3>
             <div class="concrete__animate">
@@ -128,32 +151,34 @@
                 <img class="concrete__img" src="img/concrete-polystyrene-5.png" alt="">
                 <img class="concrete__img" src="img/concrete-strainer-6.png" alt="">
               </div>
-              <ul class="concrete__layer">
-                <li class="concrete__description">
-                  <span class="concrete__text">Чистовое покрытие (паркет, ламинат, кафель) </span>
-                  <span class="concrete__price">300р/м.кв</span>
-                </li>
-                <li class="concrete__description">
-                  <span class="concrete__text">Бетонная стяжка </span>
-                  <span class="concrete__price">300р/м.кв</span>
-                </li>
-                <li class="concrete__description layer--action">
-                  <span class="concrete__text">Труба для теплого поля </span>
-                  <span class="concrete__price">300р/м.кв</span>
-                </li>
-                <li class="concrete__description">
-                  <span class="concrete__text">Арматурная сетка </span>
-                  <span class="concrete__price">300р/м.кв</span>
-                </li>
-                <li class="concrete__description">
-                  <span class="concrete__text">Понополистерол с гидроизоляционной основой </span>
-                  <span class="concrete__price">300р/м.кв</span>
-                </li>
-                <li class="concrete__description">
-                  <span class="concrete__text">Бетонная основа под монтаж теплого пола </span>
-                  <span class="concrete__price">300р/м.кв</span>
-                </li>
-              </ul>
+              <div class="concrete__layer">
+                <ul class="concrete__list">
+                  <li class="concrete__description">
+                    <span class="concrete__text">Чистовое покрытие (кафель, ламинат)</span>
+                  </li>
+                  <li class="concrete__description">
+                    <span class="concrete__text">Бетонная стяжка </span>
+                    <span class="concrete__price">430 р/м<sup>2</sup></span>
+                  </li>
+                  <li class="concrete__description">
+                    <span class="concrete__text">Труба 5 метров по 58р/м<sup>2</sup></span>
+                    <span class="concrete__price">290 р/м<sup>2</sup></span>
+                  </li>
+                  <li class="concrete__description">
+                    <span class="concrete__text">Арматурная сетка </span>
+                    <span class="concrete__price">81 р/м<sup>2</sup></span>
+                  </li>
+                  <li class="concrete__description">
+                    <span class="concrete__text">Пенополистирол</span>
+                    <span class="concrete__price">243 р/м<sup>2</sup></span>
+                  </li>
+                  <li class="concrete__description">
+                    <span class="concrete__text">Бетонная основа под монтаж теплого пола </span>
+                  </li>
+                </ul>
+                <p class="concrete__fullprice">Общая стоимость материалов без учета бетонной основы: <span class="fullprice">1044,00 р/м<sup>2</sup></span></p>
+                <button class="btn btn__concrete">Подробнее</button>
+              </div>
             </div>
           </div>
           <div class="wood">
@@ -167,56 +192,53 @@
                 <img class="wood__img" src="img/wood-polystyrene-5.png" alt="">
                 <img class="wood__img" src="img/wood-wood-6.png" alt="">
               </div>
-              <ul class="wood__layer">
-                <li class="wood__description">
-                  <span class="wood__text">Чистовое покрытие (паркет, ламинат, кафель) </span>
-                  <span class="wood__price">300р/м.кв</span>
-                </li>
-                <li class="wood__description">
-                  <span class="wood__text">ГВЛ(гипсоволокнистая плита) или цементно-стружечная плита </span>
-                  <span class="wood__price">300р/м.кв</span>
-                </li>
-                <li class="wood__description layer--action">
-                  <span class="wood__text">Теплораспределительные пластины </span>
-                  <span class="wood__price">300р/м.кв</span>
-                </li>
-                <li class="wood__description">
-                  <span class="wood__text">Труба для теплого поля </span>
-                  <span class="wood__price">300р/м.кв</span>
-                </li>
-                <li class="wood__description">
-                  <span class="wood__text">Понополистерол с гидроизоляционной основой </span>
-                  <span class="wood__price">300р/м.кв</span>
-                </li>
-                <li class="wood__description">
-                  <span class="wood__text">Деревянная основа под монтаж теплого пола и доски на лагах </span>
-                  <span class="wood__price">300р/м.кв</span>
-                </li>
-              </ul>
+              <div class="wood__layer">
+                <ul class="wood__list">
+                  <li class="wood__description">
+                    <span class="wood__text">Чистовое покрытие (кафель, ламинат)</span>
+                  </li>
+                  <li class="wood__description">
+                    <span class="wood__text">Гипсоволокнистая плита </span>
+                    <span class="wood__price">421,00 р/м<sup>2</sup></span>
+                  </li>
+                  <li class="wood__description">
+                    <span class="wood__text">Труба 5 метров по 58р/м<sup>2</sup></span>
+                    <span class="wood__price">290 р/м<sup>2</sup></span>
+                  </li>
+                  <li class="wood__description layer--action">
+                    <span class="wood__text">Теплораспределительные пластины 2шт по 105р.</span>
+                    <span class="wood__price">210 р/м<sup>2</sup></span>
+                  </li>
+                  <li class="wood__description">
+                    <span class="wood__text">Пенополистирол</span>
+                    <span class="wood__price">243 р/м<sup>2</sup></span>
+                  </li>
+                  <li class="wood__description">
+                    <span class="wood__text">Деревянная основа под монтаж теплого пола и доски на лагах </span>
+                  </li>
+                </ul>
+                <p class="wood__fullprice">Общая стоимость материалов без учета деревянной основы: <span class="fullprice">1164,00 р/м<sup>2</sup></span></p>
+                <button class="btn btn__wood">Подробнее</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <div id="gift" class="gift">
       <div class="container">
         <span class="gift__slogan">Выбери подарок</span>
         <h2 class="gift__head">Заказав у нас теплый пол, вы можете выбрать любой из  подарков</h2>
-          <form action="" class="range form form-gift">
+          <form action="#" class="range form form-gift" id="form_gift" onsubmit="yaCounter36809450.reachGoal('gift'); ga('send', 'event', 'SendForm', 'SendGift');">
             <div class="gift__col">
               <div class="gift__item">
                 <img src="img/gift1.jpg" alt="" class="gift__photo">
                 <div class="gift__description">
                   <input name="giftradio" type="radio" id="gift1" checked="checked">
                   <label for="gift1" class="gift__item-head">Проект бесплатно</label>
-                  <!-- /.gift__item-head -->
                   <p class="gift__item-text">Вы можете получить индивидуальный проект для вашего дома</p>
-                  <!-- /.gift__item-text -->
                 </div>
-                <!-- /.gift__description -->
               </div>
-              <!-- /.gift__item -->
             </div>
             <div class="gift__col">
               <div class="gift__item">
@@ -224,47 +246,37 @@
                 <div class="gift__description">
                   <input name="giftradio" type="radio" id="gift2">
                   <label for="gift2" class="gift__item-head">Доставка бесплатно</label>
-                  <!-- /.gift__item-head -->
                   <p class="gift__item-text">Мы доставим материалыв пределах 30 км от КАД</p>
-                  <!-- /.gift__item-text -->
                 </div>
-                <!-- /.gift__description -->
               </div>
-              <!-- /.gift__item -->
             </div>
             <div class="gift__col">
               <div class="gift__item">
                 <img src="img/gift3.jpg" alt="" class="gift__photo">
                 <div class="gift__description">
                   <input name="giftradio" type="radio" id="gift3">
-                  <label for="gift3" class="gift__item-head">Скидка на услугу</label>
-                  <!-- /.gift__item-head -->
-                  <p class="gift__item-text">Вы так же можете выбрать скидку 30% на любую из наших дополнительных  услуг</p>
-                  <!-- /.gift__item-text -->
+                  <label for="gift3" class="gift__item-head">Сервис бесплатно</label>
+                  <p class="gift__item-text">Годовой договор на сервисное обслуживание котла</p>
                 </div>
-                <!-- /.gift__description -->
               </div>
-              <!-- /.gift__item -->
             </div>
             <div class="form-gift__col">
               <div class="range">
-                <div class="form-gift__item">
-                  <input type="text" name="form-name" placeholder="Имя">
+                <input type="hidden" class="title" name="DATA[TITLE]" value="Форма - Хочу подарок">
+                <div class="form-gift__item form-row">
+                  <input type="text" class="form-name" name="name" placeholder="Имя">
                 </div>
-                <div class="form-gift__item">
-                  <input type="text" name="form-phone" placeholder="Телефон">
+                <div class="form-gift__item form-row">
+                  <input type="text" class="form-phone" name="phone" placeholder="Телефон">
                 </div>
-                <div class="form-gift__item">
+                <div class="form-gift__item form-row">
                   <button class="btn">Хочу теплый пол</button>
                 </div>
               </div>
             </div>
           </form>
-        <!-- /.range -->
       </div>
-      <!-- /.container -->
     </div>
-    <!-- /.gift -->
     <div id="howwork" class="howwork">
       <div class="container">
         <h2 class="howwork__head">4 шага к вашему комфорту</h2>
@@ -288,7 +300,6 @@
         </ul>
       </div>
     </div>
-    <!-- howwork -->
     <div id="pay" class="pay">
       <div class="bg-box"></div>
       <div class="test-box">
@@ -304,49 +315,39 @@
           </div>
       </div>
     </div>
-    <!-- /.pay -->
     <div class="worth">
       <div class="container">
         <h2 class="worth__head">Основные достоинства систем отопления на основе водяных теплых полов:</h2>
         <ul class="range worth__list">
           <li class="worth__item adv-comfort">
             <span class="worth__item-head">Комфорт</span>
-            <p class="worth__item-text">Поддержание температуры в комфортном для человека диапазоне. Отсутствие перегретых и переохлажденных зон</p>
+            <p class="worth__item-text">Отсутствуют переохлажденные и перегретые места в помещении - температура воздуха везде одинакова, что создает дополнительный комфорт.</p>
           </li>
-          <!-- /.worth__item -->
           <li class="worth__item adv-design">
             <span class="worth__item-head">Современный дизайн</span>
-            <p class="worth__item-text">Скрытность систем, на виду только термо&shy;статы. Что никак не повредит внешниему виду вашего интерьера. </p>
+            <p class="worth__item-text">Водяной теплый пол невидим глазу. Это позволит сделать дизайн интерьера по настоящему уникальным.</p>
           </li>
-          <!-- /.worth__item -->
           <li class="worth__item adv-protect">
             <span class="worth__item-head">Надежность</span>
-            <p class="worth__item-text">Системы ВТП имеют продолжительный срок службы (десятилетия), но не требуют дорогостоящего и высококвалифициро&shy;ванного обслуживания.</p>
+            <p class="worth__item-text">Системы водяных теплых полов служат десятилетия и требуют минимальное обслуживание, что дешево и быстро.</p>
           </li>
-          <!-- /.worth__item -->
           <li class="worth__item adv-pig">
             <span class="worth__item-head">Экономичность</span>
-            <p class="worth__item-text">Снижение теплопотерь при применении ВТП по сравнению с радиаторными системами, которое, в первую очередь, достигается за счет более низкого значения температуры воздуха в помещениях, при котором обеспечивается тепловой.</p>
+            <p class="worth__item-text">Экономия энергоресурсов, за счет малой температуры теплоносителя в трубе и соответственно экономия средств.</p>
           </li>
-          <!-- /.worth__item -->
           <li class="worth__item adv-light">
             <span class="worth__item-head">Рациональность</span>
             <p class="worth__item-text">Увеличение пропускной способности тепловых сетей за счет использования теплоносителя более низкой температуры.</p>
           </li>
-          <!-- /.worth__item -->
           <li class="worth__item adv-target">
             <span class="worth__item-head">Перспективность</span>
             <p class="worth__item-text">Системы ВТП удачно сочетаются с теплонасосными установками (резко повышается коэффициент эффективности ТНУ), которые всё больше применяются в современном строительстве.</p>
           </li>
-          <!-- /.worth__item -->
         </ul>
-        <!-- /.range worth__list -->
-
         <div class="range form-worth">
           <button class="btn form-worth-call" id="form-worth-call">Хочу теплый пол</button>
-          <form action="#" class="form hidden-form" id="form_worth">
-            <span class="form-close"></span>
-            <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы 'Преимущества фодяного пола'">
+          <form action="#" class="form hidden-form" id="form_worth" onsubmit="yaCounter36809450.reachGoal('worth'); ga('send', 'event', 'SendForm', 'SendWorth');">
+            <input type="hidden" class="title" name="DATA[TITLE]" value="Заявка с формы Преимущества dодяного пола">
             <div class="col form-row">
               <input type="text" class="form-name" name="name" placeholder="Имя">
             </div>
@@ -362,10 +363,7 @@
           </form>
         </div>
       </div>
-      <!-- /.container -->
     </div>
-    <!-- /.worth -->
-
     <div id="reviews" class="reviews">
       <div class="container">
         <h2>Отзывы</h2>
@@ -374,32 +372,28 @@
             <div class="reviews__item">
               <div class="img-skin"><img src="img/reviews_eugeniy.jpg" alt="Фотография Евгения для отзыва об установке водяного теплого пола"></div>
               <blockquote class="reviews__text">
-                <site class="reviews__name">Евгений</site>
+                <cite class="reviews__name">Евгений</cite>
                 Обратился в компанию для монтажа и проектирования теплых полов. Работы были выполнены в строго поставленные сроки и предельно качественно. Очень благодарен специалистам компании «РОСА Монтаж»!
               </blockquote>
             </div>
             <div class="reviews__item">
               <div class="img-skin"><img src="img/reviews_elena.jpg" alt="Фотография Елены для отзыва об установке водяного теплого пола"></div>
               <blockquote class="reviews__text">
-                <site class="reviews__name">Елена</site>
+                <cite class="reviews__name">Елена</cite>
                 Очень долго искала подходящую компанию для установки теплых полов в моем доме. Знакомый посоветовал компанию «РОСА Монтаж». При сотрудничестве нисколько не пожалела, все было сделано так, как я хотела
               </blockquote>
             </div>
             <div class="reviews__item">
               <div class="img-skin"><img src="img/reviews_constantin.jpg" alt="Фотография Константина для отзыва об установке водяного теплого пола"></div>
               <blockquote class="reviews__text">
-                <site class="reviews__name">Константин</site>
+                <cite class="reviews__name">Константин</cite>
                 Разослал сведения о доме в кучу разных компаний для проекта. Никто не предоставил ничего путного. В компании «РОСА Монтаж» мы нашли индивидуальный подход к своему дому, как и хотели. Спасибо профессионалам!
               </blockquote>
             </div>
           </div>
         </div>
-        <!-- /.range -->
       </div>
-      <!-- /.container -->
     </div>
-    <!-- /.reviews -->
-
     <div id="services" class="more">
       <div class="container">
         <h2 class="more__head">Кроме теплого пола у нас так же заказывают:</h2>
@@ -411,7 +405,6 @@
               </div>
             </div>
           </div>
-          <!-- /.more__item -->
           <div class="more__item">
             <div class="installation">
               <div class="bg-hover">
@@ -419,7 +412,6 @@
               </div>
             </div>
           </div>
-          <!-- /.more__item -->
           <div class="more__item">
             <div class="install-water">
               <div class="bg-hover">
@@ -427,7 +419,6 @@
               </div>
             </div>
           </div>
-          <!-- /.more__item -->
           <div class="more__item">
             <div class="boiler">
               <div class="bg-hover">
@@ -435,7 +426,6 @@
               </div>
             </div>
           </div>
-          <!-- /.more__item -->
           <div class="more__item">
             <div class="boiler-rus">
               <div class="bg-hover">
@@ -443,7 +433,6 @@
               </div>
             </div>
           </div>
-          <!-- /.more__item -->
           <div class="more__item">
             <div class="services">
               <div class="bg-hover">
@@ -451,7 +440,6 @@
               </div>
             </div>
           </div>
-          <!-- /.more__item -->
           <div class="more__item">
             <div class="start">
               <div class="bg-hover">
@@ -459,7 +447,6 @@
               </div>
             </div>
           </div>
-          <!-- /.more__item -->
           <div class="more__item">
             <div class="sewerage">
               <div class="bg-hover">
@@ -467,91 +454,80 @@
               </div>
             </div>
           </div>
-          <!-- /.more__item -->
           <div class="more__item">
             <button class="more__btn" id="more__btn">
               Хочу больше, чем просто теплый пол
             </button>
-            <form action="" class="form hidden-form">
-              <span class="form-close"></span>
-              <input type="text" placeholder="Имя">
-              <input type="text" placeholder="E-mail">
-              <input type="text" placeholder="Телефон">
+            <form action="#" class="form hidden-form" id="form-more" onsubmit="yaCounter36809450.reachGoal('more'); ga('send', 'event', 'SendForm', 'SendMore');">
+              <input type="hidden" class="title" name="DATA[TITLE]" value="Форма -Дополнительные услуги">
+              <div class="form-row">
+                <input type="text" class="form-name" name="name" placeholder="Имя">
+              </div>
+              <div class="form-row">
+                <input type="text" class="form-email" name="email" placeholder="E-mail">
+              </div>
+              <div class="form-row">
+                <input type="text" class="form-phone" name="phone" placeholder="Телефон">
+              </div>
               <button class="btn">Хочу теплый пол</button>
             </form>
-
-            <!-- <form action="" class="form hidden-form">
-              <span class="form-close"></span>
-              <div class="col">
-                <input type="text" placeholder="Имя">
-              </div>
-              <div class="col">
-                <input type="text" placeholder="Телефон">
-              </div>
-              <div class="col">
-                <input type="email" placeholder="E-mail">
-              </div>
-              <div class="col">
-                <button class="btn">Хочу теплый пол</button>
-              </div>
-            </form> -->
-
           </div>
         </div>
-        <!-- /.range -->
       </div>
-      <!-- /.container -->
     </div>
-    <!-- /.more -->
-
     <div class="sertificate">
       <div class="container">
         <h2 class="sertificate__head">Наши сертификаты</h2>
-        <!-- /.sertificate__head -->
         <div class="range">
           <div class="owl-carousel" id="owl-sertificate">
             <div class="sertificate__item">
               <img src="img/sertificate/Baxi_Koz.jpg" alt="">
             </div>
             <div class="sertificate__item">
-              <img src="img/sertificate/Baxi_Sol.jpg" alt="">
-            </div>
-            <div class="sertificate__item">
-              <img src="img/sertificate/Dimplex_Rod.jpg" alt="">
-            </div>
-            <div class="sertificate__item">
               <img src="img/sertificate/Dimplex_Sol.jpg" alt="">
             </div>
             <div class="sertificate__item">
-              <img src="img/sertificate/Dimplex_Sol_adv.jpg" alt="">
+              <img src="img/sertificate/Lamborghini_Sol.jpg" alt="">
             </div>
             <div class="sertificate__item">
-              <img src="img/sertificate/Dimplex_Sol_air.jpg" alt="">
+              <img src="img/sertificate/meibes_Koz.jpg" alt="">
+            </div>
+            <div class="sertificate__item">
+              <img src="img/sertificate/Nibe_Sol.jpg" alt="">
+            </div>
+            <div class="sertificate__item">
+              <img src="img/sertificate/Oilon_Koz.jpg" alt="">
+            </div>
+            <div class="sertificate__item">
+              <img src="img/sertificate/Rapido_Sol.jpg" alt="">
+            </div>
+            <div class="sertificate__item">
+              <img src="img/sertificate/Termet_Sol.jpg" alt="">
+            </div>
+            <div class="sertificate__item">
+              <img src="img/sertificate/Vaillant_Motin.jpg" alt="">
             </div>
           </div>
         </div>
-        <!-- /.range -->
       </div>
-      <!-- /.container -->
     </div>
-    <!-- /.sertificate -->
-
     <div class="map" id="map">
     </div>
-
     <div class="question">
       <div class="container">
-        <form action="" class="form form-question">
+        <form action="#" class="form form-question" id="form-question" onsubmit="yaCounter36809450.reachGoal('question'); ga('send', 'event', 'SendForm', 'SendQuestion');">
           <span class="form-question__head">Остались вопросы ? напишите нам</span>
-          <input type="text" placeholder="E-mail">
-          <textarea placeholder="Сообщение"></textarea>
+          <input type="hidden" class="title" name="DATA[TITLE]" value="Форма - Остались вопросы?">
+          <div class="form-row">
+            <input type="text" class="form-email" name="email" placeholder="E-mail">
+          </div>
+          <div class="form-row">
+            <textarea class="form-text" name="text" placeholder="Сообщение"></textarea>
+          </div>
           <button class="btn">Отправить</button>
         </form>
-        <!-- /.form form-question -->
       </div>
-      <!-- /.container -->
     </div>
-    <!-- /.question -->
   </main>
   <footer>
     <div class="container">
@@ -559,36 +535,62 @@
         <div class="logo-footer">
           <img src="  img/main_logo_footer.png" alt="РОСА Монтаж. Логотип">
         </div>
-        <!-- /.logo -->
         <ul class="contacts">
           <li>
             <a class="phone" href="tel:+78127150506">+7 (812) 715-05-06</a>
           </li>
           <li>
-            <a class="mail" href="mailto:rosa.812@mail.ru">rosa.812@mail.ru</a>
+            <a class="mail" href="mailto:order@rosa-montazh.ru">order@rosa-montazh.ru</a>
           </li>
           <li>
             <a class="adress" href="">г. Санкт-Петербург, Бухарестская улица, д. 24</a>
           </li>
         </ul>
-        <!-- /.adress -->
         <div class="copypast">
           <span>РОСА Монтаж 2016 ©</span>
-          <span>Разработка: <a class="webstudia" href="#">Рекламное агентство</a></span>
+          <span>Разработка: <a class="webstudia" href="http://neststudio.ru/">nest</a></span>
         </div>
-        <!-- /.copypast -->
       </div>
     </div>
   </footer>
+  <div id="thank-you">
+  </div>
   <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDRQVjTZq6DH0X8LwFzLIvXJqAWW5kiCo&signed_in=true&callback=initMap"></script>
-  </body>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDRQVjTZq6DH0X8LwFzLIvXJqAWW5kiCo&signed_in=true&callback=initMap">
+  </script>
+  <script>
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: {lat: 59.8863, lng: 30.365594},
+        scrollwheel: false
+      });
+
+      var image = 'img/icon-for-map.png';
+      var beachMarker = new google.maps.Marker({
+        position: {lat: 59.8863, lng: 30.365594},
+        map: map,
+        icon: image
+      });
+    }
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-71517814-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
   <!-- build:js js/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/owl.carousel/dist/owl.carousel.js"></script>
   <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
+  <script src="bower_components/jquery-modal/jquery.modal.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:js js/main.min.js -->

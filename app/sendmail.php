@@ -19,10 +19,21 @@
   $nameForm = $_POST['form_nameForm'];
   $name = $_POST['form_name'];
   $email = $_POST['form_email'];
-  $phone = $_POST['form_email'];
+  $phone = $_POST['form_phone'];
   $area = $_POST['form_area'];
   $quantity = $_POST['form_quantity'];
   $comments = "Площадь ".$area." м.кв; Кол-во помещений ".$quantity;
+
+  // if($area == '') {
+  //   $area_message = '';
+  // } else {
+  //   $area_massage = "Отапливаемая площадь: ".$area."\n";
+  // }
+  // if($quantity == '') {
+  //   $quantity_message = '';
+  // } else {
+  //   $quantity_massage = "Количество помещений: ".$quantity."\n";
+  // }
 
   // create email body and send it
   $to = 'kademidov@gmail.com'; // put your email
@@ -31,12 +42,12 @@
     "Данные отправителя:\n\nИмя: $name \n".
     "Почта: $email \n".
     "Телефон: $phone \n".
-    "Отапливаемая площадь: $area \n".
-    "Количество помещений: $quantity \n";
+    "Отапливаемая площадь: ".$area."\n".
+    "Количество помещений: ".$quantity."\n";
   $headers = "From: ".$name." <".$email.">" . "\r\n" .
     "Reply-To: ".$name." <".$email.">" . "\r\n" ;
   mail($to, $subject, $message ,$headers);
-  return true;
+  // return true;
 
   // Bitrix24
   // CRM server conect ion data
@@ -61,7 +72,7 @@
     $nameForm = $_POST['form_nameForm'];
     $name = $_POST['form_name'];
     $email = $_POST['form_email'];
-    $phone = $_POST['form_email'];
+    $phone = $_POST['form_phone'];
     $area = $_POST['form_area'];
     $quantity = $_POST['form_quantity'];
     $comments = "Площадь ".$area." м.кв; Кол-во помещений ".$quantity;
@@ -132,6 +143,6 @@
   {
     $output = '';
   }
-
+   return true;
 // HTML form
 ?>

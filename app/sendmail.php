@@ -38,6 +38,17 @@
   }
 
 
+  // if($area == '') {
+  //   $area_message = '';
+  // } else {
+  //   $area_massage = "Отапливаемая площадь: ".$area."\n";
+  // }
+  // if($quantity == '') {
+  //   $quantity_message = '';
+  // } else {
+  //   $quantity_massage = "Количество помещений: ".$quantity."\n";
+  // }
+
   // create email body and send it
   $to = 'order@rosa-montazh.ru'; // put your email
   $subject = "Заявка от $name | ".$title;
@@ -159,6 +170,6 @@
   {
     $output = '';
   }
-
+   return true;
 // HTML form
 ?>

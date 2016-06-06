@@ -32,26 +32,14 @@
   } else if(isset($gift)) {
     $comments ="Выбранный подарок: ".$gift;
   } else if(isset($text)) {
-    $comments ="Выбранный подарок: ".$text;
+    $comments ="Дополнение: ".$text;
   } else {
     $comments ="";
   }
 
-
-  // if($area == '') {
-  //   $area_message = '';
-  // } else {
-  //   $area_massage = "Отапливаемая площадь: ".$area."\n";
-  // }
-  // if($quantity == '') {
-  //   $quantity_message = '';
-  // } else {
-  //   $quantity_massage = "Количество помещений: ".$quantity."\n";
-  // }
-
   // create email body and send it
   $to = 'order@rosa-montazh.ru'; // put your email
-  $subject = "Заявка от $name | ".$title;
+  $subject = "Заявка от $name | ".$title." | Сайт - Водяной теплый пол";
   $message = "Заполнена форма ".$title.". \n\n".
     "Данные отправителя:\n\nИмя: ".$name." \n".
     "Почта: ".$email." \n".
@@ -71,8 +59,8 @@
   define('CRM_PATH', '/crm/configs/import/lead.php'); // CRM server REST service path
 
   // CRM server authorization data
-  define('CRM_LOGIN', 'rosa.812@mail.ru'); // login of a CRM user able to manage leads
-  define('CRM_PASSWORD', 'rosainstall308'); // password of a CRM user
+  define('CRM_LOGIN', 'order@rosa-montazh.ru'); // login of a CRM user able to manage leads
+  define('CRM_PASSWORD', 'rosamontazh'); // password of a CRM user
   // OR you can send special authorization hash which is sent by server after first successful connection with login and password
   // define('CRM_AUTH', 'e54ec19f0c5f092ea11145b80f465e1a'); // authorization hash
 

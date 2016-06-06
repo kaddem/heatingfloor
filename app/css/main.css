@@ -193,7 +193,7 @@ This must be run when you have at least 2 sprites.
   font-family: "Segoe Ui Lite", sans-serif;
 }
 .blocker {
-  z-index: 9999999;
+  z-index: 9999;
   padding-top: 130px;
 }
 html,
@@ -336,9 +336,16 @@ label.error {
   cursor: pointer;
 }
 .modal {
+  position: absolute;
   -webkit-border-radius: 0;
   border-radius: 0;
-  width: 320px;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
 }
 .modal a.close-modal {
   top: 5px;
@@ -350,6 +357,12 @@ label.error {
 }
 .jquery-modal:before {
   content: normal;
+}
+.modal-thank-you__head {
+  display: block;
+  border-bottom: 1px solid #434242;
+  padding-bottom: 10px;
+  color: #f08456;
 }
 #form_recall {
   width: 280px;
@@ -365,25 +378,39 @@ label.error {
 #form_recall input {
   margin-bottom: 20px;
 }
-#form-more {
-  width: 280px;
+.gift__description .checked:after {
+  background-color: #f08456;
 }
-#form-more h3 {
-  margin-top: 0;
-  text-align: center;
+.gift__description .checked:after {
+  background-color: #f08456;
 }
-#form-more input,
-#form-more button {
+.preload:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  overflow: auto;
 }
-#form-more input {
-  margin-bottom: 20px;
-}
-.gift__description .checked:after {
-  background-color: #f08456;
-}
-.gift__description .checked:after {
-  background-color: #f08456;
+.preload:after {
+  content: '';
+  background-image: url(../img/preloader.svg);
+  background-size: 60px 60px;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10000;
 }
 header {
   position: fixed;
@@ -391,7 +418,7 @@ header {
   top: 0;
   left: 0;
   background-color: #fff;
-  z-index: 10000000;
+  z-index: 1000;
   padding: 15px 0 8px 0;
   -webkit-box-shadow: 0 0 1px 1px grey;
   box-shadow: 0 0 1px 1px grey;
@@ -884,6 +911,7 @@ header .visible-form {
 .gift__description {
   position: absolute;
   text-align: left;
+  width: 100%;
   background-image: -webkit-linear-gradient(45deg, rgba(239, 149, 103, 0.9) 0%, rgba(239, 149, 103, 0.9) 90%, transparent 90%, transparent 100%);
   background-image: linear-gradient(45deg, rgba(239, 149, 103, 0.9) 0%, rgba(239, 149, 103, 0.9) 90%, transparent 90%, transparent 100%);
   color: #fff;
@@ -1207,6 +1235,9 @@ header .visible-form {
 .form-worth input,
 .form-worth button {
   width: 100%;
+}
+.reviews {
+  padding-bottom: 30px;
 }
 .reviews .owl-carousel {
   width: 83.33333333%;
@@ -1598,6 +1629,7 @@ footer .copypast a {
   }
   .main-nav {
     display: block !important;
+    text-align: center;
   }
   .promo .promo-text .btn {
     display: none;
@@ -1655,7 +1687,7 @@ footer .copypast a {
     bottom: 0;
     left: -115px;
     margin: auto;
-    z-index: 999999999;
+    z-index: 999;
   }
   .floor .concrete__animate .concrete__text:after {
     content: '';
@@ -1670,7 +1702,7 @@ footer .copypast a {
     bottom: 0;
     left: -122px;
     margin: auto;
-    z-index: 999999999;
+    z-index: 999;
   }
   .floor .concrete--open .concrete__img:nth-child(1) {
     top: 0;
@@ -1715,7 +1747,7 @@ footer .copypast a {
     bottom: 0;
     left: -195px;
     margin: auto;
-    z-index: 99999;
+    z-index: 999;
   }
   .floor .wood__animate .wood__text:after {
     content: '';
@@ -1730,7 +1762,7 @@ footer .copypast a {
     bottom: 0;
     left: -202px;
     margin: auto;
-    z-index: 99999;
+    z-index: 999;
   }
   .floor .wood__animate .wood__description:nth-child(1) .wood__text:before {
     width: 150px;
@@ -1837,6 +1869,171 @@ footer .copypast a {
     -webkit-transform: translateX(-558px);
     -ms-transform: translateX(-558px);
     transform: translateX(-558px);
+  }
+  .services {
+    background-image: url(../img/bg-services.jpg);
+    background-repeat: repeat;
+    padding-top: 10px;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+  .services .container {
+    position: relative;
+    padding-bottom: 330px;
+  }
+  .services__header {
+    font-size: 30px;
+    font-family: "Segoe Ui Bold", sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .services__nav {
+    font-size: 0;
+  }
+  .services__nav-item {
+    vertical-align: middle;
+    display: inline-block;
+    width: 13%;
+    margin-right: 1.5%;
+  }
+  .services__nav-item:last-child {
+    margin-right: 0;
+  }
+  .services__nav a {
+    height: 82px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFF;
+    width: 100%;
+    display: inline-block;
+    font-family: "Segoe Ui", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    border: 3px solid #f08456;
+    padding: 14px 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .services__nav a:hover {
+    border: 3px solid #fff;
+  }
+  .services__nav .active {
+    border: 3px solid #fff;
+  }
+  .services__description {
+    width: 66.66666667%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+  }
+  .services__head {
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "Segoe Ui Bold", sans-serif;
+  }
+  .services__list-item {
+    margin-right: 20px;
+    padding-left: 15px;
+    position: relative;
+    display: inline-block;
+    color: #f08456;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Segoe Ui", sans-serif;
+  }
+  .services__list-item:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #f08456;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .services__text {
+    font-family: "Segoe Ui", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 8px;
+  }
+  .services__text ul {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  .services__text p {
+    margin: 18px 0 0 0;
+  }
+  .services__form {
+    width: 33.33333333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    padding-left: 55px;
+  }
+  .services__form .form {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #434242;
+    padding: 20px 35px;
+    margin-top: 35px;
+    width: 100%;
+  }
+  .services__form .form__input {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #434242;
+    margin-bottom: 13px;
+    font-size: 18px;
+    padding: 15px;
+  }
+  .services__form .form__head {
+    font-size: 18px;
+    line-height: 24px;
+    display: block;
+    text-align: center;
+    margin: 0 -10px 13px -10px;
+    font-family: "Segoe Ui Bold", sans-serif;
+  }
+  .services__form .services__btn {
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: #f08456;
+    padding: 16px;
+    font-size: 18px;
+  }
+  .gallery {
+    margin-left: -10px;
+    margin-right: -10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -50px;
+  }
+  .gallery:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .gallery__item {
+    width: 25%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    height: 346px;
+  }
+  .gallery__item img {
+    -webkit-box-shadow: 0 0 10px -1px #000;
+    box-shadow: 0 0 10px -1px #000;
+    width: 100%;
+    display: inline-block;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -2191,82 +2388,181 @@ footer .copypast a {
   .worth .form-worth .col:nth-of-type(2) {
     margin-bottom: 20px;
   }
-  .more .range {
-    margin-left: -15px;
-    margin-right: -15px;
+  .services {
+    background-image: url(../img/bg-services.jpg);
+    background-repeat: repeat;
+    padding-top: 10px;
+    color: #fff;
+    margin-bottom: 50px;
   }
-  .more__item {
-    width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
-    float: left;
-    padding: 15px;
-  }
-  .more__item:nth-child(3) {
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    float: left;
-    padding: 15px;
-  }
-  .more__item:nth-child(8),
-  .more__item:nth-child(9) {
-    width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
-    float: left;
-    padding: 15px;
-  }
-  .more__item .bg-hover {
-    width: 100%;
-    height: 40%;
-    text-align: center;
-    position: absolute;
-    opacity: 0.8;
-    bottom: 0;
-    background-color: #f08456;
-  }
-  .more__item .bg-hover p {
+  .services .container {
     position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    padding-bottom: 300px;
+  }
+  .services__header {
     font-size: 30px;
-    margin: 0;
     font-family: "Segoe Ui Bold", sans-serif;
     color: #fff;
     text-transform: uppercase;
+    text-align: center;
   }
-  .more .more__item > div {
-    height: 300px;
+  .services__nav {
+    font-size: 0;
+    text-align: center;
   }
-  .more__btn {
-    height: 300px;
+  .services__nav-item {
+    display: inline-block;
+    width: 155px;
+    margin-right: 1.5%;
+    margin-bottom: 1.5%;
   }
-  .more .project {
-    background-image: url(../../img/more-project_tablet.jpg);
+  .services__nav-item:last-child,
+  .services__nav-item:nth-child(4) {
+    margin-right: 0;
   }
-  .more .installation {
-    background-image: url(../../img/more-install_tablet.jpg);
+  .services__nav a {
+    vertical-align: middle;
+    height: 82px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFF;
+    width: 100%;
+    display: inline-block;
+    font-family: "Segoe Ui", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    border: 3px solid #f08456;
+    padding: 14px 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
-  .more .install-water {
-    background-image: url(../../img/more-install-water_tablet.jpg);
+  .services__nav a:hover {
+    border: 3px solid #fff;
   }
-  .more .boiler {
-    background-image: url(../../img/more-install-boiler_tablet.jpg);
+  .services__nav .active {
+    border: 3px solid #fff;
   }
-  .more .boiler-rus {
-    background-image: url(../../img/more-install-boilerrus_tablet.jpg);
+  .services__head {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "Segoe Ui Bold", sans-serif;
+    text-align: center;
   }
-  .more .services {
-    background-image: url(../../img/more-service_tablet.jpg);
+  .services__list {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    text-align: center;
   }
-  .more .start {
-    background-image: url(../../img/more-start_tablet.jpg);
+  .services__list-item {
+    margin-right: 20px;
+    padding-left: 15px;
+    position: relative;
+    display: inline-block;
+    color: #f08456;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Segoe Ui", sans-serif;
   }
-  .more .sewerage {
-    background-image: url(../../img/more-sewerage_tablet.jpg);
+  .services__list-item:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #f08456;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .services__text {
+    font-family: "Segoe Ui", sans-serif;
+    width: 58.33333333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .services__text ul {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  .services__text p {
+    margin: 18px 0 0 0;
+  }
+  .services__form {
+    width: 41.66666667%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+  }
+  .services__form .form {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #434242;
+    padding: 20px 35px;
+    margin-top: 25px;
+  }
+  .services__form .form__input {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #434242;
+    margin-bottom: 13px;
+    font-size: 18px;
+    padding: 15px;
+  }
+  .services__form .form__head {
+    font-size: 18px;
+    line-height: 24px;
+    display: block;
+    text-align: center;
+    margin: 0 -10px 13px -10px;
+    font-family: "Segoe Ui Bold", sans-serif;
+  }
+  .services__form .services__btn {
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: #f08456;
+    padding: 16px;
+    font-size: 18px;
+  }
+  .gallery {
+    margin-left: -10px;
+    margin-right: -10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -50px;
+  }
+  .gallery:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .gallery__item {
+    width: 33.33333333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    padding: 0;
+  }
+  .gallery__item:nth-child(4) {
+    display: none;
+  }
+  .gallery__item img {
+    width: 100%;
+    display: inline-block;
   }
   footer .logo-footer {
     width: 16.66666667%;
@@ -2319,6 +2615,9 @@ footer .copypast a {
     display: block;
     position: fixed;
   }
+  .modal {
+    width: 300px;
+  }
   .form-close {
     top: 5px;
     right: 5px;
@@ -2365,6 +2664,9 @@ footer .copypast a {
     float: left;
     margin-left: 16.66666667%;
     text-align: center;
+  }
+  header .logo img {
+    height: 70px;
   }
   header .main-nav {
     width: auto;
@@ -2416,11 +2718,13 @@ footer .copypast a {
   }
   header .contacts .btn-recall {
     max-width: 180px;
+    padding: 5px 10px;
   }
   .promo {
     padding-bottom: 60px;
     background-image: url(../img/promo-bg_phone.jpg);
     background-position: center bottom;
+    margin-top: 90px;
   }
   .promo .promo-text {
     width: 100%;
@@ -2654,64 +2958,175 @@ footer .copypast a {
     margin-left: 10px;
     margin-right: 10px;
   }
-  .more__item {
-    width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
-    float: left;
+  .services {
+    background-image: url(../img/bg-services.jpg);
+    background-repeat: repeat;
     padding-top: 10px;
-    padding-bottom: 10px;
+    color: #fff;
   }
-  .more__item:nth-child(3) {
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    float: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .more__item:nth-child(8),
-  .more__item:nth-child(9) {
-    width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
-    float: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .more__item .bg-hover {
-    width: 100%;
-    height: 40%;
-    text-align: center;
-    position: absolute;
-    opacity: 0.8;
-    bottom: 0;
-    background-color: #f08456;
-  }
-  .more__item .bg-hover p {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    font-size: 18px;
-    margin: 0;
+  .services__header {
+    font-size: 30px;
     font-family: "Segoe Ui Bold", sans-serif;
     color: #fff;
     text-transform: uppercase;
+    text-align: center;
   }
-  .more .more__item > div {
-    height: 200px;
+  .services__nav {
+    font-size: 0;
+    text-align: center;
   }
-  .more__btn {
-    height: 200px;
-    padding: 80px 5px 5px 5px;
-    -webkit-box-shadow: inset 0 0 0px 5px #ffe252, inset 0 0 0px 6px #fff;
-    box-shadow: inset 0 0 0px 5px #ffe252, inset 0 0 0px 6px #fff;
+  .services__nav-item {
+    float: left;
+    margin: 0;
+    width: 50%;
+  }
+  .services__nav-item:nth-child(1),
+  .services__nav-item:nth-child(2),
+  .services__nav-item:nth-child(3) {
+    width: 33.33%;
+  }
+  .services__nav a {
+    font-size: 13px;
+    line-height: 17px;
+    height: 60px;
+    color: #FFF;
+    width: 100%;
+    display: inline-block;
+    font-family: "Segoe Ui", sans-serif;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+    border: 3px solid #f08456;
+    padding: 10px 3px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .services__nav a:hover {
+    background-color: #f08456;
+  }
+  .services__nav a.active {
+    background-color: #f08456;
+  }
+  .services__head {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Segoe Ui Bold", sans-serif;
+    text-align: center;
+  }
+  .services__list {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    text-align: center;
+  }
+  .services__list-item {
+    margin-right: 20px;
+    padding-left: 15px;
+    position: relative;
+    display: inline-block;
+    color: #f08456;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Segoe Ui", sans-serif;
+  }
+  .services__list-item:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #f08456;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .services__text {
+    font-family: "Segoe Ui", sans-serif;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 20px;
+  }
+  .services__text ul {
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+  .services__text p {
+    margin: 10px 0 0 0;
+  }
+  .services__form {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    padding: 0;
+  }
+  .services__form .form {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #434242;
+    padding: 15px;
+    width: 100%;
+  }
+  .services__form .form__input {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #434242;
+    margin-bottom: 13px;
+    font-size: 18px;
+    padding: 15px;
+  }
+  .services__form .form__head {
+    font-size: 18px;
+    line-height: 24px;
+    display: block;
+    text-align: center;
+    margin: 0 -10px 13px -10px;
+    font-family: "Segoe Ui Bold", sans-serif;
+  }
+  .services__form .services__btn {
+    display: block;
+    width: 100%;
+    color: #fff;
+    background-color: #f08456;
+    padding: 16px;
     font-size: 18px;
   }
-  .more__btn:before {
-    top: 10%;
+  .gallery {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin: auto;
+  }
+  .gallery:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .gallery__item {
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    padding: 0;
+  }
+  .gallery__item:nth-child(4),
+  .gallery__item:nth-child(3) {
+    display: none;
+  }
+  .gallery__item img {
+    width: 100%;
+    display: block;
   }
   .question .form-question {
     width: 90%;
@@ -2738,6 +3153,15 @@ footer .copypast a {
   }
   footer .contacts .phone {
     font-size: 18px;
+  }
+  footer .mail,
+  footer .adress {
+    font-size: 15px;
+  }
+  footer .phone,
+  footer .mail,
+  footer .adress {
+    padding-left: 25px;
   }
   footer .copypast {
     border-top: 1px solid grey;

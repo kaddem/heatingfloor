@@ -13,6 +13,7 @@
   }
   .main-nav{
     display: block !important;
+    text-align: center;
   }
   .promo{
     .promo-text{
@@ -83,7 +84,7 @@
           bottom: 0;
           left: -115px;
           margin: auto;
-          z-index: 999999999;
+          z-index: 999;
         }
 
         &:after{
@@ -98,7 +99,7 @@
           bottom: 0;
           left: -122px;
           margin: auto;
-          z-index: 999999999;
+          z-index: 999;
         }
       }
       // &:hover .concrete__description{
@@ -183,7 +184,7 @@
           bottom: 0;
           left: -195px;
           margin: auto;
-          z-index: 99999;
+          z-index: 999;
         }
         &:after{
           content: '';
@@ -197,7 +198,7 @@
           bottom: 0;
           left: -202px;
           margin: auto;
-          z-index: 99999;
+          z-index: 999;
         }
       }
       & .wood__description{
@@ -325,6 +326,7 @@
 
     transform: translateX(-@laptop-min/2 + 42px);
   }
+  @import url(services.less);
 }
 
 @media screen and (min-width: @tablet-min) and (max-width: @tablet-max) {
@@ -357,7 +359,7 @@
   @import url(responsive/pay_tablet.less);
   @import url(responsive/worth_tablet.less);
   @import url(responsive/reviews_tablet.less);
-  @import url(responsive/more_tablet.less);
+  @import url(responsive/services-tablet.less);
   @import url(responsive/sertificate_tablet.less);
   @import url(responsive/map_tablet.less);
   @import url(responsive/question_tablet.less);
@@ -392,6 +394,9 @@
     display: block;
     position: fixed;
   }
+  .modal{
+    width: @phone-min - 20px
+  }
   .form-close{
     top: 5px;
     right: 5px;
@@ -423,7 +428,7 @@
   @import url(responsive/pay_phone.less);
   @import url(responsive/worth_phone.less);
   @import url(responsive/reviews_phone.less);
-  @import url(responsive/more_phone.less);
+  @import url(responsive/services-phone.less);
   @import url(responsive/sertificate_phone.less);
   @import url(responsive/map_phone.less);
   @import url(responsive/question_phone.less);

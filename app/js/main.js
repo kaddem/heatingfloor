@@ -72,34 +72,6 @@ $(document).ready(function(){
         });
     };
 
-    // Закрытие модального окна формы
-    // function modalClose(id){
-    //     $(id).css('display','none');
-    //     var elem = $(id).parent('.form');
-    //         elem.animate({
-    //             top: 0,
-    //             opacity: 0
-    //         }, 300);
-    //     setTimeout(
-    //         function(){
-    //             elem
-    //                 .addClass('hidden-form')
-    //                 .removeClass('visible-form')
-    //         }, 300);
-    // };
-
-    // Функция открытия формы в модальном окне
-    // function formCall(btn){
-    //     $(btn).parent().find('.form-close').css('display','block');
-    //     $(btn).parent().find('.form')
-    //         .addClass('visible-form')
-    //         .removeClass('hidden-form')
-    //         .animate({
-    //             opacity: 1,
-    //             top: 40
-    //         }, 300);
-    // };
-
     $(window).resize(function(){
         if( $(window).width() > 767 ) {
             $('.form-calculate').find('.form').css('opacity', 1);
